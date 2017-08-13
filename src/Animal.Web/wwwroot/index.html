@@ -23,6 +23,35 @@
         <main class="container">
             <h1>Home Page</h1>
             <p>This is the index.cshtml</p>
+
+            <span class="animal">
+                <img src="//upload.wikimedia.org/wikipedia/commons/2/23/African_Lion_3.jpg" style="max-width:150px;" 
+                     onclick="this.nextElementSibling.play()" />
+                <audio controls="controls" id="lion01" style="visibility:hidden;max-width:0">
+                    <source src="http://www.animal-sounds.org/jungle/Lion%20roar%20animals031.wav" />
+                </audio>
+            </span>
+            <span class="animal">
+                <img src="https://static.pexels.com/photos/46251/sumatran-tiger-tiger-big-cat-stripes-46251.jpeg" style="max-width:150px;" 
+                     onclick="this.nextElementSibling.play()"/>
+                <audio controls="controls" style="visibility:hidden;max-width:0">
+                    <source src="http://www.animal-sounds.org/jungle/Tiger%20growl%20animals026.wav" />
+                </audio>
+            </span>
+            <span class="animal">
+                <img src="http://res.freestockphotos.biz/pictures/10/10006-an-elephant-in-the-wild-pv.jpg" style="max-width:150px;"
+                     onclick="this.nextElementSibling.play()" />
+                <audio controls="controls" style="visibility:hidden;max-width:0">
+                    <source src="http://www.animal-sounds.org/jungle/Elephant-angry%20animals035.wav" />
+                </audio>
+            </span>
+            <span class="animal">
+                <img src="https://c1.staticflickr.com/1/179/459292254_7fdf520442_b.jpg" style="max-width:150px;"
+                     onclick="this.nextElementSibling.play()" />
+                <audio controls="controls" style="visibility:hidden;max-width:0">
+                    <source src="http://www.animal-sounds.org/jungle/Gorilla%20growl%20animals028.wav" />
+                </audio>
+            </span>
         </main>
     </div>
 
@@ -34,4 +63,5 @@
 
     <script src="/js/site.js"></script>
 </body>
+<!-- sounds from: http://www.animal-sounds.org/animal-sounds-free-download.html -->
 </html>
