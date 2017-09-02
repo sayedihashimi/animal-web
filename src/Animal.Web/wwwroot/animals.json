@@ -1,0 +1,114 @@
+[
+  {
+    "Audio": "http://www.animal-sounds.org/jungle/Lion%20roar%20animals031.wav",
+    "Image": "/media/African_Lion_3-200.jpg",
+    "Name": "lion",
+    "Text": "The lion says",
+    "Index": 0
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/Air/Bee%20buzzing%20animals131.wav",
+    "Image": "/media/bee-1584981_960_720-200.jpg",
+    "Name": "hawk",
+    "Text": "The hawk says",
+    "Index": 1
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/jungle/Elephant-angry%20animals035.wav",
+    "Image": "/media/10006-an-elephant-in-the-wild-pv-200.jpg",
+    "Name": "elephant",
+    "Text": "The elephant says",
+    "Index": 2
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/jungle/Monkey%20chatter%20animals059.wav",
+    "Image": "/media/squirrel-monkey-monkey-climb-feeding-47074-200.jpg",
+    "Name": "monkey",
+    "Text": "The monkey says",
+    "Index": 3
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Duck-quacking%20animals038.wav",
+    "Image": "/media/White_duck-200.jpg",
+    "Name": "lion",
+    "Text": "The lion says",
+    "Index": 4
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Rooster%20animals070.wav",
+    "Image": "/media/Royal-_A_Rhode_Island_Red_Rooster-200.jpg",
+    "Name": "lion",
+    "Text": "The lion says",
+    "Index": 5
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Dog%20animals080.wav",
+    "Image": "/media/happy-dog-golden-retriever-82760-200.jpg",
+    "Name": "dog",
+    "Text": "The dog says",
+    "Index": 6
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Cat%20meow%20animals020.wav",
+    "Image": "/media/cat-1468491613Sf4-200.jpg",
+    "Name": "cat",
+    "Text": "The cat says",
+    "Index": 7
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/Air/Bird%20chirps%20animals140.wav",
+    "Image": "/media/bird-93598_960_720-200.jpg",
+    "Name": "burd",
+    "Text": "The burd says",
+    "Index": 8
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Cow%20animals055.wav",
+    "Image": "/media/Cow_female_black_white-200.jpg",
+    "Name": "cow",
+    "Text": "The cow says",
+    "Index": 9
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Horse%20whinny%20animals126.wav",
+    "Image": "/media/Nokota_Horses_cropped-200.jpg",
+    "Name": "horse",
+    "Text": "The horse says",
+    "Index": 10
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Geese%20(Canadian)-flockanimals003.wav",
+    "Image": "/media/Canada_Geese_at_Marymoor_Park-200.jpg",
+    "Name": "rooster",
+    "Text": "The rooster says",
+    "Index": 11
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/farm/Pig%20squeal%20animals024.wav",
+    "Image": "/media/pig-1516956_960_720-200.jpg",
+    "Name": "pig",
+    "Text": "The pig says",
+    "Index": 12
+  },
+  {
+    "Audio": "http://www.animal-sounds.org/Air/Crow%20caw%20animals063.wav",
+    "Image": "/media/raven-2162504_960_720-200.jpg",
+    "Name": "pig",
+    "Text": "The pig says",
+    "Index": 13
+  },
+  {
+    "Audio": "http://animal-sounds.org/Air/owl%20animals074.wav",
+    "Image": "/media/Southern_white_faced_scops_owl-200.jpg",
+    "Name": "pig",
+    "Text": "The pig says",
+    "Index": 14
+  },
+  {
+    "Audio": "http://animal-sounds.org/dessert/Rattlesnake%20%20animals077.wav",
+    "Image": "/media/Western_Diamondback_Rattlesnake-200.jpg",
+    "Name": "pig",
+    "Text": "The pig says",
+    "Index": 15
+  }
+]

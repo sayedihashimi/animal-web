@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animal.Web", "Animal.Web\Animal.Web.csproj", "{BEC91EBA-9640-4C56-8433-041C83BBA008}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animal.Web", "Animal.Web\Animal.Web.csproj", "{FF533E57-C3B4-42F8-B626-4E375170A53E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BEC91EBA-9640-4C56-8433-041C83BBA008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEC91EBA-9640-4C56-8433-041C83BBA008}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEC91EBA-9640-4C56-8433-041C83BBA008}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEC91EBA-9640-4C56-8433-041C83BBA008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF533E57-C3B4-42F8-B626-4E375170A53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF533E57-C3B4-42F8-B626-4E375170A53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF533E57-C3B4-42F8-B626-4E375170A53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF533E57-C3B4-42F8-B626-4E375170A53E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D2D1DD91-13D8-4F46-BBE0-F4CF91BDC365}
+		SolutionGuid = {87ABE147-5160-46DF-BA60-9B7EF0A4F76D}
 	EndGlobalSection
 EndGlobal

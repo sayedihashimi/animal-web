@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+
+
+    @foreach (var animal in Model.AnimalList) {
+        
+        <span class="animal" onclick="sayThenPlay('@animal.Text',this.children[1]);">
+            <img src="@animal.Image" style="max-height:200px;max-width:340px;" />
+            <audio style="visibility:hidden;display:none;max-width:0">
+                <source src="@animal.Audio" />
+            </audio>
+        </span>
+
+    }
