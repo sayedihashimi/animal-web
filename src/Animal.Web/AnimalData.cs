@@ -10,6 +10,7 @@ namespace Animal.Web
     {
         public string Audio { get; set; }
         public string Image { get; set; }
+        public string ImageFull { get; set; }
         public string Text { get; set; }
         public string Name { get; set; }
 

@@ -1,0 +1,29 @@
+﻿@page "{index?}"
+@model SlideshowModel
+
+
+@if (Model.Animals != null && Model.Index >= 0) {
+    var index = Model.Index;
+    if (index < 0 || index >= Model.Animals.Count) {
+        index = 0;
+    }
+    var currentAnimal = Model.Animals[index];
+    if (currentAnimal != null) {
+        <h2 class="textOverLeft"><a class="verticalLink" href="/slideshow/@(index-1)"><</a></h2>
+        
+        <span class="animal" onclick="sayThenPlay('@currentAnimal.Text',this.children[1]);">
+            <img id="fullpageimage" src="@currentAnimal.ImageFull" alt="@currentAnimal.Name" />
+            <audio style="visibility:hidden;display:none;max-width:0">
+                <source src="@currentAnimal.Audio" />
+            </audio>
+        </span>
+        <h2 class="textOverRight"><a class="verticalLink" href="/slideshow/@(index+1)">></a></h2>
+    }
+}
+
+
+
+@section scripts{
+<script src="/js/slideshow.js"></script>
+}
+

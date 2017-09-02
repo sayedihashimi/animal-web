@@ -17,3 +17,23 @@ img, span {
     display:block;
     float:left;
 }
+
+.verticalLink {
+    background-color:red;
+}
+#fullpageimage {
+    width: 80%;
+
+}
+.textOverLeft {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+.textOverRight {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 100%;
+}
