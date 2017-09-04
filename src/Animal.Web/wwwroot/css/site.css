@@ -19,21 +19,29 @@ img, span {
 }
 
 .verticalLink {
-    background-color:red;
+    
 }
 #fullpageimage {
+    display: block;
+    margin: auto;
     width: 80%;
-
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .textOverLeft {
     position: absolute;
     top: 50px;
     left: 0;
-    width: 100%;
+    text-decoration: none;
+    font-size: 80px;
+    color: lightgrey;
 }
 .textOverRight {
     position: absolute;
-    top: 250px;
-    left: 0;
-    width: 100%;
+    top: 50px;
+    right: 100px;
+    text-align: right;
+    text-decoration: none;
+    font-size: 80px;
+    color:lightgrey;
 }
