@@ -118,5 +118,24 @@
     "ImageFull": "/media/Gorilla_zoo-leipzig.jpg",
     "Image": "/media/Gorilla_zoo-leipzig-200.jpg",
     "Audio": "http://animal-sounds.org/jungle/Gorilla%20growl%20animals028.wav"
+  },
+  {
+    "Name": "hawk",
+    "ImageFull": "/media/harris-hawk-859397_960_720.jpg",
+    "Image": "/media/harris-hawk-859397_960_720-200.jpg",
+    "Audio": "http://animal-sounds.org/jungle/Hawk%20animals083.wav"
+  },
+  {
+    "Name": "leopard",
+    "ImageFull": "/media/17859-leopard-pv.jpg",
+    "Image": "/media/17859-leopard-pv-200.jpg",
+    "Audio": "http://animal-sounds.org/jungle/Leopard%20growl%20animals089.wav"
+  },
+  {
+    "Name": "leopard",
+    "ImageFull": "/media/white_rhinoceros.jpg",
+    "Image": "/media/white_rhinoceros-200.jpg",
+    "Audio": "http://animal-sounds.org/jungle/Rhinoceros%20animals134.wav"
   }
+
 ]
