@@ -1,5 +1,5 @@
 ﻿@page "{index?}"
-@model SlideshowModel
+@model SlidesModel
 
 
 @if (Model.Animals != null && Model.Index >= 0) {
@@ -9,7 +9,7 @@
     }
     var currentAnimal = Model.Animals[index];
     if (currentAnimal != null) {
-        <a class="textOverLeft verticalLink" href="/slideshow/@(index-1)"><</a>
+        <a class="textOverLeft verticalLink" href="/slides/@(index-1)"><</a>
         
         <span ontouchstart="HandleImageTap(this.children[1]);">
             <img id="fullpageimage" src="@currentAnimal.ImageFull" alt="@currentAnimal.Name" />
@@ -17,13 +17,12 @@
                 <source src="@currentAnimal.Audio" />
             </audio>
         </span>
-        <a class="textOverRight verticalLink" href="/slideshow/@(index+1)">></a>
+        <a class="textOverRight verticalLink" href="/slides/@(index+1)">></a>
     }
 }
 
 
 
 @section scripts{
-<script src="/js/slideshow.js"></script>
 }
 

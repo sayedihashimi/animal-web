@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Animal.Web.Pages {
-    public class SlideshowModel : AnimalBaseModel {
-        public SlideshowModel(IHostingEnvironment hostingEnvironment) : base(hostingEnvironment) {
+    public class SlidesModel : AnimalBaseModel {
+        public SlidesModel(IHostingEnvironment hostingEnvironment) : base(hostingEnvironment) {
 
         }
         [BindProperty]
