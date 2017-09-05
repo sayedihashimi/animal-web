@@ -45,3 +45,10 @@ img, span {
     font-size: 80px;
     color:lightgrey;
 }
+
+.animalName{
+    color:dimgray;
+    font-size:30px;
+    width:100%;
+    text-align:center;
+}

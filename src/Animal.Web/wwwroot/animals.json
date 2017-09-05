@@ -6,7 +6,7 @@
     "Audio": "http://www.animal-sounds.org/jungle/Lion%20roar%20animals031.wav"
   },
   {
-    "Name": "hawk",
+    "Name": "bee",
     "ImageFull": "/media/bee-1584981_960_720.jpg",
     "Image": "/media/bee-1584981_960_720-200.jpg",
     "Audio": "http://www.animal-sounds.org/Air/Bee%20buzzing%20animals131.wav"
@@ -24,13 +24,13 @@
     "Audio": "http://animal-sounds.org/jungle/Capuchin%20monkey%20animals075.wav"
   },
   {
-    "Name": "lion",
+    "Name": "duck",
     "ImageFull": "/media/White_duck.jpg",
     "Image": "/media/White_duck-200.jpg",
     "Audio": "http://www.animal-sounds.org/farm/Duck-quacking%20animals038.wav"
   },
   {
-    "Name": "lion",
+    "Name": "rooster",
     "ImageFull": "/media/Royal-_A_Rhode_Island_Red_Rooster.jpg",
     "Image": "/media/Royal-_A_Rhode_Island_Red_Rooster-200.jpg",
     "Audio": "http://www.animal-sounds.org/farm/Rooster%20animals070.wav"
@@ -66,7 +66,7 @@
     "Audio": "http://www.animal-sounds.org/farm/Horse%20whinny%20animals126.wav"
   },
   {
-    "Name": "rooster",
+    "Name": "geese",
     "ImageFull": "/media/Canada_Geese_at_Marymoor_Park.jpg",
     "Image": "/media/Canada_Geese_at_Marymoor_Park-200.jpg",
     "Audio": "http://www.animal-sounds.org/farm/Geese%20(Canadian)-flockanimals003.wav"
@@ -132,7 +132,7 @@
     "Audio": "http://animal-sounds.org/jungle/Leopard%20growl%20animals089.wav"
   },
   {
-    "Name": "leopard",
+    "Name": "rhino",
     "ImageFull": "/media/white_rhinoceros.jpg",
     "Image": "/media/white_rhinoceros-200.jpg",
     "Audio": "http://animal-sounds.org/jungle/Rhinoceros%20animals134.wav"
