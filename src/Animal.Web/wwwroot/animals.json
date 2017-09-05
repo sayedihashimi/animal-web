@@ -1,138 +1,122 @@
 [
   {
     "Name": "lion",
-    "Text": "The lion says",
     "ImageFull": "/media/African_Lion_3.jpg",
     "Image": "/media/African_Lion_3-200.jpg",
-    "Audio": "http://www.animal-sounds.org/jungle/Lion%20roar%20animals031.wav",
-    "Index": 0
+    "Audio": "http://www.animal-sounds.org/jungle/Lion%20roar%20animals031.wav"
   },
   {
     "Name": "hawk",
-    "Text": "The hawk says",
     "ImageFull": "/media/bee-1584981_960_720.jpg",
     "Image": "/media/bee-1584981_960_720-200.jpg",
-    "Audio": "http://www.animal-sounds.org/Air/Bee%20buzzing%20animals131.wav",
-    "Index": 1
+    "Audio": "http://www.animal-sounds.org/Air/Bee%20buzzing%20animals131.wav"
   },
   {
     "Name": "elephant",
-    "Text": "The elephant says",
     "ImageFull": "/media/10006-an-elephant-in-the-wild-pv.jpg",
     "Image": "/media/10006-an-elephant-in-the-wild-pv-200.jpg",
-    "Audio": "http://www.animal-sounds.org/jungle/Elephant-angry%20animals035.wav",
-    "Index": 2
+    "Audio": "http://www.animal-sounds.org/jungle/Elephant-angry%20animals035.wav"
   },
   {
     "Name": "monkey",
-    "Text": "The monkey says",
     "ImageFull": "/media/squirrel-monkey-monkey-climb-feeding-47074.jpg",
     "Image": "/media/squirrel-monkey-monkey-climb-feeding-47074-200.jpg",
-    "Audio": "http://www.animal-sounds.org/jungle/Monkey%20chatter%20animals059.wav",
-    "Index": 3
+    "Audio": "http://animal-sounds.org/jungle/Capuchin%20monkey%20animals075.wav"
   },
   {
     "Name": "lion",
-    "Text": "The lion says",
     "ImageFull": "/media/White_duck.jpg",
     "Image": "/media/White_duck-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Duck-quacking%20animals038.wav",
-    "Index": 4
+    "Audio": "http://www.animal-sounds.org/farm/Duck-quacking%20animals038.wav"
   },
   {
     "Name": "lion",
-    "Text": "The lion says",
     "ImageFull": "/media/Royal-_A_Rhode_Island_Red_Rooster.jpg",
     "Image": "/media/Royal-_A_Rhode_Island_Red_Rooster-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Rooster%20animals070.wav",
-    "Index": 5
+    "Audio": "http://www.animal-sounds.org/farm/Rooster%20animals070.wav"
   },
   {
     "Name": "dog",
-    "Text": "The dog says",
     "ImageFull": "/media/happy-dog-golden-retriever-82760.jpg",
     "Image": "/media/happy-dog-golden-retriever-82760-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Dog%20animals080.wav",
-    "Index": 6
+    "Audio": "http://www.animal-sounds.org/farm/Dog%20animals080.wav"
   },
   {
     "Name": "cat",
-    "Text": "The cat says",
     "ImageFull": "/media/cat-1468491613Sf4.jpg",
     "Image": "/media/cat-1468491613Sf4-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Cat%20meow%20animals021.wav",
-    "Index": 7
+    "Audio": "http://www.animal-sounds.org/farm/Cat%20meow%20animals021.wav"
   },
   {
-    "Name": "burd",
-    "Text": "The burd says",
+    "Name": "bird",
     "ImageFull": "/media/bird-93598_960_720.jpg",
     "Image": "/media/bird-93598_960_720-200.jpg",
-    "Audio": "http://www.animal-sounds.org/Air/Bird%20chirps%20animals140.wav",
-    "Index": 8
+    "Audio": "http://www.animal-sounds.org/Air/Bird%20chirps%20animals140.wav"
   },
   {
     "Name": "cow",
-    "Text": "The cow says",
     "ImageFull": "/media/Cow_female_black_white.jpg",
     "Image": "/media/Cow_female_black_white-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Cow%20animals055.wav",
-    "Index": 9
+    "Audio": "http://www.animal-sounds.org/farm/Cow%20animals055.wav"
   },
   {
     "Name": "horse",
-    "Text": "The horse says",
     "ImageFull": "/media/Nokota_Horses_cropped.jpg",
     "Image": "/media/Nokota_Horses_cropped-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Horse%20whinny%20animals126.wav",
-    "Index": 10
+    "Audio": "http://www.animal-sounds.org/farm/Horse%20whinny%20animals126.wav"
   },
   {
     "Name": "rooster",
-    "Text": "The rooster says",
     "ImageFull": "/media/Canada_Geese_at_Marymoor_Park.jpg",
     "Image": "/media/Canada_Geese_at_Marymoor_Park-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Geese%20(Canadian)-flockanimals003.wav",
-    "Index": 11
+    "Audio": "http://www.animal-sounds.org/farm/Geese%20(Canadian)-flockanimals003.wav"
   },
   {
     "Name": "pig",
-    "Text": "The pig says",
     "ImageFull": "/media/pig-1516956_960_720.jpg",
     "Image": "/media/pig-1516956_960_720-200.jpg",
-    "Audio": "http://www.animal-sounds.org/farm/Pig%20squeal%20animals024.wav",
-    "Index": 12
+    "Audio": "http://www.animal-sounds.org/farm/Pig%20squeal%20animals024.wav"
   },
   {
-    "Name": "pig",
-    "Text": "The pig says",
+    "Name": "raven",
     "ImageFull": "/media/raven-2162504_960_720.jpg",
     "Image": "/media/raven-2162504_960_720-200.jpg",
-    "Audio": "http://www.animal-sounds.org/Air/Crow%20caw%20animals063.wav",
-    "Index": 13
+    "Audio": "http://www.animal-sounds.org/Air/Crow%20caw%20animals063.wav"
   },
   {
-    "Name": "pig",
-    "Text": "The pig says",
+    "Name": "owl",
     "ImageFull": "/media/Southern_white_faced_scops_owl.jpg",
     "Image": "/media/Southern_white_faced_scops_owl-200.jpg",
-    "Audio": "http://animal-sounds.org/Air/owl%20animals074.wav",
-    "Index": 14
+    "Audio": "http://animal-sounds.org/Air/owl%20animals074.wav"
   },
   {
-    "Name": "pig",
-    "Text": "The pig says",
+    "Name": "snake",
     "ImageFull": "/media/Western_Diamondback_Rattlesnake.jpg",
     "Image": "/media/Western_Diamondback_Rattlesnake-200.jpg",
-    "Audio": "http://animal-sounds.org/dessert/Rattlesnake%20%20animals077.wav",
-    "Index": 15
+    "Audio": "http://animal-sounds.org/dessert/Rattlesnake%20%20animals077.wav"
   },
   {
     "Name": "sheep",
-    "Text": "The pig says",
     "ImageFull": "/media/Lleyn_sheep.jpg",
     "Image": "/media/Lleyn_sheep-200.jpg",
-    "Audio": "http://animal-sounds.org/farm/Sheep%20-%20ewe%20animals112.wav",
-    "Index": 16
+    "Audio": "http://animal-sounds.org/farm/Sheep%20-%20ewe%20animals112.wav"
+  },
+  {
+    "Name": "peacock",
+    "ImageFull": "/media/peacock.jpg",
+    "Image": "/media/peacock-200.jpg",
+    "Audio": "http://animal-sounds.org/Air/Peacock%20animals019.wav"
+  },
+  {
+    "Name": "peacock",
+    "ImageFull": "/media/Seagulls_at_Bensersiel_01.jpg",
+    "Image": "/media/Seagulls_at_Bensersiel_01-200.jpg",
+    "Audio": "http://animal-sounds.org/Air/Seagulls%20animals133.wav"
+  },
+  {
+    "Name": "gorilla",
+    "ImageFull": "/media/Gorilla_zoo-leipzig.jpg",
+    "Image": "/media/Gorilla_zoo-leipzig-200.jpg",
+    "Audio": "http://animal-sounds.org/jungle/Gorilla%20growl%20animals028.wav"
   }
 ]
