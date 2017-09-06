@@ -13,8 +13,35 @@ namespace Animal.Web.Pages {
         }
         [BindProperty]
         public int Index { get; set; }
+
+        public int NextIndex { get; set; }
+        public int PreviousIndex { get; set; }
         public void OnGet(int index) {
+            if(index < 0 && Animals != null) {
+                index = Animals.Count - 1;
+            }
             Index = index;
+
+            PreviousIndex = Index - 1;
+            NextIndex = Index + 1;
+
+            // ensure PreviousIndex in range
+            if(Animals != null && PreviousIndex < 0) {
+                PreviousIndex = Animals.Count - 1;
+            }
+            if (Animals != null && PreviousIndex >= Animals.Count) {
+                // shouldn't happen
+                PreviousIndex = 0;
+            }
+
+            // ensure NextIndex in range
+            if (Animals != null && NextIndex >= Animals.Count) {
+                NextIndex = 0;
+            }
+            if (Animals != null && NextIndex < 0) {
+                // shouldn't happen
+                NextIndex = Animals.Count - 1;
+            }
         }
     }
 }

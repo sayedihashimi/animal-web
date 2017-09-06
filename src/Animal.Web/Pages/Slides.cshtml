@@ -9,7 +9,7 @@
     }
     var currentAnimal = Model.Animals[index];
     if (currentAnimal != null) {
-        <a class="textOverLeft verticalLink" href="/slides/@(index-1)"><</a>
+        <a class="textOverLeft verticalLink" href="/slides/@Model.PreviousIndex"><</a>
         
         <span ontouchstart="HandleImageTap(this.children[1]);">
             <img id="fullpageimage" src="@currentAnimal.ImageFull" alt="@currentAnimal.Name" />
@@ -18,7 +18,7 @@
             </audio>
             <span class="animalName">@currentAnimal.Name</span>
         </span>
-        <a class="textOverRight verticalLink" href="/slides/@(index+1)">></a>
+        <a class="textOverRight verticalLink" href="/slides/@Model.NextIndex">></a>
     }
 }
 
