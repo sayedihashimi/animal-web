@@ -6,6 +6,12 @@
   "Audio": "lion-01"
   },
   {
+  "Name": "alpaca",
+  "ImageFull": "alpaca",
+  "Image": "alpaca-200",
+  "Audio": "alpaca"
+  },
+  {
   "Name": "bee",
   "ImageFull": "bee-1584981_960_720",
   "Image": "bee-1584981_960_720-200",
