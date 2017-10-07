@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   items.plist
+   AnimalSounds
+
+   Created by Sayed Hashimi on 10/2/17.
+   Copyright (c) 2017 Sayed Ibrahim Hashimi. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>itemImage</key>
+            <string>10006-an-elephant-in-the-wild-pv</string>
+        </dict>
+        <dict>
+            <key>itemImage</key>
+            <string>17859-leopard-pv</string>
+        </dict>
+        <dict>
+            <key>itemImage</key>
+            <string>African_Lion_3</string>
+        </dict>
+        <dict>
+            <key>itemImage</key>
+            <string>Bee buzzing animals131</string>
+        </dict>
+    </array>
+</plist>

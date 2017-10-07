@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC072B0D1F832BEB00CDF5F0 /* items.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC072B0C1F832BEB00CDF5F0 /* items.plist */; };
+		EC072B0F1F834FF200CDF5F0 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = EC072B0E1F834FF200CDF5F0 /* animals.json */; };
+		EC2AB2C81F8893A400CDBC41 /* Bee buzzing animals131.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BE1F888FA800CDBC41 /* Bee buzzing animals131.wav */; };
+		EC2AB2C91F8893A400CDBC41 /* Capuchin monkey animals075.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2B81F888FA700CDBC41 /* Capuchin monkey animals075.wav */; };
+		EC2AB2CA1F8893A400CDBC41 /* Cat meow animals021.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C71F888FAC00CDBC41 /* Cat meow animals021.wav */; };
+		EC2AB2CB1F8893A400CDBC41 /* Duck-quacking animals038.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C31F888FAA00CDBC41 /* Duck-quacking animals038.wav */; };
+		EC2AB2CC1F8893A400CDBC41 /* Elephant-angry animals035.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C11F888FAA00CDBC41 /* Elephant-angry animals035.wav */; };
+		EC2AB2CD1F8893A400CDBC41 /* Gorilla growl animals028.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BA1F888FA800CDBC41 /* Gorilla growl animals028.wav */; };
+		EC2AB2CE1F8893A400CDBC41 /* Hawk animals083.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C01F888FA900CDBC41 /* Hawk animals083.wav */; };
+		EC2AB2CF1F8893A400CDBC41 /* Leopard growl animals089.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C61F888FAB00CDBC41 /* Leopard growl animals089.wav */; };
+		EC2AB2D01F8893A400CDBC41 /* Lion roar animals031.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BC1F888FA800CDBC41 /* Lion roar animals031.wav */; };
+		EC2AB2D11F8893A400CDBC41 /* Peacock animals018.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C41F888FAA00CDBC41 /* Peacock animals018.wav */; };
+		EC2AB2D21F8893A400CDBC41 /* Peacock animals019.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2B71F888FA700CDBC41 /* Peacock animals019.wav */; };
+		EC2AB2D31F8893A400CDBC41 /* porcupine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BD1F888FA800CDBC41 /* porcupine.mp3 */; };
+		EC2AB2D41F8893A400CDBC41 /* Rhinoceros animals134.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C21F888FAA00CDBC41 /* Rhinoceros animals134.wav */; };
+		EC2AB2D51F8893A400CDBC41 /* Seagulls animals133.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2B91F888FA700CDBC41 /* Seagulls animals133.wav */; };
+		EC2AB2D61F8893A400CDBC41 /* Sheep - ewe animals112.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BB1F888FA800CDBC41 /* Sheep - ewe animals112.wav */; };
+		EC2AB2D81F8893A400CDBC41 /* lion-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C51F888FAB00CDBC41 /* lion-01.wav */; };
+		EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77771F831517003CB235 /* AppDelegate.swift */; };
+		EC5B777A1F831517003CB235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77791F831517003CB235 /* ViewController.swift */; };
+		EC5B777D1F831517003CB235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B777B1F831517003CB235 /* Main.storyboard */; };
+		EC5B777F1F831517003CB235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B777E1F831517003CB235 /* Assets.xcassets */; };
+		EC5B77821F831517003CB235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B77801F831517003CB235 /* LaunchScreen.storyboard */; };
+		EC5B778A1F831684003CB235 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77891F831684003CB235 /* Gallery.swift */; };
+		ECBAE2481F892CEC00D33CEF /* Bird chirps animals140.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */; };
+		ECBAE2491F892CEC00D33CEF /* Cow animals055.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2471F892CC500D33CEF /* Cow animals055.wav */; };
+		ECBAE24A1F892CEC00D33CEF /* Crow caw animals063.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */; };
+		ECBAE24B1F892CEC00D33CEF /* Dog animals080.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2411F892CC400D33CEF /* Dog animals080.wav */; };
+		ECBAE24C1F892CEC00D33CEF /* Geese (Canadian)-flockanimals003.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2401F892CC400D33CEF /* Geese (Canadian)-flockanimals003.wav */; };
+		ECBAE24D1F892CEC00D33CEF /* Horse whinny animals126.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE23D1F892CC400D33CEF /* Horse whinny animals126.wav */; };
+		ECBAE24E1F892CEC00D33CEF /* owl animals074.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE23F1F892CC400D33CEF /* owl animals074.wav */; };
+		ECBAE24F1F892CEC00D33CEF /* Pig squeal animals024.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2451F892CC500D33CEF /* Pig squeal animals024.wav */; };
+		ECBAE2501F892CEC00D33CEF /* porcupine.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2431F892CC500D33CEF /* porcupine.wav */; };
+		ECBAE2511F892CEC00D33CEF /* Rattlesnake  animals077.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2421F892CC400D33CEF /* Rattlesnake  animals077.wav */; };
+		ECBAE2521F892CEC00D33CEF /* Rooster animals070.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2441F892CC500D33CEF /* Rooster animals070.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC072B0C1F832BEB00CDF5F0 /* items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
+		EC072B0E1F834FF200CDF5F0 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
+		EC2AB2B71F888FA700CDBC41 /* Peacock animals019.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Peacock animals019.wav"; sourceTree = "<group>"; };
+		EC2AB2B81F888FA700CDBC41 /* Capuchin monkey animals075.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Capuchin monkey animals075.wav"; sourceTree = "<group>"; };
+		EC2AB2B91F888FA700CDBC41 /* Seagulls animals133.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Seagulls animals133.wav"; sourceTree = "<group>"; };
+		EC2AB2BA1F888FA800CDBC41 /* Gorilla growl animals028.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Gorilla growl animals028.wav"; sourceTree = "<group>"; };
+		EC2AB2BB1F888FA800CDBC41 /* Sheep - ewe animals112.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sheep - ewe animals112.wav"; sourceTree = "<group>"; };
+		EC2AB2BC1F888FA800CDBC41 /* Lion roar animals031.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Lion roar animals031.wav"; sourceTree = "<group>"; };
+		EC2AB2BD1F888FA800CDBC41 /* porcupine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = porcupine.mp3; sourceTree = "<group>"; };
+		EC2AB2BE1F888FA800CDBC41 /* Bee buzzing animals131.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bee buzzing animals131.wav"; sourceTree = "<group>"; };
+		EC2AB2C01F888FA900CDBC41 /* Hawk animals083.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Hawk animals083.wav"; sourceTree = "<group>"; };
+		EC2AB2C11F888FAA00CDBC41 /* Elephant-angry animals035.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Elephant-angry animals035.wav"; sourceTree = "<group>"; };
+		EC2AB2C21F888FAA00CDBC41 /* Rhinoceros animals134.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Rhinoceros animals134.wav"; sourceTree = "<group>"; };
+		EC2AB2C31F888FAA00CDBC41 /* Duck-quacking animals038.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Duck-quacking animals038.wav"; sourceTree = "<group>"; };
+		EC2AB2C41F888FAA00CDBC41 /* Peacock animals018.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Peacock animals018.wav"; sourceTree = "<group>"; };
+		EC2AB2C51F888FAB00CDBC41 /* lion-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "lion-01.wav"; sourceTree = "<group>"; };
+		EC2AB2C61F888FAB00CDBC41 /* Leopard growl animals089.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Leopard growl animals089.wav"; sourceTree = "<group>"; };
+		EC2AB2C71F888FAC00CDBC41 /* Cat meow animals021.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cat meow animals021.wav"; sourceTree = "<group>"; };
+		EC5B77741F831517003CB235 /* AnimalSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5B77771F831517003CB235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC5B77791F831517003CB235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC5B777C1F831517003CB235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC5B777E1F831517003CB235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC5B77811F831517003CB235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC5B77831F831517003CB235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5B77891F831684003CB235 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		ECBAE23D1F892CC400D33CEF /* Horse whinny animals126.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Horse whinny animals126.wav"; sourceTree = "<group>"; };
+		ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Crow caw animals063.wav"; sourceTree = "<group>"; };
+		ECBAE23F1F892CC400D33CEF /* owl animals074.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "owl animals074.wav"; sourceTree = "<group>"; };
+		ECBAE2401F892CC400D33CEF /* Geese (Canadian)-flockanimals003.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Geese (Canadian)-flockanimals003.wav"; sourceTree = "<group>"; };
+		ECBAE2411F892CC400D33CEF /* Dog animals080.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Dog animals080.wav"; sourceTree = "<group>"; };
+		ECBAE2421F892CC400D33CEF /* Rattlesnake  animals077.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Rattlesnake  animals077.wav"; sourceTree = "<group>"; };
+		ECBAE2431F892CC500D33CEF /* porcupine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = porcupine.wav; sourceTree = "<group>"; };
+		ECBAE2441F892CC500D33CEF /* Rooster animals070.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Rooster animals070.wav"; sourceTree = "<group>"; };
+		ECBAE2451F892CC500D33CEF /* Pig squeal animals024.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig squeal animals024.wav"; sourceTree = "<group>"; };
+		ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bird chirps animals140.wav"; sourceTree = "<group>"; };
+		ECBAE2471F892CC500D33CEF /* Cow animals055.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cow animals055.wav"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC5B77711F831517003CB235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2AB2B61F888F9000CDBC41 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */,
+				ECBAE2471F892CC500D33CEF /* Cow animals055.wav */,
+				ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */,
+				ECBAE2411F892CC400D33CEF /* Dog animals080.wav */,
+				ECBAE2401F892CC400D33CEF /* Geese (Canadian)-flockanimals003.wav */,
+				ECBAE23D1F892CC400D33CEF /* Horse whinny animals126.wav */,
+				ECBAE23F1F892CC400D33CEF /* owl animals074.wav */,
+				ECBAE2451F892CC500D33CEF /* Pig squeal animals024.wav */,
+				ECBAE2431F892CC500D33CEF /* porcupine.wav */,
+				ECBAE2421F892CC400D33CEF /* Rattlesnake  animals077.wav */,
+				ECBAE2441F892CC500D33CEF /* Rooster animals070.wav */,
+				EC2AB2BE1F888FA800CDBC41 /* Bee buzzing animals131.wav */,
+				EC2AB2B81F888FA700CDBC41 /* Capuchin monkey animals075.wav */,
+				EC2AB2C71F888FAC00CDBC41 /* Cat meow animals021.wav */,
+				EC2AB2C31F888FAA00CDBC41 /* Duck-quacking animals038.wav */,
+				EC2AB2C11F888FAA00CDBC41 /* Elephant-angry animals035.wav */,
+				EC2AB2BA1F888FA800CDBC41 /* Gorilla growl animals028.wav */,
+				EC2AB2C01F888FA900CDBC41 /* Hawk animals083.wav */,
+				EC2AB2C61F888FAB00CDBC41 /* Leopard growl animals089.wav */,
+				EC2AB2BC1F888FA800CDBC41 /* Lion roar animals031.wav */,
+				EC2AB2C41F888FAA00CDBC41 /* Peacock animals018.wav */,
+				EC2AB2B71F888FA700CDBC41 /* Peacock animals019.wav */,
+				EC2AB2BD1F888FA800CDBC41 /* porcupine.mp3 */,
+				EC2AB2C21F888FAA00CDBC41 /* Rhinoceros animals134.wav */,
+				EC2AB2B91F888FA700CDBC41 /* Seagulls animals133.wav */,
+				EC2AB2BB1F888FA800CDBC41 /* Sheep - ewe animals112.wav */,
+				EC2AB2C51F888FAB00CDBC41 /* lion-01.wav */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		EC5B776B1F831517003CB235 = {
+			isa = PBXGroup;
+			children = (
+				EC5B77761F831517003CB235 /* AnimalSounds */,
+				EC5B77751F831517003CB235 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC5B77751F831517003CB235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC5B77741F831517003CB235 /* AnimalSounds.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC5B77761F831517003CB235 /* AnimalSounds */ = {
+			isa = PBXGroup;
+			children = (
+				EC2AB2B61F888F9000CDBC41 /* media */,
+				EC5B77771F831517003CB235 /* AppDelegate.swift */,
+				EC5B77791F831517003CB235 /* ViewController.swift */,
+				EC5B777B1F831517003CB235 /* Main.storyboard */,
+				EC5B777E1F831517003CB235 /* Assets.xcassets */,
+				EC5B77801F831517003CB235 /* LaunchScreen.storyboard */,
+				EC5B77831F831517003CB235 /* Info.plist */,
+				EC5B77891F831684003CB235 /* Gallery.swift */,
+				EC072B0C1F832BEB00CDF5F0 /* items.plist */,
+				EC072B0E1F834FF200CDF5F0 /* animals.json */,
+			);
+			path = AnimalSounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC5B77731F831517003CB235 /* AnimalSounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC5B77861F831517003CB235 /* Build configuration list for PBXNativeTarget "AnimalSounds" */;
+			buildPhases = (
+				EC5B77701F831517003CB235 /* Sources */,
+				EC5B77711F831517003CB235 /* Frameworks */,
+				EC5B77721F831517003CB235 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimalSounds;
+			productName = AnimalSounds;
+			productReference = EC5B77741F831517003CB235 /* AnimalSounds.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC5B776C1F831517003CB235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Sayed Ibrahim Hashimi";
+				TargetAttributes = {
+					EC5B77731F831517003CB235 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EC5B776F1F831517003CB235 /* Build configuration list for PBXProject "AnimalSounds" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC5B776B1F831517003CB235;
+			productRefGroup = EC5B77751F831517003CB235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC5B77731F831517003CB235 /* AnimalSounds */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC5B77721F831517003CB235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBAE2481F892CEC00D33CEF /* Bird chirps animals140.wav in Resources */,
+				ECBAE2491F892CEC00D33CEF /* Cow animals055.wav in Resources */,
+				ECBAE24A1F892CEC00D33CEF /* Crow caw animals063.wav in Resources */,
+				ECBAE24B1F892CEC00D33CEF /* Dog animals080.wav in Resources */,
+				ECBAE24C1F892CEC00D33CEF /* Geese (Canadian)-flockanimals003.wav in Resources */,
+				ECBAE24D1F892CEC00D33CEF /* Horse whinny animals126.wav in Resources */,
+				ECBAE24E1F892CEC00D33CEF /* owl animals074.wav in Resources */,
+				ECBAE24F1F892CEC00D33CEF /* Pig squeal animals024.wav in Resources */,
+				ECBAE2501F892CEC00D33CEF /* porcupine.wav in Resources */,
+				ECBAE2511F892CEC00D33CEF /* Rattlesnake  animals077.wav in Resources */,
+				ECBAE2521F892CEC00D33CEF /* Rooster animals070.wav in Resources */,
+				EC2AB2C81F8893A400CDBC41 /* Bee buzzing animals131.wav in Resources */,
+				EC2AB2C91F8893A400CDBC41 /* Capuchin monkey animals075.wav in Resources */,
+				EC2AB2CA1F8893A400CDBC41 /* Cat meow animals021.wav in Resources */,
+				EC2AB2CB1F8893A400CDBC41 /* Duck-quacking animals038.wav in Resources */,
+				EC2AB2CC1F8893A400CDBC41 /* Elephant-angry animals035.wav in Resources */,
+				EC2AB2CD1F8893A400CDBC41 /* Gorilla growl animals028.wav in Resources */,
+				EC2AB2CE1F8893A400CDBC41 /* Hawk animals083.wav in Resources */,
+				EC2AB2CF1F8893A400CDBC41 /* Leopard growl animals089.wav in Resources */,
+				EC2AB2D01F8893A400CDBC41 /* Lion roar animals031.wav in Resources */,
+				EC2AB2D11F8893A400CDBC41 /* Peacock animals018.wav in Resources */,
+				EC2AB2D21F8893A400CDBC41 /* Peacock animals019.wav in Resources */,
+				EC2AB2D31F8893A400CDBC41 /* porcupine.mp3 in Resources */,
+				EC2AB2D41F8893A400CDBC41 /* Rhinoceros animals134.wav in Resources */,
+				EC2AB2D51F8893A400CDBC41 /* Seagulls animals133.wav in Resources */,
+				EC2AB2D61F8893A400CDBC41 /* Sheep - ewe animals112.wav in Resources */,
+				EC2AB2D81F8893A400CDBC41 /* lion-01.wav in Resources */,
+				EC072B0F1F834FF200CDF5F0 /* animals.json in Resources */,
+				EC5B77821F831517003CB235 /* LaunchScreen.storyboard in Resources */,
+				EC5B777F1F831517003CB235 /* Assets.xcassets in Resources */,
+				EC5B777D1F831517003CB235 /* Main.storyboard in Resources */,
+				EC072B0D1F832BEB00CDF5F0 /* items.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC5B77701F831517003CB235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5B777A1F831517003CB235 /* ViewController.swift in Sources */,
+				EC5B778A1F831684003CB235 /* Gallery.swift in Sources */,
+				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC5B777B1F831517003CB235 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC5B777C1F831517003CB235 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC5B77801F831517003CB235 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC5B77811F831517003CB235 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC5B77841F831517003CB235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC5B77851F831517003CB235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC5B77871F831517003CB235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalSounds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.AnimalSounds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC5B77881F831517003CB235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalSounds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.AnimalSounds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC5B776F1F831517003CB235 /* Build configuration list for PBXProject "AnimalSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5B77841F831517003CB235 /* Debug */,
+				EC5B77851F831517003CB235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC5B77861F831517003CB235 /* Build configuration list for PBXNativeTarget "AnimalSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5B77871F831517003CB235 /* Debug */,
+				EC5B77881F831517003CB235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC5B776C1F831517003CB235 /* Project object */;
+}
