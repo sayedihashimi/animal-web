@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,19 +56,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-L6-OWR">
-                                            <rect key="frame" x="122" y="7" width="130" height="37"/>
+                                            <rect key="frame" x="130" y="15.5" width="114" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="top" secondItem="kdm-sy-rB4" secondAttribute="topMargin" constant="7" id="LPX-PR-Ueb"/>
-                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="leading" secondItem="kdm-sy-rB4" secondAttribute="leadingMargin" constant="122" id="OlG-AI-wua"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Dqz-L6-OWR" secondAttribute="trailing" constant="123" id="e12-bo-82i"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Dqz-L6-OWR" secondAttribute="bottom" constant="6" id="gu6-Zt-zpR"/>
-                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerX" secondItem="kdm-sy-rB4" secondAttribute="centerX" id="irK-zZ-d4M"/>
-                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="oX6-Y2-fVe"/>
+                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="ZY3-9m-Qos"/>
+                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerX" secondItem="kdm-sy-rB4" secondAttribute="centerX" id="oIy-uf-SLg"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="commentLabel" destination="Dqz-L6-OWR" id="OSn-Vc-Xb5"/>

@@ -17,6 +17,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
         initGalleryItems()
@@ -77,7 +78,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             print(error)
         }
     }
-    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        flowLayout.invalidateLayout()
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return galleryItems.count
         return animalItems.count
@@ -96,7 +104,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         //cell.setGalleryItem(galleryItems[indexPath.row])
         cell.setAnimal(animalItems[indexPath.row].imageFull)
-        cell.backgroundColor = UIColor.red
         
         return cell
     }
@@ -130,15 +137,43 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // let picDimension = self.view.frame.size.width / 4.0
         // TODO: Revisit this
         
-        var targetWidth = self.view.frame.size.width
-        if(targetWidth > 300){
-            targetWidth = self.view.frame.size.width / 2.0
+        let devSize = self.view.frame.size
+        var numColumns = 1
+        
+        let imgname = animalItems[indexPath.row].imageFull
+        
+        
+        /*
+        if(devSize.width > 500 ){
+            numColumns = 2
+        }
+        */
+        
+        // assume landscape
+        // var longSideLength = self.view.frame.size.width > self.view.frame.size.height ? self.view.frame.size.width : self.view.frame.size.height
+        
+        if let currentImg = UIImage(named: imgname) {
+            if(Float(currentImg.size.height) > Float(currentImg.size.width)){
+                // set size based on height
+                var imgHeight2 = self.view.frame.size.height
+                var imgWidth2 = imgHeight2 * (currentImg.size.height/currentImg.size.height)
+                return CGSize(width:imgWidth2, height: imgHeight2)
+            } else {
+                // set size based on width
+                var imgWidth3 = self.view.frame.size.width
+                var imgHeight3 = imgWidth3 * (currentImg.size.height/currentImg.size.width)
+                return CGSize(width:imgWidth3, height: imgHeight3)
+            }
         }
         
-        return CGSize(width: self.view.frame.size.width, height: 200)
+        
+        let imgHeight = (devSize.height) / CGFloat(numColumns)
+        let imgWidth = imgHeight * (devSize.width/devSize.height) //(devSize.width)/CGFloat(numColumns)
+        
+        return CGSize(width:imgWidth, height: imgHeight)
+        // return CGSize(width: self.view.frame.size.width, height: (self.view.frame.size.width/2))
         
         // return CGSize(width:targetWidth, height: targetWidth)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -146,5 +181,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // let leftRightInset: CGFloat = 1.0
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
+    
+    
 }
 
