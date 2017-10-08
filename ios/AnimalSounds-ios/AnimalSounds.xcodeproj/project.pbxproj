@@ -48,6 +48,7 @@
 /* Begin PBXFileReference section */
 		EC072B0C1F832BEB00CDF5F0 /* items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
 		EC072B0E1F834FF200CDF5F0 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
+		EC2747961F89DC1A004E63A7 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "appicon/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
 		EC2A3A341F898A9700BF7922 /* alpaca.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = alpaca.wav; path = media/alpaca.wav; sourceTree = SOURCE_ROOT; };
 		EC2AB2B71F888FA700CDBC41 /* Peacock animals019.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Peacock animals019.wav"; sourceTree = "<group>"; };
 		EC2AB2B81F888FA700CDBC41 /* Capuchin monkey animals075.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Capuchin monkey animals075.wav"; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				EC2747961F89DC1A004E63A7 /* Icon-60@2x.png */,
 				EC2A3A341F898A9700BF7922 /* alpaca.wav */,
 				ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */,
 				ECBAE2471F892CC500D33CEF /* Cow animals055.wav */,
@@ -411,7 +413,7 @@
 				INFOPLIST_FILE = AnimalSounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.AnimalSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.sonyaapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,7 +429,7 @@
 				INFOPLIST_FILE = AnimalSounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.AnimalSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.sonyaapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
