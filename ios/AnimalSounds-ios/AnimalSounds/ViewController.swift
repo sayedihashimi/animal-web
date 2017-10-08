@@ -11,7 +11,6 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    var galleryItems: [GalleryItem] = []
     var animalItems: [Animal] = []
     @IBOutlet var collectionView: UICollectionView!
     
@@ -20,28 +19,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
-        initGalleryItems()
         initAnimals()
         collectionView.reloadData()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-    }
-    
-    fileprivate func initGalleryItems() {
-        
-        var items = [GalleryItem]()
-        let inputFile = Bundle.main.path(forResource: "items", ofType: "plist")
-        
-        let inputDataArray = NSArray(contentsOfFile: inputFile!)
-        
-        for inputItem in inputDataArray as! [Dictionary<String, String>] {
-            let galleryItem = GalleryItem(dataDictionary: inputItem)
-            items.append(galleryItem)
-        }
-        
-        galleryItems = items
     }
     
     fileprivate func initAnimals() {
@@ -87,7 +70,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         flowLayout.invalidateLayout()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return galleryItems.count
         return animalItems.count
     }
     
@@ -102,7 +84,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryItemCollectionViewCell", for: indexPath) as! GalleryItemCollectionViewCell
 
-        //cell.setGalleryItem(galleryItems[indexPath.row])
         cell.setAnimal(animalItems[indexPath.row].imageFull)
         
         return cell

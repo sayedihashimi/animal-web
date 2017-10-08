@@ -26,6 +26,7 @@
 		EC2AB2D51F8893A400CDBC41 /* Seagulls animals133.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2B91F888FA700CDBC41 /* Seagulls animals133.wav */; };
 		EC2AB2D61F8893A400CDBC41 /* Sheep - ewe animals112.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BB1F888FA800CDBC41 /* Sheep - ewe animals112.wav */; };
 		EC2AB2D81F8893A400CDBC41 /* lion-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C51F888FAB00CDBC41 /* lion-01.wav */; };
+		EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */; };
 		EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77771F831517003CB235 /* AppDelegate.swift */; };
 		EC5B777A1F831517003CB235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77791F831517003CB235 /* ViewController.swift */; };
 		EC5B777D1F831517003CB235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B777B1F831517003CB235 /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		EC2AB2C51F888FAB00CDBC41 /* lion-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "lion-01.wav"; sourceTree = "<group>"; };
 		EC2AB2C61F888FAB00CDBC41 /* Leopard growl animals089.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Leopard growl animals089.wav"; sourceTree = "<group>"; };
 		EC2AB2C71F888FAC00CDBC41 /* Cat meow animals021.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cat meow animals021.wav"; sourceTree = "<group>"; };
+		EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 		EC5B77741F831517003CB235 /* AnimalSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B77771F831517003CB235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B77791F831517003CB235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				EC5B77891F831684003CB235 /* Gallery.swift */,
 				EC072B0C1F832BEB00CDF5F0 /* items.plist */,
 				EC072B0E1F834FF200CDF5F0 /* animals.json */,
+				EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */,
 			);
 			path = AnimalSounds;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5B777A1F831517003CB235 /* ViewController.swift in Sources */,
+				EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */,
 				EC5B778A1F831684003CB235 /* Gallery.swift in Sources */,
 				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
 			);
