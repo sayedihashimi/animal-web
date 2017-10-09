@@ -117,7 +117,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let devSize = self.view.frame.size
-        var numColumns = 1
+        let numColumns = 1
         
         let imgname = animalItems[indexPath.row].imageFull
 
