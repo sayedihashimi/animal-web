@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -109,17 +114,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcY-eo-m4P">
-                                <rect key="frame" x="137" y="323" width="101" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVT-88-SK0">
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kom-B3-wH8">
+                                    <size key="itemSize" width="300" height="300"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NumbersItemCollectionViewCell" id="jiO-XF-zgZ" customClass="NumbersItemCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-i2-A5J">
+                                                    <rect key="frame" x="30.5" y="-76.5" width="240.5" height="453.5"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="400"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="lMX-i2-A5J" firstAttribute="centerX" secondItem="jiO-XF-zgZ" secondAttribute="centerX" id="UIO-WL-95B"/>
+                                            <constraint firstItem="lMX-i2-A5J" firstAttribute="centerY" secondItem="jiO-XF-zgZ" secondAttribute="centerY" id="h40-bh-htg"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="numberLabel" destination="lMX-i2-A5J" id="aqh-C2-r29"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="NumbersItemCommentView" id="5ko-lj-Fcn" customClass="NumbersItemCommentView" customModule="AnimalSounds" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAn-GE-XEW">
+                                            <rect key="frame" x="152.5" y="15" width="70" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gY-2a-us4">
+                                            <rect key="frame" x="321" y="10" width="54" height="30"/>
+                                            <state key="normal" title="Animals"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="C5T-fm-5QI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4gY-2a-us4" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="6YO-gM-sHt"/>
+                                        <constraint firstItem="jAn-GE-XEW" firstAttribute="centerX" secondItem="5ko-lj-Fcn" secondAttribute="centerX" id="SrC-tU-1yy"/>
+                                        <constraint firstItem="jAn-GE-XEW" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="bn9-B1-9yi"/>
+                                        <constraint firstAttribute="trailing" secondItem="4gY-2a-us4" secondAttribute="trailing" id="eOE-c5-vPX"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="commentLabel" destination="jAn-GE-XEW" id="DYP-qK-DUj"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZAB-Z0-SqK" id="Y0z-3b-Vhp"/>
+                                    <outlet property="delegate" destination="ZAB-Z0-SqK" id="xmC-Tf-BqW"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Keu-TL-cj1" firstAttribute="bottom" secondItem="PVT-88-SK0" secondAttribute="bottom" id="9De-po-6wJ"/>
+                            <constraint firstItem="Keu-TL-cj1" firstAttribute="trailing" secondItem="PVT-88-SK0" secondAttribute="trailing" id="9U8-Na-5PV"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="top" secondItem="Keu-TL-cj1" secondAttribute="top" constant="25" id="d3i-3e-uZA"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="leading" secondItem="Keu-TL-cj1" secondAttribute="leading" id="fJ4-5p-m09"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="trailing" secondItem="Keu-TL-cj1" secondAttribute="trailing" id="qZv-BM-5oD"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="leading" secondItem="Keu-TL-cj1" secondAttribute="leading" id="vMV-O0-V09"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="top" secondItem="Keu-TL-cj1" secondAttribute="top" constant="25" id="vtP-EW-NFl"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="bottom" secondItem="Keu-TL-cj1" secondAttribute="bottom" id="xAg-hZ-cz2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Keu-TL-cj1"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="PVT-88-SK0" id="7iw-Ta-MNP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fe-fl-Bj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

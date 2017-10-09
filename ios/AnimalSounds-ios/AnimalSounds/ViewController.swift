@@ -115,34 +115,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // let picDimension = self.view.frame.size.width / 4.0
-        // TODO: Revisit this
-        
+
         let devSize = self.view.frame.size
         var numColumns = 1
         
         let imgname = animalItems[indexPath.row].imageFull
-        
-        
-        /*
-        if(devSize.width > 500 ){
-            numColumns = 2
-        }
-        */
-        
+
         // assume landscape
-        // var longSideLength = self.view.frame.size.width > self.view.frame.size.height ? self.view.frame.size.width : self.view.frame.size.height
         
         if let currentImg = UIImage(named: imgname) {
             if(Float(currentImg.size.height) > Float(currentImg.size.width)){
                 // set size based on height
-                var imgHeight2 = self.view.frame.size.height
-                var imgWidth2 = imgHeight2 * (currentImg.size.height/currentImg.size.height)
+                let imgHeight2 = self.view.frame.size.height
+                let imgWidth2 = imgHeight2 * (currentImg.size.height/currentImg.size.height)
                 return CGSize(width:imgWidth2, height: imgHeight2)
             } else {
                 // set size based on width
-                var imgWidth3 = self.view.frame.size.width
-                var imgHeight3 = imgWidth3 * (currentImg.size.height/currentImg.size.width)
+                let imgWidth3 = self.view.frame.size.width
+                let imgHeight3 = imgWidth3 * (currentImg.size.height/currentImg.size.width)
                 return CGSize(width:imgWidth3, height: imgHeight3)
             }
         }
