@@ -19,11 +19,35 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         initItems()
+        
+        //RegisterSwipeToNavigate()
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         collectionView.reloadData()
     }
-    
+    func RegisterSwipeToNavigate() {
+        // swipe gesture
+        let swipeRightRec = UISwipeGestureRecognizer()
+        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeRightRec.direction = .right
+        collectionView.addGestureRecognizer(swipeRightRec)
+        self.view.addGestureRecognizer(swipeRightRec)
+        
+        let swipeLeftRec = UISwipeGestureRecognizer()
+        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeLeftRec.direction = .left
+        collectionView.addGestureRecognizer(swipeLeftRec)
+        self.view.addGestureRecognizer(swipeLeftRec)
+    }
+    @objc func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
+        print("swipped, direction: \(gestureRecognizer.direction)")
+        // let newViewController = NumbersViewController()
+        // self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "animalsViewController") as! ViewController
+        self.present(newViewController, animated: true, completion: nil)
+    }
     fileprivate func initItems() {
         for index in 0...10 {
             textItems.append(TextItem(displayText: String(index), speakText: String(index)))

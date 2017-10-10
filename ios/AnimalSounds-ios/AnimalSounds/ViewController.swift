@@ -20,9 +20,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
         initAnimals()
+        //RegisterSwipeToNavigate()
         collectionView.reloadData()
     }
     
+    func RegisterSwipeToNavigate() {
+        // swipe gesture
+        let swipeRightRec = UISwipeGestureRecognizer()
+        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeRightRec.direction = .right
+        collectionView.addGestureRecognizer(swipeRightRec)
+        self.view.addGestureRecognizer(swipeRightRec)
+        
+        let swipeLeftRec = UISwipeGestureRecognizer()
+        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeLeftRec.direction = .left
+        collectionView.addGestureRecognizer(swipeLeftRec)
+        self.view.addGestureRecognizer(swipeLeftRec)
+    }
+    @objc func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
+        print("swipped, direction: \(gestureRecognizer.direction)")
+        // let newViewController = NumbersViewController()
+        // self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "numbersViewController") as! NumbersViewController
+        self.present(newViewController, animated: true, completion: nil)
+    }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
