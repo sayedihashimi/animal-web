@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-Q1-cfx">
-                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hpV-nV-Lw7">
                                     <size key="itemSize" width="375" height="300"/>
@@ -96,7 +96,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WLf-Q1-cfx" secondAttribute="trailing" id="qc3-Tw-LYA"/>
                             <constraint firstItem="WLf-Q1-cfx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJV-zh-GAB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WLf-Q1-cfx" secondAttribute="bottom" id="tV0-2c-2LZ"/>
-                            <constraint firstItem="WLf-Q1-cfx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="ymv-5u-F9D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -116,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVT-88-SK0">
-                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kom-B3-wH8">
                                     <size key="itemSize" width="300" height="300"/>
@@ -132,8 +131,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-i2-A5J">
-                                                    <rect key="frame" x="-119.5" y="-20" width="540.5" height="340.5"/>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-i2-A5J">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                                     <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="300"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -141,8 +140,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="lMX-i2-A5J" firstAttribute="centerX" secondItem="jiO-XF-zgZ" secondAttribute="centerX" id="UIO-WL-95B"/>
-                                            <constraint firstItem="lMX-i2-A5J" firstAttribute="centerY" secondItem="jiO-XF-zgZ" secondAttribute="centerY" id="h40-bh-htg"/>
+                                            <constraint firstItem="lMX-i2-A5J" firstAttribute="top" secondItem="jiO-XF-zgZ" secondAttribute="top" id="UW7-SF-WdK"/>
+                                            <constraint firstItem="lMX-i2-A5J" firstAttribute="leading" secondItem="jiO-XF-zgZ" secondAttribute="leading" id="gMx-gO-rfU"/>
+                                            <constraint firstAttribute="trailing" secondItem="lMX-i2-A5J" secondAttribute="trailing" id="phq-uM-NGv"/>
+                                            <constraint firstAttribute="bottom" secondItem="lMX-i2-A5J" secondAttribute="bottom" id="xWj-G9-GS0"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="numberLabel" destination="lMX-i2-A5J" id="aqh-C2-r29"/>
@@ -187,11 +188,10 @@
                         <constraints>
                             <constraint firstItem="Keu-TL-cj1" firstAttribute="bottom" secondItem="PVT-88-SK0" secondAttribute="bottom" id="9De-po-6wJ"/>
                             <constraint firstItem="Keu-TL-cj1" firstAttribute="trailing" secondItem="PVT-88-SK0" secondAttribute="trailing" id="9U8-Na-5PV"/>
-                            <constraint firstItem="PVT-88-SK0" firstAttribute="top" secondItem="Keu-TL-cj1" secondAttribute="top" constant="25" id="d3i-3e-uZA"/>
                             <constraint firstItem="PVT-88-SK0" firstAttribute="leading" secondItem="Keu-TL-cj1" secondAttribute="leading" id="fJ4-5p-m09"/>
+                            <constraint firstItem="PVT-88-SK0" firstAttribute="top" secondItem="Keu-TL-cj1" secondAttribute="top" id="iFB-yA-OUP"/>
                             <constraint firstItem="PVT-88-SK0" firstAttribute="trailing" secondItem="Keu-TL-cj1" secondAttribute="trailing" id="qZv-BM-5oD"/>
                             <constraint firstItem="PVT-88-SK0" firstAttribute="leading" secondItem="Keu-TL-cj1" secondAttribute="leading" id="vMV-O0-V09"/>
-                            <constraint firstItem="PVT-88-SK0" firstAttribute="top" secondItem="Keu-TL-cj1" secondAttribute="top" constant="25" id="vtP-EW-NFl"/>
                             <constraint firstItem="PVT-88-SK0" firstAttribute="bottom" secondItem="Keu-TL-cj1" secondAttribute="bottom" id="xAg-hZ-cz2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Keu-TL-cj1"/>

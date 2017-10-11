@@ -25,6 +25,14 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         collectionView.reloadData()
     }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        flowLayout.invalidateLayout()
+    }
     func RegisterSwipeToNavigate() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
@@ -76,6 +84,18 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NumbersItemCollectionViewCell", for: indexPath) as! NumbersItemCollectionViewCell
         
         cell.setText(textItems[indexPath.row].displayText)
+        
+        if let label = cell.numberLabel {
+            label.isUserInteractionEnabled = true
+            label.tag = indexPath.row
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(itemTapped(tapGestureRecognizer:)))
+            label.addGestureRecognizer(tapGestureRecognizer)
+            
+            if(self.view.frame.size.width < 500 || self.view.frame.size.height < 500){
+                print("changing font size")
+                label.font = UIFont(name: label.font.fontName, size: 200)
+            }
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -87,12 +107,24 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         return commentView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         return self.view.frame.size
     }
+    
+    /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let myUtterance = AVSpeechUtterance(string: textItems[indexPath.row].speakText)
         synth.speak(myUtterance)
+    }
+    */
+    
+    @objc func itemTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        print("itemTapped", separator: "", terminator: "")
+        
+        if let label = tapGestureRecognizer.view as! UILabel! {
+            let myUtterance = AVSpeechUtterance(string: textItems[label.tag].speakText)
+            synth.speak(myUtterance)
+        }
     }
     /*
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {

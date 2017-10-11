@@ -110,8 +110,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         cell.setAnimal(animalItems[indexPath.row].imageFull)
         
+        if let imageView = cell.itemImageView {
+            imageView.tag = indexPath.row
+            imageView.isUserInteractionEnabled = true
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+        }
+        
         return cell
     }
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        print("imageTapped", separator: "", terminator: "")
+        
+        if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
+            playSound(name: animalItems[tappedImage.tag].audio)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "GalleryItemCommentView", for: indexPath) as! GalleryItemCommentView
@@ -120,10 +136,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return commentView
     }
+    /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("collection view item selected")
         playSound(name: animalItems[indexPath[1]].audio)
     }
-    
+    */
     
     var audioPlayer: AVAudioPlayer?
     func playSound(name: String) {
