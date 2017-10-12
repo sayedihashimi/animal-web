@@ -1,5 +1,23 @@
  [
   {
+  "Name": "zebra",
+  "ImageFull": "zebra",
+  "Image": "zebra-200",
+  "Audio": "zebra"
+  },
+  {
+  "Name": "whale",
+  "ImageFull": "whale",
+  "Image": "whale-200",
+  "Audio": "whale"
+  },
+  {
+  "Name": "hippo",
+  "ImageFull": "hippo",
+  "Image": "hippo-200",
+  "Audio": "hippo"
+  },
+  {
   "Name": "lion",
   "ImageFull": "African_Lion_3",
   "Image": "African_Lion_3-200",
@@ -139,8 +157,8 @@
   },
   {
   "Name": "porcupine",
-  "ImageFull": "porcupine",
-  "Image": "porcupine-200",
+  "ImageFull": "porcupine2",
+  "Image": "porcupine2-200",
   "Audio": "porcupine"
   }
   
