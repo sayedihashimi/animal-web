@@ -18,27 +18,43 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
         
         initAnimals()
-        //RegisterSwipeToNavigate()
+        registerSwipeToPlay()
+        //registerSwipeToNavigate()
         collectionView.reloadData()
     }
     
-    func RegisterSwipeToNavigate() {
+    func registerSwipeToNavigate() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
-        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeRightRec.addTarget(self, action: #selector(self.handleSwipeToNavigate))
         swipeRightRec.direction = .right
         collectionView.addGestureRecognizer(swipeRightRec)
         self.view.addGestureRecognizer(swipeRightRec)
         
         let swipeLeftRec = UISwipeGestureRecognizer()
-        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipeToNavigate))
         swipeLeftRec.direction = .left
         collectionView.addGestureRecognizer(swipeLeftRec)
         self.view.addGestureRecognizer(swipeLeftRec)
     }
-    @objc func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
+    func registerSwipeToPlay() {
+        // swipe gesture
+        let swipeRightRec = UISwipeGestureRecognizer()
+        swipeRightRec.addTarget(self, action: #selector(self.handleSwipeToPlay))
+        swipeRightRec.direction = .right
+        collectionView.addGestureRecognizer(swipeRightRec)
+        self.view.addGestureRecognizer(swipeRightRec)
+        
+        let swipeLeftRec = UISwipeGestureRecognizer()
+        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipeToPlay))
+        swipeLeftRec.direction = .left
+        collectionView.addGestureRecognizer(swipeLeftRec)
+        self.view.addGestureRecognizer(swipeLeftRec)
+    }
+    @objc func handleSwipeToNavigate(gestureRecognizer: UISwipeGestureRecognizer) {
         print("swipped, direction: \(gestureRecognizer.direction)")
         // let newViewController = NumbersViewController()
         // self.navigationController?.pushViewController(newViewController, animated: true)
@@ -46,6 +62,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "numbersViewController") as! NumbersViewController
         self.present(newViewController, animated: true, completion: nil)
+    }
+    @objc func handleSwipeToPlay(gestureRecognizer: UISwipeGestureRecognizer) {
+        let touchpoint = gestureRecognizer.location(ofTouch: 0, in: collectionView)
+        if let item = collectionView.indexPathForItem(at: touchpoint) {
+            playSound(name: animalItems[item.row].audio)
+        }
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -121,8 +143,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        print("imageTapped", separator: "", terminator: "")
-        
         if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
             playSound(name: animalItems[tappedImage.tag].audio)
         }

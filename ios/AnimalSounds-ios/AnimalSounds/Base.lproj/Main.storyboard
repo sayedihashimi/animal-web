@@ -67,8 +67,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCP-yP-vHc">
-                                            <rect key="frame" x="312" y="10" width="63" height="30"/>
-                                            <state key="normal" title="Numbers"/>
+                                            <rect key="frame" x="264" y="10" width="111" height="30"/>
+                                            <state key="normal" title="Numbers &amp; ABC"/>
                                             <connections>
                                                 <segue destination="ZAB-Z0-SqK" kind="show" id="uHN-3u-P5r"/>
                                             </connections>

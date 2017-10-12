@@ -19,8 +19,10 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         initItems()
-        
-        //RegisterSwipeToNavigate()
+        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+
+        //registerSwipeToNavigate()
+        registerSwipeToSpeak()
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         collectionView.reloadData()
@@ -33,21 +35,41 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         flowLayout.invalidateLayout()
     }
-    func RegisterSwipeToNavigate() {
+    func registerSwipeToNavigate() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
-        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeRightRec.addTarget(self, action: #selector(self.handleSwipeToNavigate))
         swipeRightRec.direction = .right
         collectionView.addGestureRecognizer(swipeRightRec)
         self.view.addGestureRecognizer(swipeRightRec)
         
         let swipeLeftRec = UISwipeGestureRecognizer()
-        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
+        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipeToNavigate))
         swipeLeftRec.direction = .left
         collectionView.addGestureRecognizer(swipeLeftRec)
         self.view.addGestureRecognizer(swipeLeftRec)
     }
-    @objc func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
+    func registerSwipeToSpeak() {
+        // swipe gesture
+        let swipeRightRec = UISwipeGestureRecognizer()
+        swipeRightRec.addTarget(self, action: #selector(self.handleSwipeToSpeak))
+        swipeRightRec.direction = .right
+        collectionView.addGestureRecognizer(swipeRightRec)
+        self.view.addGestureRecognizer(swipeRightRec)
+        
+        let swipeLeftRec = UISwipeGestureRecognizer()
+        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipeToSpeak))
+        swipeLeftRec.direction = .left
+        collectionView.addGestureRecognizer(swipeLeftRec)
+        self.view.addGestureRecognizer(swipeLeftRec)
+    }
+    @objc func handleSwipeToSpeak(gestureRecognizer: UISwipeGestureRecognizer) {
+        let touchpoint = gestureRecognizer.location(ofTouch: 0, in: collectionView)
+        if let item = collectionView.indexPathForItem(at: touchpoint) {
+            sayText(text: textItems[item.row].speakText)
+        }
+    }
+    @objc func handleSwipeToNavigate(gestureRecognizer: UISwipeGestureRecognizer) {
         print("swipped, direction: \(gestureRecognizer.direction)")
         // let newViewController = NumbersViewController()
         // self.navigationController?.pushViewController(newViewController, animated: true)
@@ -122,10 +144,15 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         print("itemTapped", separator: "", terminator: "")
         
         if let label = tapGestureRecognizer.view as! UILabel! {
-            let myUtterance = AVSpeechUtterance(string: textItems[label.tag].speakText)
-            synth.speak(myUtterance)
+            sayText(text: textItems[label.tag].speakText)
         }
     }
+    
+    fileprivate func sayText(text: String){
+        let myUtterance = AVSpeechUtterance(string: text)
+        synth.speak(myUtterance)
+    }
+    
     /*
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         print("scrollViewDidEndDragging ", separator: "", terminator: "")
