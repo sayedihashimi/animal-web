@@ -48,6 +48,9 @@
 		ECBAE2501F892CEC00D33CEF /* porcupine.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2431F892CC500D33CEF /* porcupine.wav */; };
 		ECBAE2511F892CEC00D33CEF /* Rattlesnake  animals077.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2421F892CC400D33CEF /* Rattlesnake  animals077.wav */; };
 		ECBAE2521F892CEC00D33CEF /* Rooster animals070.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2441F892CC500D33CEF /* Rooster animals070.wav */; };
+		ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECD74E941F9068EB00E012A0 /* Settings.bundle */; };
+		ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */; };
+		ECD74E9D1F907E5D00E012A0 /* animal.names.hindi.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD74E9C1F907E5200E012A0 /* animal.names.hindi.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		ECBAE2451F892CC500D33CEF /* Pig squeal animals024.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig squeal animals024.wav"; sourceTree = "<group>"; };
 		ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bird chirps animals140.wav"; sourceTree = "<group>"; };
 		ECBAE2471F892CC500D33CEF /* Cow animals055.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cow animals055.wav"; sourceTree = "<group>"; };
+		ECD74E941F9068EB00E012A0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		ECD74E9C1F907E5200E012A0 /* animal.names.hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animal.names.hindi.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 			children = (
 				EC2AB2B61F888F9000CDBC41 /* media */,
 				EC5B77771F831517003CB235 /* AppDelegate.swift */,
+				ECD74E9C1F907E5200E012A0 /* animal.names.hindi.json */,
 				EC5B77791F831517003CB235 /* ViewController.swift */,
 				EC5B777B1F831517003CB235 /* Main.storyboard */,
 				EC5B777E1F831517003CB235 /* Assets.xcassets */,
@@ -178,6 +185,8 @@
 				EC072B0E1F834FF200CDF5F0 /* animals.json */,
 				EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */,
 				EC249E921F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift */,
+				ECD74E941F9068EB00E012A0 /* Settings.bundle */,
+				ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */,
 			);
 			path = AnimalSounds;
 			sourceTree = "<group>";
@@ -241,6 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD74E9D1F907E5D00E012A0 /* animal.names.hindi.json in Resources */,
+				ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */,
 				ECA382C51F8F1AE000212BBA /* hippo.wav in Resources */,
 				ECA382C71F8F1AE000212BBA /* whale.wav in Resources */,
 				ECA382C91F8F1AE000212BBA /* zebra.wav in Resources */,
@@ -291,6 +302,7 @@
 				EC5B777A1F831517003CB235 /* ViewController.swift in Sources */,
 				EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */,
 				EC5B778A1F831684003CB235 /* Gallery.swift in Sources */,
+				ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */,
 				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

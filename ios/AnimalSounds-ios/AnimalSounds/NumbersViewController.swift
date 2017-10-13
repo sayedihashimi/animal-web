@@ -15,9 +15,14 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet var collectionView: UICollectionView!
     let synth = AVSpeechSynthesizer()
     var textItems: [TextItem] = []
-    
+    var voiceName: String = "Samantha (Enhanced)"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerSettingsBundle()
+        NotificationCenter.default.addObserver(self, selector: #selector(NumbersViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        defaultsChanged()
+        
         initItems()
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
 
@@ -90,6 +95,17 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
     
+    func registerSettingsBundle() {
+        let appDefaults = [String:AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
+    
+    @objc func defaultsChanged() {
+        if let voiceSettingValue =  UserDefaults.standard.string(forKey: SettingsBundleHelper.SettingsBundleKeys.Language) {
+            self.voiceName = voiceSettingValue
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return textItems.count
     }
@@ -150,9 +166,23 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     
     fileprivate func sayText(text: String){
         let myUtterance = AVSpeechUtterance(string: text)
+        // if let voice = getVoice(forName: voiceName) {
+        //    myUtterance.voice = voice
+        // }
         synth.speak(myUtterance)
     }
     
+    func getVoice(forName name: String) -> AVSpeechSynthesisVoice? {
+        for voice in AVSpeechSynthesisVoice.speechVoices() {
+            if #available(iOS 9.0, *) {
+                if voice.name == name {
+                    return voice
+                }
+            }
+        }
+        
+        return nil
+    }
     /*
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         print("scrollViewDidEndDragging ", separator: "", terminator: "")
