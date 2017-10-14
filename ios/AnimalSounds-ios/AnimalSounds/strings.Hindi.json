@@ -1,0 +1,45 @@
+{
+    "settings": {
+        "voiceName": "Lekha",
+        "language": "hi-IN"
+    },
+    "translations": {
+        "zebra": "",
+        "whale": "",
+        "hippo": "",
+        "lion": "",
+        "bee": "",
+        "elephant": "",
+        "monkey": "",
+        "duck": "",
+        "rooster": "",
+        "dog": "",
+        "cat": "",
+        "bird": "",
+        "cow": "",
+        "horse": "",
+        "geese": "",
+        "pig": "",
+        "raven": "",
+        "owl": "",
+        "snake": "",
+        "sheep": "",
+        "peacock": "",
+        "seagull": "",
+        "gorilla": "",
+        "hawk": "",
+        "leopard": "",
+        "rhino": "",
+        "porcupine": "",
+
+        "circle":"",
+        "square":"",
+        "rectangle":"",
+        "triangle":"",
+        "oval":"",
+        "rhombus":"",
+        "star":"",
+        "octogon":"",
+        "heart":""
+    }
+}

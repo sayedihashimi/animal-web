@@ -1,5 +1,12 @@
  [
   {
+  "Id": "lion",
+  "Name": "lion",
+  "ImageFull": "African_Lion_3",
+  "Image": "African_Lion_3-200",
+  "Audio": "lion-01"
+  },
+  {
   "Id": "zebra",
   "Name": "zebra",
   "ImageFull": "zebra",
@@ -21,18 +28,18 @@
   "Audio": "hippo"
   },
   {
-  "Id": "lion",
-  "Name": "lion",
-  "ImageFull": "African_Lion_3",
-  "Image": "African_Lion_3-200",
-  "Audio": "lion-01"
-  },
-  {
   "Id": "bee",
   "Name": "bee",
   "ImageFull": "bee-1584981_960_720",
   "Image": "bee-1584981_960_720-200",
   "Audio": "Bee buzzing animals131"
+  },
+  {
+  "Id": "bear",
+  "Name": "bear",
+  "ImageFull": "brown-bear",
+  "Image": "brown-bear-200",
+  "Audio": "brown-bear"
   },
   {
   "Id": "elephant",

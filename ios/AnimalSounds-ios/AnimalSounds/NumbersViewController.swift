@@ -16,14 +16,13 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     let synth = AVSpeechSynthesizer()
     var textItems: [TextItem] = []
     var voiceName: String = "Samantha (Enhanced)"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerSettingsBundle()
-        NotificationCenter.default.addObserver(self, selector: #selector(NumbersViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
-        defaultsChanged()
-        
+        initSettings()
         initItems()
+        
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
 
         //registerSwipeToNavigate()
@@ -40,6 +39,13 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         flowLayout.invalidateLayout()
     }
+    
+    func initSettings() {
+        registerSettingsBundle()
+        NotificationCenter.default.addObserver(self, selector: #selector(NumbersViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        defaultsChanged()
+    }
+    
     func registerSwipeToNavigate() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
@@ -130,12 +136,12 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
             label.addGestureRecognizer(tapGestureRecognizer)
             
             if(self.view.frame.size.width < 500 || self.view.frame.size.height < 500){
-                print("changing font size")
                 label.font = UIFont(name: label.font.fontName, size: 200)
             }
         }
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "NumbersItemCommentView", for: indexPath) as! NumbersItemCommentView
@@ -144,16 +150,10 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         return commentView
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.view.frame.size
     }
-    
-    /*
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let myUtterance = AVSpeechUtterance(string: textItems[indexPath.row].speakText)
-        synth.speak(myUtterance)
-    }
-    */
     
     @objc func itemTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
@@ -166,9 +166,9 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     
     fileprivate func sayText(text: String){
         let myUtterance = AVSpeechUtterance(string: text)
-        // if let voice = getVoice(forName: voiceName) {
-        //    myUtterance.voice = voice
-        // }
+        if let voice = getVoice(forName: voiceName) {
+           myUtterance.voice = voice
+        }
         synth.speak(myUtterance)
     }
     
