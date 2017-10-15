@@ -128,6 +128,13 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        var sizeValues = [self.view.frame.size.height,self.view.frame.size.width]
+        
+        var width = sizeValues.max()
+        var height = sizeValues.min()
+        
+        return CGSize(width: width!, height: height!)
+        /*
         let devSize = self.view.frame.size
         let numColumns = 1
         
@@ -154,5 +161,6 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
         let imgWidth = imgHeight * (devSize.width/devSize.height)
         
         return CGSize(width:imgWidth, height: imgHeight)
+        */
     }
 }

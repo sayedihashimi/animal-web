@@ -2,46 +2,94 @@
     {
         "id": "triangle",
         "name": "triangle",
-        "image": "triangle"
+        "image": "s01-triangle"
     },
     {
         "id": "square",
         "name": "square",
-        "image": "square"
+        "image": "s01-square"
     },
     {
         "id": "rectangle",
         "name": "rectangle",
-        "image": "rectangle"
+        "image": "s01-rectangle"
     },
     {
         "id": "circle",
         "name": "circle",
-        "image": "circle"
+        "image": "s01-circle"
     },
     {
         "id": "oval",
         "name": "oval",
-        "image": "oval"
+        "image": "s01-oval"
     },
     {
         "id": "rhombus",
         "name": "rhombus",
-        "image": "rhombus"
+        "image": "s01-rhombus"
     },
     {
         "id": "heart",
         "name": "heart",
-        "image": "heart"
+        "image": "s01-heart"
     },
     {
         "id": "octogon",
         "name": "octogon",
-        "image": "octogon"
+        "image": "s01-octogon"
     },
     {
         "id": "star",
         "name": "star",
-        "image": "star"
+        "image": "s01-star"
+    },
+
+
+
+    {
+        "id": "s02-triangle",
+        "name": "triangle",
+        "image": "s02-triangle"
+    },
+    {
+        "id": "s02-square",
+        "name": "square",
+        "image": "s02-square"
+    },
+    {
+        "id": "s02-rectangle",
+        "name": "rectangle",
+        "image": "s02-rectangle"
+    },
+    {
+        "id": "s02-circle",
+        "name": "circle",
+        "image": "s02-circle"
+    },
+    {
+        "id": "s02-oval",
+        "name": "oval",
+        "image": "s02-oval"
+    },
+    {
+        "id": "s02-rhombus",
+        "name": "rhombus",
+        "image": "s02-rhombus"
+    },
+    {
+        "id": "s02-heart",
+        "name": "heart",
+        "image": "s02-heart"
+    },
+    {
+        "id": "s02-octogon",
+        "name": "octogon",
+        "image": "s02-octogon"
+    },
+    {
+        "id": "s02-star",
+        "name": "star",
+        "image": "s02-star"
     }
 ]
