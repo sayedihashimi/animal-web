@@ -283,8 +283,11 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-Je-zTR">
-                                            <rect key="frame" x="0.0" y="10" width="63" height="30"/>
-                                            <state key="normal" title="Numbers"/>
+                                            <rect key="frame" x="0.0" y="10" width="60" height="30"/>
+                                            <state key="normal" title="123/ABC"/>
+                                            <connections>
+                                                <segue destination="ZAB-Z0-SqK" kind="show" id="IEy-Zs-Xpn"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -325,6 +328,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="c2D-x4-cGv"/>
+        <segue reference="IEy-Zs-Xpn"/>
         <segue reference="Tsv-Vh-Nnj"/>
     </inferredMetricsTieBreakers>
 </document>

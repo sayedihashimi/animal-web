@@ -16,6 +16,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     let synth = AVSpeechSynthesizer()
     var textItems: [TextItem] = []
     var voiceName: String = "Samantha"
+    var maxNumber = 25
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +91,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         self.present(newViewController, animated: true, completion: nil)
     }
     fileprivate func initItems() {
-        for index in 0...10 {
+        for index in 0...self.maxNumber {
             textItems.append(TextItem(displayText: String(index), speakText: String(index)))
         }
         
@@ -110,6 +111,8 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         if let voiceSettingValue =  UserDefaults.standard.string(forKey: SettingsBundleHelper.SettingsBundleKeys.Language) {
             self.voiceName = voiceSettingValue
         }
+        let maxnumvalue = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.MaxNumber)
+        self.maxNumber = maxnumvalue
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -13,5 +13,6 @@ class SettingsBundleHelper {
         static let Language = "SONYA_LANGUAGE"
         static let PlayAnimalSound = "SONYA_SAY_ANIMAL_NAME"
         static let SayAnimalName = "SONYA_PLAY_ANIMAL_SOUND"
+        static let MaxNumber = "SONYA_MAX_NUMBER"
     }
 }
