@@ -1,0 +1,47 @@
+[
+    {
+        "id": "triangle",
+        "name": "triangle",
+        "image": "triangle"
+    },
+    {
+        "id": "square",
+        "name": "square",
+        "image": "square"
+    },
+    {
+        "id": "rectangle",
+        "name": "rectangle",
+        "image": "rectangle"
+    },
+    {
+        "id": "circle",
+        "name": "circle",
+        "image": "circle"
+    },
+    {
+        "id": "oval",
+        "name": "oval",
+        "image": "oval"
+    },
+    {
+        "id": "rhombus",
+        "name": "rhombus",
+        "image": "rhombus"
+    },
+    {
+        "id": "heart",
+        "name": "heart",
+        "image": "heart"
+    },
+    {
+        "id": "octogon",
+        "name": "octogon",
+        "image": "octogon"
+    },
+    {
+        "id": "star",
+        "name": "star",
+        "image": "star"
+    }
+]

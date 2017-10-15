@@ -201,12 +201,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         let imgHeight = (devSize.height) / CGFloat(numColumns)
-        let imgWidth = imgHeight * (devSize.width/devSize.height) //(devSize.width)/CGFloat(numColumns)
+        let imgWidth = imgHeight * (devSize.width/devSize.height)
         
         return CGSize(width:imgWidth, height: imgHeight)
-        // return CGSize(width: self.view.frame.size.width, height: (self.view.frame.size.width/2))
-        
-        // return CGSize(width:targetWidth, height: targetWidth)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

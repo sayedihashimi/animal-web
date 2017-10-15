@@ -35,10 +35,14 @@
 		EC5B777F1F831517003CB235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B777E1F831517003CB235 /* Assets.xcassets */; };
 		EC5B77821F831517003CB235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B77801F831517003CB235 /* LaunchScreen.storyboard */; };
 		EC5B778A1F831684003CB235 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77891F831684003CB235 /* Gallery.swift */; };
+		EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */; };
+		EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */ = {isa = PBXBuildFile; fileRef = EC7A21FC1F92E3A50062E04E /* shapes.json */; };
+		EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FE1F92E3D70062E04E /* DataItem.swift */; };
 		EC9639DE1F92654900B6204D /* brown-bear.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC9639DD1F92654100B6204D /* brown-bear.wav */; };
 		ECA382C51F8F1AE000212BBA /* hippo.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382C31F8F1ACD00212BBA /* hippo.wav */; };
 		ECA382C71F8F1AE000212BBA /* whale.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382BE1F8F1ACD00212BBA /* whale.wav */; };
 		ECA382C91F8F1AE000212BBA /* zebra.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382C01F8F1ACD00212BBA /* zebra.wav */; };
+		ECA84D351F92EE6000803C67 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA84D341F92EE6000803C67 /* Shape.swift */; };
 		ECBAE2481F892CEC00D33CEF /* Bird chirps animals140.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */; };
 		ECBAE2491F892CEC00D33CEF /* Cow animals055.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2471F892CC500D33CEF /* Cow animals055.wav */; };
 		ECBAE24A1F892CEC00D33CEF /* Crow caw animals063.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */; };
@@ -86,10 +90,14 @@
 		EC5B77811F831517003CB235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5B77831F831517003CB235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5B77891F831684003CB235 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
+		EC7A21FC1F92E3A50062E04E /* shapes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shapes.json; sourceTree = "<group>"; };
+		EC7A21FE1F92E3D70062E04E /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		EC9639DD1F92654100B6204D /* brown-bear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "brown-bear.wav"; sourceTree = "<group>"; };
 		ECA382BE1F8F1ACD00212BBA /* whale.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = whale.wav; path = media/whale.wav; sourceTree = SOURCE_ROOT; };
 		ECA382C01F8F1ACD00212BBA /* zebra.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = zebra.wav; path = media/zebra.wav; sourceTree = SOURCE_ROOT; };
 		ECA382C31F8F1ACD00212BBA /* hippo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hippo.wav; path = media/hippo.wav; sourceTree = SOURCE_ROOT; };
+		ECA84D341F92EE6000803C67 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		ECBAE23D1F892CC400D33CEF /* Horse whinny animals126.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Horse whinny animals126.wav"; sourceTree = "<group>"; };
 		ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Crow caw animals063.wav"; sourceTree = "<group>"; };
 		ECBAE23F1F892CC400D33CEF /* owl animals074.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "owl animals074.wav"; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 				EC5B777B1F831517003CB235 /* Main.storyboard */,
 				EC5B777E1F831517003CB235 /* Assets.xcassets */,
 				EC5B77801F831517003CB235 /* LaunchScreen.storyboard */,
+				EC7A21FC1F92E3A50062E04E /* shapes.json */,
 				EC5B77831F831517003CB235 /* Info.plist */,
 				EC5B77891F831684003CB235 /* Gallery.swift */,
 				EC072B0C1F832BEB00CDF5F0 /* items.plist */,
@@ -190,6 +199,9 @@
 				EC249E921F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift */,
 				ECD74E941F9068EB00E012A0 /* Settings.bundle */,
 				ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */,
+				EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */,
+				EC7A21FE1F92E3D70062E04E /* DataItem.swift */,
+				ECA84D341F92EE6000803C67 /* Shape.swift */,
 			);
 			path = AnimalSounds;
 			sourceTree = "<group>";
@@ -253,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */,
 				EC9639DE1F92654900B6204D /* brown-bear.wav in Resources */,
 				EC225A8A1F91730300AD0393 /* strings.Hindi.json in Resources */,
 				ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */,
@@ -304,10 +317,13 @@
 			files = (
 				EC249E931F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift in Sources */,
 				EC5B777A1F831517003CB235 /* ViewController.swift in Sources */,
+				EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */,
 				EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */,
+				ECA84D351F92EE6000803C67 /* Shape.swift in Sources */,
 				EC5B778A1F831684003CB235 /* Gallery.swift in Sources */,
 				ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */,
 				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
+				EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
