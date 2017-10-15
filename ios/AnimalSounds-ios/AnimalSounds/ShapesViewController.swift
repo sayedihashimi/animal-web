@@ -15,7 +15,8 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet var collectionView: UICollectionView!
     let synth = AVSpeechSynthesizer()
     var shapeItems: [DataItem] = []
-    var voiceName: String = "Samantha (Enhanced)"
+    var voiceName: String = "Samantha"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +69,53 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShapesCollectionViewCell", for: indexPath) as! ShapesCollectionViewCell
         cell.setImage(shapeItems[indexPath.row].image!)
+        cell.tag = indexPath.row
+        
+        if let imgView = cell.image {
+            imgView.isUserInteractionEnabled = true
+            imgView.tag = indexPath.row
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            imgView.addGestureRecognizer(tapGestureRecognizer)
+        }
+        
         return cell
     }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
+            sayText(text: shapeItems[tappedImage.tag].name)
+        }
+    }
+    func getVoice(forName name: String) -> AVSpeechSynthesisVoice? {
+        for voice in AVSpeechSynthesisVoice.speechVoices() {
+            if #available(iOS 9.0, *) {
+                if voice.name == name {
+                    return voice
+                }
+            }
+        }
+        
+        return nil
+    }
+    /*
+    func printAllVoices(){
+        for voice in AVSpeechSynthesisVoice.speechVoices() {
+            if #available(iOS 9.0, *) {
+                print("name:[\(voice.name)] language:[\(voice.language)] id:[\(voice.identifier)] ")
+            }
+        }
+    }
+    */
+    fileprivate func sayText(text: String){
+        let myUtterance = AVSpeechUtterance(string: text)
+        if let voice = getVoice(forName: voiceName) {
+            myUtterance.voice = voice
+        }
+        synth.speak(myUtterance)
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         

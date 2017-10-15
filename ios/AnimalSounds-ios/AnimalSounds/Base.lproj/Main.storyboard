@@ -178,9 +178,18 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="C5T-fm-5QI"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jla-hm-04s">
+                                            <rect key="frame" x="0.0" y="10" width="51" height="30"/>
+                                            <state key="normal" title="Shapes"/>
+                                            <connections>
+                                                <segue destination="uUO-u8-eia" kind="show" id="c2D-x4-cGv"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="jla-hm-04s" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="1AZ-zb-KUK"/>
                                         <constraint firstItem="4gY-2a-us4" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="6YO-gM-sHt"/>
+                                        <constraint firstItem="jla-hm-04s" firstAttribute="leading" secondItem="5ko-lj-Fcn" secondAttribute="leading" id="F7a-H4-km3"/>
                                         <constraint firstItem="jAn-GE-XEW" firstAttribute="centerX" secondItem="5ko-lj-Fcn" secondAttribute="centerX" id="SrC-tU-1yy"/>
                                         <constraint firstItem="jAn-GE-XEW" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="bn9-B1-9yi"/>
                                         <constraint firstAttribute="trailing" secondItem="4gY-2a-us4" secondAttribute="trailing" id="eOE-c5-vPX"/>
@@ -227,35 +236,29 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MrG-2m-MJg">
-                                    <size key="itemSize" width="300" height="300"/>
+                                    <size key="itemSize" width="375" height="300"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShapesCollectionViewCell" id="ghD-8R-Zv5" customClass="ShapesCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NvS-3N-at5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="NvS-3N-at5" firstAttribute="top" secondItem="ghD-8R-Zv5" secondAttribute="top" id="2R1-dE-RfK"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="NvS-3N-at5" secondAttribute="bottom" id="8NV-an-14c"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="NvS-3N-at5" secondAttribute="trailing" id="8h9-OG-ufL"/>
-                                            <constraint firstAttribute="trailing" secondItem="NvS-3N-at5" secondAttribute="trailing" id="OFM-iw-u1t"/>
-                                            <constraint firstAttribute="bottom" secondItem="NvS-3N-at5" secondAttribute="bottom" id="PJv-x4-Alt"/>
-                                            <constraint firstItem="NvS-3N-at5" firstAttribute="top" secondItem="ghD-8R-Zv5" secondAttribute="topMargin" id="PZR-7A-Erf"/>
-                                            <constraint firstItem="NvS-3N-at5" firstAttribute="leading" secondItem="ghD-8R-Zv5" secondAttribute="leadingMargin" id="dK4-rI-EIr"/>
-                                            <constraint firstItem="NvS-3N-at5" firstAttribute="leading" secondItem="ghD-8R-Zv5" secondAttribute="leading" id="n3U-Kq-4C8"/>
-                                            <constraint firstItem="NvS-3N-at5" firstAttribute="centerY" secondItem="ghD-8R-Zv5" secondAttribute="centerY" id="raz-9W-knW"/>
-                                            <constraint firstItem="NvS-3N-at5" firstAttribute="centerX" secondItem="ghD-8R-Zv5" secondAttribute="centerX" id="tHW-Fq-zSK"/>
+                                            <constraint firstItem="NvS-3N-at5" firstAttribute="leading" secondItem="ghD-8R-Zv5" secondAttribute="leading" id="ndT-SW-7t4"/>
+                                            <constraint firstAttribute="bottom" secondItem="NvS-3N-at5" secondAttribute="bottom" id="rTz-w5-5lc"/>
+                                            <constraint firstItem="NvS-3N-at5" firstAttribute="top" secondItem="ghD-8R-Zv5" secondAttribute="top" id="suv-Eo-ghu"/>
+                                            <constraint firstAttribute="trailing" secondItem="NvS-3N-at5" secondAttribute="trailing" id="yRw-hK-zEk"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="image" destination="NvS-3N-at5" id="2um-rV-17c"/>
@@ -272,9 +275,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX9-pH-gZv">
+                                            <rect key="frame" x="321" y="10" width="54" height="30"/>
+                                            <state key="normal" title="Animals"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="Tsv-Vh-Nnj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-Je-zTR">
+                                            <rect key="frame" x="0.0" y="10" width="63" height="30"/>
+                                            <state key="normal" title="Numbers"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QEG-f2-jOV" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="9Fz-Kc-Qi5"/>
+                                        <constraint firstItem="tX9-pH-gZv" firstAttribute="trailing" secondItem="fnb-WR-fQW" secondAttribute="trailingMargin" id="IOu-Ex-aHA"/>
+                                        <constraint firstItem="8sd-Je-zTR" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="Ntd-Xd-Liq"/>
+                                        <constraint firstItem="8sd-Je-zTR" firstAttribute="leading" secondItem="fnb-WR-fQW" secondAttribute="leading" id="XaS-be-laU"/>
+                                        <constraint firstItem="tX9-pH-gZv" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="kqU-rP-dxU"/>
                                         <constraint firstItem="QEG-f2-jOV" firstAttribute="centerX" secondItem="fnb-WR-fQW" secondAttribute="centerX" id="wRC-7P-mKj"/>
                                     </constraints>
                                     <connections>
@@ -305,4 +323,8 @@
             <point key="canvasLocation" x="-71" y="688"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c2D-x4-cGv"/>
+        <segue reference="Tsv-Vh-Nnj"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -15,7 +15,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet var collectionView: UICollectionView!
     let synth = AVSpeechSynthesizer()
     var textItems: [TextItem] = []
-    var voiceName: String = "Samantha (Enhanced)"
+    var voiceName: String = "Samantha"
     
     override func viewDidLoad() {
         super.viewDidLoad()
