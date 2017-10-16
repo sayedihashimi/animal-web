@@ -7,6 +7,13 @@
   "Audio": "lion-01"
   },
   {
+  "Id": "chipmunk",
+  "Name": "chipmunk",
+  "ImageFull": "chipmunk",
+  "Image": "chipmunk-200",
+  "Audio": "chipmunk"
+  },
+  {
   "Id": "zebra",
   "Name": "zebra",
   "ImageFull": "zebra",
@@ -194,6 +201,20 @@
   "ImageFull": "porcupine2",
   "Image": "porcupine2-200",
   "Audio": "porcupine"
+  },
+  {
+  "Id": "goat",
+  "Name": "goat",
+  "ImageFull": "goat",
+  "Image": "goat-200",
+  "Audio": "goat"
+  },
+  {
+  "Id": "giraffe",
+  "Name": "giraffe",
+  "ImageFull": "giraffe",
+  "Image": "giraffe-200",
+  "Audio": "giraffe"
   }
   
   ]

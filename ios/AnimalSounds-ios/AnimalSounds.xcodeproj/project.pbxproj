@@ -43,6 +43,9 @@
 		ECA382C71F8F1AE000212BBA /* whale.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382BE1F8F1ACD00212BBA /* whale.wav */; };
 		ECA382C91F8F1AE000212BBA /* zebra.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382C01F8F1ACD00212BBA /* zebra.wav */; };
 		ECA84D351F92EE6000803C67 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA84D341F92EE6000803C67 /* Shape.swift */; };
+		ECA9EE821F942E0A00FAAE6C /* goat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA9EE811F942D8200FAAE6C /* goat.wav */; };
+		ECA9EE881F94326A00FAAE6C /* chipmunk.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA9EE851F94320800FAAE6C /* chipmunk.wav */; };
+		ECA9EE891F94326A00FAAE6C /* giraffe.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA9EE861F94320800FAAE6C /* giraffe.wav */; };
 		ECBAE2481F892CEC00D33CEF /* Bird chirps animals140.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */; };
 		ECBAE2491F892CEC00D33CEF /* Cow animals055.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2471F892CC500D33CEF /* Cow animals055.wav */; };
 		ECBAE24A1F892CEC00D33CEF /* Crow caw animals063.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */; };
@@ -59,6 +62,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC007EF41F946AE0000E2B88 /* AnimalSounds-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalSounds-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC007EF51F946AE1000E2B88 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		EC007EF61F946AE1000E2B88 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EC072B0C1F832BEB00CDF5F0 /* items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
 		EC072B0E1F834FF200CDF5F0 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		EC225A891F9172EB00AD0393 /* strings.Hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.Hindi.json; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 		ECA382C01F8F1ACD00212BBA /* zebra.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = zebra.wav; path = media/zebra.wav; sourceTree = SOURCE_ROOT; };
 		ECA382C31F8F1ACD00212BBA /* hippo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hippo.wav; path = media/hippo.wav; sourceTree = SOURCE_ROOT; };
 		ECA84D341F92EE6000803C67 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		ECA9EE811F942D8200FAAE6C /* goat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = goat.wav; path = media/goat.wav; sourceTree = SOURCE_ROOT; };
+		ECA9EE851F94320800FAAE6C /* chipmunk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chipmunk.wav; path = media/chipmunk.wav; sourceTree = SOURCE_ROOT; };
+		ECA9EE861F94320800FAAE6C /* giraffe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = giraffe.wav; path = media/giraffe.wav; sourceTree = SOURCE_ROOT; };
 		ECBAE23D1F892CC400D33CEF /* Horse whinny animals126.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Horse whinny animals126.wav"; sourceTree = "<group>"; };
 		ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Crow caw animals063.wav"; sourceTree = "<group>"; };
 		ECBAE23F1F892CC400D33CEF /* owl animals074.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "owl animals074.wav"; sourceTree = "<group>"; };
@@ -124,14 +133,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC007EF31F946AAE000E2B88 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC007EF51F946AE1000E2B88 /* SWRevealViewController.h */,
+				EC007EF61F946AE1000E2B88 /* SWRevealViewController.m */,
+				EC007EF41F946AE0000E2B88 /* AnimalSounds-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
 				EC9639DD1F92654100B6204D /* brown-bear.wav */,
+				ECA9EE811F942D8200FAAE6C /* goat.wav */,
 				ECA382C31F8F1ACD00212BBA /* hippo.wav */,
 				ECA382BE1F8F1ACD00212BBA /* whale.wav */,
 				ECA382C01F8F1ACD00212BBA /* zebra.wav */,
 				EC2747961F89DC1A004E63A7 /* Icon-60@2x.png */,
+				ECA9EE851F94320800FAAE6C /* chipmunk.wav */,
+				ECA9EE861F94320800FAAE6C /* giraffe.wav */,
 				EC2A3A341F898A9700BF7922 /* alpaca.wav */,
 				ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */,
 				ECBAE2471F892CC500D33CEF /* Cow animals055.wav */,
@@ -167,6 +189,7 @@
 		EC5B776B1F831517003CB235 = {
 			isa = PBXGroup;
 			children = (
+				EC007EF31F946AAE000E2B88 /* SWRevealViewController */,
 				EC5B77761F831517003CB235 /* AnimalSounds */,
 				EC5B77751F831517003CB235 /* Products */,
 			);
@@ -238,6 +261,7 @@
 				TargetAttributes = {
 					EC5B77731F831517003CB235 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -265,6 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA9EE881F94326A00FAAE6C /* chipmunk.wav in Resources */,
+				ECA9EE891F94326A00FAAE6C /* giraffe.wav in Resources */,
+				ECA9EE821F942E0A00FAAE6C /* goat.wav in Resources */,
 				EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */,
 				EC9639DE1F92654900B6204D /* brown-bear.wav in Resources */,
 				EC225A8A1F91730300AD0393 /* strings.Hindi.json in Resources */,
@@ -460,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR8K4P4LEF;
 				INFOPLIST_FILE = AnimalSounds/Info.plist;
@@ -467,6 +495,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.sonyaapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SWRevealViewController/AnimalSounds-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR8K4P4LEF;
 				INFOPLIST_FILE = AnimalSounds/Info.plist;
@@ -483,6 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.sonyaapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SWRevealViewController/AnimalSounds-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
