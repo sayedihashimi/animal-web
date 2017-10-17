@@ -62,9 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC007EF41F946AE0000E2B88 /* AnimalSounds-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalSounds-Bridging-Header.h"; sourceTree = "<group>"; };
-		EC007EF51F946AE1000E2B88 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		EC007EF61F946AE1000E2B88 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EC072B0C1F832BEB00CDF5F0 /* items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
 		EC072B0E1F834FF200CDF5F0 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		EC225A891F9172EB00AD0393 /* strings.Hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.Hindi.json; sourceTree = "<group>"; };
@@ -133,16 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC007EF31F946AAE000E2B88 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC007EF51F946AE1000E2B88 /* SWRevealViewController.h */,
-				EC007EF61F946AE1000E2B88 /* SWRevealViewController.m */,
-				EC007EF41F946AE0000E2B88 /* AnimalSounds-Bridging-Header.h */,
-			);
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +176,6 @@
 		EC5B776B1F831517003CB235 = {
 			isa = PBXGroup;
 			children = (
-				EC007EF31F946AAE000E2B88 /* SWRevealViewController */,
 				EC5B77761F831517003CB235 /* AnimalSounds */,
 				EC5B77751F831517003CB235 /* Products */,
 			);
