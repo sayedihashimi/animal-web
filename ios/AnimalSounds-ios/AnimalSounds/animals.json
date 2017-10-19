@@ -7,6 +7,27 @@
   "Audio": "lion-01"
   },
   {
+  "Id": "frog",
+  "Name": "frog",
+  "ImageFull": "frog",
+  "Image": "frog-200",
+  "Audio": "frog"
+  },
+  {
+  "Id": "rabbit",
+  "Name": "rabbit",
+  "ImageFull": "rabbit",
+  "Image": "rabbit-200",
+  "Audio": "rabbit"
+  },
+  {
+  "Id": "squirrel",
+  "Name": "squirrel",
+  "ImageFull": "squirrel",
+  "Image": "squirrel-200",
+  "Audio": "squirrel"
+  },
+  {
   "Id": "goat",
   "Name": "goat",
   "ImageFull": "goat",

@@ -38,6 +38,9 @@
 		EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */; };
 		EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */ = {isa = PBXBuildFile; fileRef = EC7A21FC1F92E3A50062E04E /* shapes.json */; };
 		EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FE1F92E3D70062E04E /* DataItem.swift */; };
+		EC876F051F96DAFD0062F967 /* rabbit.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC876F031F96DA470062F967 /* rabbit.wav */; };
+		EC876F061F96DAFD0062F967 /* squirrel.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC876F041F96DA470062F967 /* squirrel.wav */; };
+		EC876F081F96E01F0062F967 /* frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC876F071F96E00F0062F967 /* frog.wav */; };
 		EC9639DE1F92654900B6204D /* brown-bear.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC9639DD1F92654100B6204D /* brown-bear.wav */; };
 		ECA382C51F8F1AE000212BBA /* hippo.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382C31F8F1ACD00212BBA /* hippo.wav */; };
 		ECA382C71F8F1AE000212BBA /* whale.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA382BE1F8F1ACD00212BBA /* whale.wav */; };
@@ -62,9 +65,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC007EF41F946AE0000E2B88 /* AnimalSounds-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalSounds-Bridging-Header.h"; sourceTree = "<group>"; };
-		EC007EF51F946AE1000E2B88 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		EC007EF61F946AE1000E2B88 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EC072B0C1F832BEB00CDF5F0 /* items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
 		EC072B0E1F834FF200CDF5F0 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		EC225A891F9172EB00AD0393 /* strings.Hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.Hindi.json; sourceTree = "<group>"; };
@@ -99,6 +99,9 @@
 		EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
 		EC7A21FC1F92E3A50062E04E /* shapes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shapes.json; sourceTree = "<group>"; };
 		EC7A21FE1F92E3D70062E04E /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
+		EC876F031F96DA470062F967 /* rabbit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = rabbit.wav; path = media/rabbit.wav; sourceTree = SOURCE_ROOT; };
+		EC876F041F96DA470062F967 /* squirrel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = squirrel.wav; path = media/squirrel.wav; sourceTree = SOURCE_ROOT; };
+		EC876F071F96E00F0062F967 /* frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = frog.wav; path = media/frog.wav; sourceTree = SOURCE_ROOT; };
 		EC9639DD1F92654100B6204D /* brown-bear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "brown-bear.wav"; sourceTree = "<group>"; };
 		ECA382BE1F8F1ACD00212BBA /* whale.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = whale.wav; path = media/whale.wav; sourceTree = SOURCE_ROOT; };
 		ECA382C01F8F1ACD00212BBA /* zebra.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = zebra.wav; path = media/zebra.wav; sourceTree = SOURCE_ROOT; };
@@ -133,23 +136,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC007EF31F946AAE000E2B88 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC007EF51F946AE1000E2B88 /* SWRevealViewController.h */,
-				EC007EF61F946AE1000E2B88 /* SWRevealViewController.m */,
-				EC007EF41F946AE0000E2B88 /* AnimalSounds-Bridging-Header.h */,
-			);
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
 				EC9639DD1F92654100B6204D /* brown-bear.wav */,
 				ECA9EE811F942D8200FAAE6C /* goat.wav */,
 				ECA382C31F8F1ACD00212BBA /* hippo.wav */,
+				EC876F071F96E00F0062F967 /* frog.wav */,
 				ECA382BE1F8F1ACD00212BBA /* whale.wav */,
+				EC876F031F96DA470062F967 /* rabbit.wav */,
+				EC876F041F96DA470062F967 /* squirrel.wav */,
 				ECA382C01F8F1ACD00212BBA /* zebra.wav */,
 				EC2747961F89DC1A004E63A7 /* Icon-60@2x.png */,
 				ECA9EE851F94320800FAAE6C /* chipmunk.wav */,
@@ -189,7 +185,6 @@
 		EC5B776B1F831517003CB235 = {
 			isa = PBXGroup;
 			children = (
-				EC007EF31F946AAE000E2B88 /* SWRevealViewController */,
 				EC5B77761F831517003CB235 /* AnimalSounds */,
 				EC5B77751F831517003CB235 /* Products */,
 			);
@@ -289,6 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC876F081F96E01F0062F967 /* frog.wav in Resources */,
+				EC876F051F96DAFD0062F967 /* rabbit.wav in Resources */,
+				EC876F061F96DAFD0062F967 /* squirrel.wav in Resources */,
 				ECA9EE881F94326A00FAAE6C /* chipmunk.wav in Resources */,
 				ECA9EE891F94326A00FAAE6C /* giraffe.wav in Resources */,
 				ECA9EE821F942E0A00FAAE6C /* goat.wav in Resources */,
@@ -495,7 +493,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.sonyaapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SWRevealViewController/AnimalSounds-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,7 +511,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayedha.sonyaapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SWRevealViewController/AnimalSounds-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
