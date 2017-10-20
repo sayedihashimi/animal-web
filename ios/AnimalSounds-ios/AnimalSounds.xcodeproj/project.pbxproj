@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0632B21F986995007F2AAB /* mouse.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0632B11F98698B007F2AAB /* mouse.wav */; };
+		EC0632B41F986C57007F2AAB /* alligator.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0632B31F986C50007F2AAB /* alligator.wav */; };
+		EC0632B61F986D57007F2AAB /* donkey.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0632B51F986D50007F2AAB /* donkey.wav */; };
+		EC0632B81F986F29007F2AAB /* hyena.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0632B71F986EEF007F2AAB /* hyena.wav */; };
+		EC0632BA1F98703C007F2AAB /* pelican.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0632B91F98701B007F2AAB /* pelican.wav */; };
 		EC072B0D1F832BEB00CDF5F0 /* items.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC072B0C1F832BEB00CDF5F0 /* items.plist */; };
 		EC072B0F1F834FF200CDF5F0 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = EC072B0E1F834FF200CDF5F0 /* animals.json */; };
 		EC225A8A1F91730300AD0393 /* strings.Hindi.json in Resources */ = {isa = PBXBuildFile; fileRef = EC225A891F9172EB00AD0393 /* strings.Hindi.json */; };
@@ -62,9 +67,18 @@
 		ECBAE2521F892CEC00D33CEF /* Rooster animals070.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2441F892CC500D33CEF /* Rooster animals070.wav */; };
 		ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECD74E941F9068EB00E012A0 /* Settings.bundle */; };
 		ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */; };
+		ECFA4A881F99B48D00165FDC /* chicken.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A871F99B48000165FDC /* chicken.wav */; };
+		ECFA4A891F99B48D00165FDC /* chimp.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A841F99B48000165FDC /* chimp.wav */; };
+		ECFA4A8A1F99B48D00165FDC /* penguin.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A851F99B48000165FDC /* penguin.wav */; };
+		ECFA4A8B1F99B48D00165FDC /* tiger.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A861F99B48000165FDC /* tiger.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC0632B11F98698B007F2AAB /* mouse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = mouse.wav; path = media/mouse.wav; sourceTree = SOURCE_ROOT; };
+		EC0632B31F986C50007F2AAB /* alligator.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = alligator.wav; path = media/alligator.wav; sourceTree = SOURCE_ROOT; };
+		EC0632B51F986D50007F2AAB /* donkey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = donkey.wav; path = media/donkey.wav; sourceTree = SOURCE_ROOT; };
+		EC0632B71F986EEF007F2AAB /* hyena.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hyena.wav; path = media/hyena.wav; sourceTree = SOURCE_ROOT; };
+		EC0632B91F98701B007F2AAB /* pelican.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pelican.wav; path = media/pelican.wav; sourceTree = SOURCE_ROOT; };
 		EC072B0C1F832BEB00CDF5F0 /* items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
 		EC072B0E1F834FF200CDF5F0 /* animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		EC225A891F9172EB00AD0393 /* strings.Hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.Hindi.json; sourceTree = "<group>"; };
@@ -123,6 +137,10 @@
 		ECBAE2471F892CC500D33CEF /* Cow animals055.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cow animals055.wav"; sourceTree = "<group>"; };
 		ECD74E941F9068EB00E012A0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		ECFA4A841F99B48000165FDC /* chimp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chimp.wav; path = media/chimp.wav; sourceTree = SOURCE_ROOT; };
+		ECFA4A851F99B48000165FDC /* penguin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = penguin.wav; path = media/penguin.wav; sourceTree = SOURCE_ROOT; };
+		ECFA4A861F99B48000165FDC /* tiger.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tiger.wav; path = media/tiger.wav; sourceTree = SOURCE_ROOT; };
+		ECFA4A871F99B48000165FDC /* chicken.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chicken.wav; path = media/chicken.wav; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +158,16 @@
 			isa = PBXGroup;
 			children = (
 				EC9639DD1F92654100B6204D /* brown-bear.wav */,
+				EC0632B71F986EEF007F2AAB /* hyena.wav */,
+				ECFA4A871F99B48000165FDC /* chicken.wav */,
+				ECFA4A841F99B48000165FDC /* chimp.wav */,
+				ECFA4A851F99B48000165FDC /* penguin.wav */,
+				ECFA4A861F99B48000165FDC /* tiger.wav */,
+				EC0632B11F98698B007F2AAB /* mouse.wav */,
+				EC0632B51F986D50007F2AAB /* donkey.wav */,
+				EC0632B91F98701B007F2AAB /* pelican.wav */,
 				ECA9EE811F942D8200FAAE6C /* goat.wav */,
+				EC0632B31F986C50007F2AAB /* alligator.wav */,
 				ECA382C31F8F1ACD00212BBA /* hippo.wav */,
 				EC876F071F96E00F0062F967 /* frog.wav */,
 				ECA382BE1F8F1ACD00212BBA /* whale.wav */,
@@ -284,6 +311,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFA4A881F99B48D00165FDC /* chicken.wav in Resources */,
+				ECFA4A891F99B48D00165FDC /* chimp.wav in Resources */,
+				ECFA4A8A1F99B48D00165FDC /* penguin.wav in Resources */,
+				ECFA4A8B1F99B48D00165FDC /* tiger.wav in Resources */,
+				EC0632BA1F98703C007F2AAB /* pelican.wav in Resources */,
+				EC0632B81F986F29007F2AAB /* hyena.wav in Resources */,
+				EC0632B61F986D57007F2AAB /* donkey.wav in Resources */,
+				EC0632B41F986C57007F2AAB /* alligator.wav in Resources */,
+				EC0632B21F986995007F2AAB /* mouse.wav in Resources */,
 				EC876F081F96E01F0062F967 /* frog.wav in Resources */,
 				EC876F051F96DAFD0062F967 /* rabbit.wav in Resources */,
 				EC876F061F96DAFD0062F967 /* squirrel.wav in Resources */,

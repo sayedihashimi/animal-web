@@ -6,6 +6,43 @@
   "Image": "African_Lion_3-200",
   "Audio": "lion-01"
   },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {
+  "Id": "chicken",
+  "Name": "chicken",
+  "ImageFull": "chicken",
+  "Image": "chicken-200",
+  "Audio": "chicken"
+  },
+  {
+  "Id": "chimp",
+  "Name": "chimp",
+  "ImageFull": "chimp",
+  "Image": "chimp-200",
+  "Audio": "chimp"
+  },
+  {
+  "Id": "penguin",
+  "Name": "penguin",
+  "ImageFull": "penguin",
+  "Image": "penguin-200",
+  "Audio": "penguin"
+  },
+  {
+  "Id": "tiger",
+  "Name": "tiger",
+  "ImageFull": "tiger",
+  "Image": "tiger-200",
+  "Audio": "tiger"
+  },
   {
   "Id": "frog",
   "Name": "frog",
