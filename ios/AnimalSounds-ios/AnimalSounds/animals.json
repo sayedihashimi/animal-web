@@ -49,6 +49,41 @@
   "Audio": "chipmunk"
   },
   {
+  "Id": "mouse",
+  "Name": "mouse",
+  "ImageFull": "mouse",
+  "Image": "mouse-200",
+  "Audio": "mouse"
+  },
+  {
+  "Id": "alligator",
+  "Name": "alligator",
+  "ImageFull": "alligator",
+  "Image": "alligator-200",
+  "Audio": "alligator"
+  },
+  {
+  "Id": "donkey",
+  "Name": "donkey",
+  "ImageFull": "donkey",
+  "Image": "donkey-200",
+  "Audio": "donkey"
+  },
+  {
+  "Id": "hyena",
+  "Name": "hyena",
+  "ImageFull": "hyena",
+  "Image": "hyena-200",
+  "Audio": "hyena"
+  },
+  {
+  "Id": "pelican",
+  "Name": "pelican",
+  "ImageFull": "pelican",
+  "Image": "pelican-200",
+  "Audio": "pelican"
+  },
+  {
   "Id": "zebra",
   "Name": "zebra",
   "ImageFull": "zebra",
