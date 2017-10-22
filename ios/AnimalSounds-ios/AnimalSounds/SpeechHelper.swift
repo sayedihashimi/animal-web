@@ -66,9 +66,11 @@ class TranslationManager{
     var translations: [String: Translation] = [String: Translation]()
     
     init(){
-        let hindi = Translation.getFromFile("strings.Hindi")
-        if(hindi.language.count > 1){
-            translations["hindi"] = hindi
+        let langs = ["hindi","spanish","danish","portuguese"]
+        for lang in langs {
+            if let translation = Translation.getFromFile("strings.\(lang)") {
+                translations[lang] = translation
+            }
         }
     }
     
@@ -111,7 +113,7 @@ class Translation {
         self.translatedStrings = translatedStrings
     }
     
-    static func getFromFile(_ filename: String) -> Translation {
+    static func getFromFile(_ filename: String) -> Translation? {
         do {
             if let path = Bundle.main.path(forResource: filename, ofType: "json") {
                 let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
@@ -131,9 +133,9 @@ class Translation {
                 }
             }
         } catch {
-            return Translation("","", [String: String]())
+            return nil
         }
         
-        return Translation("","",[String: String]())
+        return nil
     }
 }

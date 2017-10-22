@@ -16,14 +16,14 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     let synth = AVSpeechSynthesizer()
     var shapeItems: [DataItem] = []
     var voiceName: String = "Samantha"
-    
+    let speechHelper = SpeechHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
-        initSettings()
+        // initSettings()
         initDataItems()
     }
     override func viewWillLayoutSubviews() {
@@ -39,6 +39,7 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     // Move to base class
     // Settings related
+    /*
     func initSettings() {
         registerSettingsBundle()
         NotificationCenter.default.addObserver(self, selector: #selector(ShapesViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
@@ -53,6 +54,7 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
             self.voiceName = voiceSettingValue
         }
     }
+    */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shapeItems.count
@@ -84,9 +86,11 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
-            sayText(text: shapeItems[tappedImage.tag].name)
+            speechHelper.speakText(shapeItems[tappedImage.tag].name)
+            // sayText(text: shapeItems[tappedImage.tag].name)
         }
     }
+    /*
     func getVoice(forName name: String) -> AVSpeechSynthesisVoice? {
         for voice in AVSpeechSynthesisVoice.speechVoices() {
             if #available(iOS 9.0, *) {
@@ -98,6 +102,7 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         return nil
     }
+    */
     /*
     func printAllVoices(){
         for voice in AVSpeechSynthesisVoice.speechVoices() {
@@ -106,7 +111,7 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
     }
-    */
+ 
     fileprivate func sayText(text: String){
         let myUtterance = AVSpeechUtterance(string: text)
         if let voice = getVoice(forName: voiceName) {
@@ -114,7 +119,7 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         synth.speak(myUtterance)
     }
-    
+    */
     
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

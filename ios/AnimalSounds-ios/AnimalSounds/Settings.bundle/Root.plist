@@ -48,20 +48,22 @@
 			<key>Key</key>
 			<string>SONYA_LANGUAGE</string>
 			<key>DefaultValue</key>
-			<string>Samantha</string>
+			<string>english</string>
 			<key>Titles</key>
 			<array>
 				<string>English</string>
 				<string>Hindi</string>
 				<string>Danish</string>
 				<string>Spanish</string>
+				<string>Portuguese</string>
 			</array>
 			<key>Values</key>
 			<array>
-				<string>English</string>
-				<string>Hindi</string>
-				<string>Danish</string>
-				<string>Spanish</string>
+				<string>english</string>
+				<string>hindi</string>
+				<string>danish</string>
+				<string>spanish</string>
+				<string>portuguese</string>
 			</array>
 		</dict>
 		<dict>
