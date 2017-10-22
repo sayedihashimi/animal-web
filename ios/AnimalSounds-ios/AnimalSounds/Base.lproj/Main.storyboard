@@ -62,7 +62,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-L6-OWR">
-                                            <rect key="frame" x="130" y="15.5" width="114" height="20.5"/>
+                                            <rect key="frame" x="130" y="15" width="114" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -81,6 +81,17 @@
                                                 <segue destination="uUO-u8-eia" kind="show" id="zmA-Iu-yCA"/>
                                             </connections>
                                         </button>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-Ob-nQC">
+                                            <rect key="frame" x="78" y="8" width="121" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Sounds"/>
+                                                <segment title="Names"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="soundNameIndexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cml-ts-URw"/>
+                                            </connections>
+                                        </segmentedControl>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="HCP-yP-vHc" secondAttribute="trailing" id="EwC-Ck-xV0"/>
@@ -92,6 +103,7 @@
                                     </constraints>
                                     <connections>
                                         <outlet property="commentLabel" destination="Dqz-L6-OWR" id="OSn-Vc-Xb5"/>
+                                        <outlet property="segmentSoundOrName" destination="iHh-Ob-nQC" id="Eg4-JZ-ybt"/>
                                     </connections>
                                 </collectionReusableView>
                                 <connections>
@@ -327,8 +339,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c2D-x4-cGv"/>
-        <segue reference="IEy-Zs-Xpn"/>
+        <segue reference="zmA-Iu-yCA"/>
+        <segue reference="uHN-3u-P5r"/>
         <segue reference="Tsv-Vh-Nnj"/>
     </inferredMetricsTieBreakers>
 </document>

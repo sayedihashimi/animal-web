@@ -13,6 +13,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     var animalItems: [Animal] = []
     @IBOutlet var collectionView: UICollectionView!
+    var action = AnimalAction.PlaySound
+    let speakHelper = SpeakHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,9 +76,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     fileprivate func initAnimals() {
-        //var items = [Animal]()
-        //let inputFile = Bundle.main.path(forResource: "animals", ofType: "json")
-        
         do{
             if let path = Bundle.main.path(forResource: "animals", ofType: "json"){
                 let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
@@ -144,7 +143,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
-            playSound(name: animalItems[tappedImage.tag].audio)
+            // playSound(name: animalItems[tappedImage.tag].audio)
+            playAnimal(animalItems[tappedImage.tag])
         }
     }
     
@@ -154,14 +154,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         commentView.commentLabel.text = "Animal Sounds"
         
+        
         return commentView
     }
-    /*
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("collection view item selected")
-        playSound(name: animalItems[indexPath[1]].audio)
+    
+    @IBAction func soundNameIndexChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            action = .PlaySound
+        case 1:
+            action = .SayName
+        default:
+            action = .SayName
+        }
     }
-    */
+    
+    func playAnimal(_ animal: Animal){
+        // see if the switch is set to name or sound
+        switch action {
+        case .PlaySound:
+            playSound(name: animal.audio)
+        case .SayName:
+            speakHelper.speakText(animal.name)
+        default:
+            playSound(name: animal.audio)
+        }
+    }
+    
+    enum AnimalAction {
+        case PlaySound
+        case SayName
+    }
     
     var audioPlayer: AVAudioPlayer?
     func playSound(name: String) {
@@ -211,7 +234,188 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // let leftRightInset: CGFloat = 1.0
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
-    
-    
 }
+
+class SpeakHelper {
+    var voiceName = "Samantha"
+    var language = "English"
+    let synth = AVSpeechSynthesizer()
+    let translationManager = TranslationManager()
+    
+    init(){
+        registerSettingsBundle()
+        NotificationCenter.default.addObserver(self, selector: #selector(SpeakHelper.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        defaultsChanged()
+    }
+    
+    // will get the translation
+    func getTextToSpeak(_ string: String, _ language: String, _ voiceName: String) -> String{
+        return translationManager.getTranslatedString(string, language)
+    }
+    
+    func speakText(_ text: String){
+        
+        let speakText = getTextToSpeak(text, language, voiceName)
+        
+        let myUtterance = AVSpeechUtterance(string: speakText)
+        
+        if let voice = getVoice(forName: voiceName) {
+            myUtterance.voice = voice
+        }
+        synth.speak(myUtterance)
+    }
+    
+    func getVoice(forName name: String) -> AVSpeechSynthesisVoice? {
+        for voice in AVSpeechSynthesisVoice.speechVoices() {
+            if #available(iOS 9.0, *) {
+                if voice.name == name {
+                    return voice
+                }
+            }
+        }
+                                            
+        return nil
+    }
+    
+    func registerSettingsBundle(){
+        let appDefaults = [String:AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
+    @objc func defaultsChanged(){
+        if let languageSettingName = UserDefaults.standard.string(forKey: SettingsBundleHelper.SettingsBundleKeys.Language) {
+            language = languageSettingName
+            voiceName = translationManager.getVoiceName(forLanguage: language, "Samantha")
+        }
+    }
+}
+
+class TranslationManager{
+    var translations: [String: Translation] = [String: Translation]()
+    
+    init(){
+        let hindi = Translation.getFromFile("strings.Hindi")
+        if(hindi.language.count > 1){
+            translations["hindi"] = hindi
+        }
+    }
+    
+    func getTranslation(_ forLanguage: String) -> Translation {
+        return Translation("","",[String: String]())
+    }
+    
+    func getTranslatedString(_ text: String, _ language: String) -> String {
+        let langLower = language.lowercased()
+        let textLower = text.lowercased()
+        if(translations.keys.contains(langLower)) {
+            if let result = translations[langLower]?.translatedStrings[textLower] {
+                if(result.count > 1){
+                    return result
+                }
+            }
+        }
+        
+        return text
+    }
+    
+    func getVoiceName(forLanguage language: String, _ defaultValue: String) -> String{
+        let langLower = language.lowercased()
+        if let t = translations[langLower] {
+            return t.voiceName
+        }
+        return defaultValue
+    }
+}
+
+class Translation {
+    let voiceName: String
+    let language: String
+    
+    var translatedStrings = [String: String]()
+    
+    init(_ voiceName: String, _ language: String, _ translatedStrings: [String: String]){
+        self.voiceName = voiceName
+        self.language = language
+        self.translatedStrings = translatedStrings
+    }
+    
+    static func getFromFile(_ filename: String) -> Translation {
+        do {
+            if let path = Bundle.main.path(forResource: filename, ofType: "json") {
+                let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
+                if(jsonData.count > 0){
+                    if let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? NSDictionary {
+                        // var voice: String? = json.value(forKey: "Image")
+                        // var lang: String? = json.value(forKey: "")
+                        // (jsonResult["settings"] as! NSDictionary)["voiceName"] as! String
+                        
+                        if let settings = jsonResult["settings"] as? NSDictionary {
+                        if let voice = settings.value(forKey: "voiceName") as? String{
+                        if let lang = settings.value(forKey: "language") as? String {
+                        if let translations = jsonResult["translations"] as? [String: String] {
+                            return Translation(voice,lang,translations)
+                        }}}}
+                    }
+                }
+            }
+        } catch {
+            return Translation("","", [String: String]())
+        }
+
+        return Translation("","",[String: String]())
+    }
+}
+
+
+
+
+
+
+
+
+/*
+ do{
+ if let path = Bundle.main.path(forResource: "animals", ofType: "json"){
+ let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
+ if(jsonData.count > 0){
+ 
+ if let jsonResult = try JSONSerialization.jsonObject(with: jsonData) as? [NSDictionary] {
+ for json in jsonResult {
+ 
+ let newanimal = Animal(name: json.value(forKey: "Name") as! String, imageFull: json.value(forKey: "ImageFull") as! String, image: json.value(forKey: "Image") as! String, audio: json.value(forKey: "Audio") as! String)
+ animalItems.append(newanimal)
+ }
+ }
+ else {
+ print("still empty")
+ }
+ 
+ if let jsonResult: [Animal] = try JSONSerialization.jsonObject(with: jsonData) as? [Animal] {
+ for (_,animal) in jsonResult.enumerated() {
+ animalItems.append(animal)
+ }
+ } else {
+ print("empty")
+ }
+ 
+ }
+ }
+ } catch {
+ print(error)
+ }
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

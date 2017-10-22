@@ -11,6 +11,8 @@ import UIKit
 
 class GalleryItemCommentView : UICollectionReusableView {
     @IBOutlet var commentLabel: UILabel!
+    @IBOutlet weak var segmentSoundOrName: UISegmentedControl!
+    
 }
 
 class GalleryItemCollectionViewCell : UICollectionViewCell {

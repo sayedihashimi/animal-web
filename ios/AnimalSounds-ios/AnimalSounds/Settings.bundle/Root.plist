@@ -53,15 +53,15 @@
 			<array>
 				<string>English</string>
 				<string>Hindi</string>
-				<string>Spanish</string>
 				<string>Danish</string>
+				<string>Spanish</string>
 			</array>
 			<key>Values</key>
 			<array>
-				<string>Samantha (Enhanced)</string>
-				<string>Lekha</string>
-				<string>Paulina</string>
-				<string>Anna</string>
+				<string>English</string>
+				<string>Hindi</string>
+				<string>Danish</string>
+				<string>Spanish</string>
 			</array>
 		</dict>
 		<dict>

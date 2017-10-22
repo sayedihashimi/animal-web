@@ -35,8 +35,8 @@
         "image": "s01-heart"
     },
     {
-        "id": "octogon",
-        "name": "octogon",
+        "id": "octagon",
+        "name": "octagon",
         "image": "s01-octogon"
     },
     {
@@ -83,8 +83,8 @@
         "image": "s02-heart"
     },
     {
-        "id": "s02-octogon",
-        "name": "octogon",
+        "id": "s02-octagon",
+        "name": "octagon",
         "image": "s02-octogon"
     },
     {

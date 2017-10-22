@@ -6,7 +6,7 @@
          contextName = "ViewController.playSound(name:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = " Bundle.main.path(forResource: &quot;lion-01&quot;, ofType: &quot;wav&quot;)">
+               value = "Bundle.main.path(forResource: name, ofType: &quot;wav&quot;)">
             </PersistentString>
             <PersistentString
                value = "Bundle.main.path(forResource: &quot;Elephant-angry animals035&quot;, ofType: &quot;wav&quot;)">
@@ -18,7 +18,7 @@
                value = "name == &quot;Elephant-angry animals035&quot;">
             </PersistentString>
             <PersistentString
-               value = "Bundle.main.path(forResource: name, ofType: &quot;wav&quot;)">
+               value = " Bundle.main.path(forResource: &quot;lion-01&quot;, ofType: &quot;wav&quot;)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -79,6 +79,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.commentLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SpeakHelper.defaultsChanged():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "voiceName">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
