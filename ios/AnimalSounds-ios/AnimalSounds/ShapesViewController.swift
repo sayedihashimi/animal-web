@@ -13,9 +13,7 @@ import AVFoundation
 class ShapesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
-    let synth = AVSpeechSynthesizer()
     var shapeItems: [DataItem] = []
-    var voiceName: String = "Samantha"
     let speechHelper = SpeechHelper()
     
     override func viewDidLoad() {
@@ -23,7 +21,6 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
-        // initSettings()
         initDataItems()
     }
     override func viewWillLayoutSubviews() {
@@ -36,25 +33,6 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
             shapeItems = DataItem.ReadFromJsonFile(filepath: path)
         }
     }
-    
-    // Move to base class
-    // Settings related
-    /*
-    func initSettings() {
-        registerSettingsBundle()
-        NotificationCenter.default.addObserver(self, selector: #selector(ShapesViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
-        defaultsChanged()
-    }
-    func registerSettingsBundle() {
-        let appDefaults = [String:AnyObject]()
-        UserDefaults.standard.register(defaults: appDefaults)
-    }
-    @objc func defaultsChanged() {
-        if let voiceSettingValue =  UserDefaults.standard.string(forKey: SettingsBundleHelper.SettingsBundleKeys.Language) {
-            self.voiceName = voiceSettingValue
-        }
-    }
-    */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shapeItems.count
@@ -87,41 +65,9 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     {
         if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
             speechHelper.speakText(shapeItems[tappedImage.tag].name)
-            // sayText(text: shapeItems[tappedImage.tag].name)
         }
     }
-    /*
-    func getVoice(forName name: String) -> AVSpeechSynthesisVoice? {
-        for voice in AVSpeechSynthesisVoice.speechVoices() {
-            if #available(iOS 9.0, *) {
-                if voice.name == name {
-                    return voice
-                }
-            }
-        }
-        
-        return nil
-    }
-    */
-    /*
-    func printAllVoices(){
-        for voice in AVSpeechSynthesisVoice.speechVoices() {
-            if #available(iOS 9.0, *) {
-                print("name:[\(voice.name)] language:[\(voice.language)] id:[\(voice.identifier)] ")
-            }
-        }
-    }
- 
-    fileprivate func sayText(text: String){
-        let myUtterance = AVSpeechUtterance(string: text)
-        if let voice = getVoice(forName: voiceName) {
-            myUtterance.voice = voice
-        }
-        synth.speak(myUtterance)
-    }
-    */
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ShapesCommentViewCell", for: indexPath) as! ShapesCommentViewCell

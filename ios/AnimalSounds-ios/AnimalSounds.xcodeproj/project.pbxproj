@@ -41,6 +41,7 @@
 		EC5B777F1F831517003CB235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B777E1F831517003CB235 /* Assets.xcassets */; };
 		EC5B77821F831517003CB235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B77801F831517003CB235 /* LaunchScreen.storyboard */; };
 		EC5B778A1F831684003CB235 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77891F831684003CB235 /* Gallery.swift */; };
+		EC709C141F9C51510044F611 /* strings.chinese.json in Resources */ = {isa = PBXBuildFile; fileRef = EC709C131F9C50EC0044F611 /* strings.chinese.json */; };
 		EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */; };
 		EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */ = {isa = PBXBuildFile; fileRef = EC7A21FC1F92E3A50062E04E /* shapes.json */; };
 		EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FE1F92E3D70062E04E /* DataItem.swift */; };
@@ -115,6 +116,7 @@
 		EC5B77811F831517003CB235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5B77831F831517003CB235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5B77891F831684003CB235 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		EC709C131F9C50EC0044F611 /* strings.chinese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.chinese.json; sourceTree = "<group>"; };
 		EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
 		EC7A21FC1F92E3A50062E04E /* shapes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shapes.json; sourceTree = "<group>"; };
 		EC7A21FE1F92E3D70062E04E /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				EC2AB2B61F888F9000CDBC41 /* media */,
 				EC5B77771F831517003CB235 /* AppDelegate.swift */,
+				EC709C131F9C50EC0044F611 /* strings.chinese.json */,
 				EC225A891F9172EB00AD0393 /* strings.hindi.json */,
 				ECD59E771F9C48AB0066F1DD /* strings.danish.json */,
 				ECD59E7B1F9C4CFF0066F1DD /* strings.portuguese.json */,
@@ -323,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC709C141F9C51510044F611 /* strings.chinese.json in Resources */,
 				ECD59E7C1F9C4D060066F1DD /* strings.portuguese.json in Resources */,
 				ECD59E7A1F9C493E0066F1DD /* strings.spanish.json in Resources */,
 				ECD59E781F9C48B50066F1DD /* strings.danish.json in Resources */,

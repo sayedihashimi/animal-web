@@ -66,7 +66,7 @@ class TranslationManager{
     var translations: [String: Translation] = [String: Translation]()
     
     init(){
-        let langs = ["hindi","spanish","danish","portuguese"]
+        let langs = ["hindi","spanish","danish","portuguese","chinese"]
         for lang in langs {
             if let translation = Translation.getFromFile("strings.\(lang)") {
                 translations[lang] = translation
@@ -119,10 +119,6 @@ class Translation {
                 let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
                 if(jsonData.count > 0){
                     if let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? NSDictionary {
-                        // var voice: String? = json.value(forKey: "Image")
-                        // var lang: String? = json.value(forKey: "")
-                        // (jsonResult["settings"] as! NSDictionary)["voiceName"] as! String
-                        
                         if let settings = jsonResult["settings"] as? NSDictionary {
                             if let voice = settings.value(forKey: "voiceName") as? String{
                                 if let lang = settings.value(forKey: "language") as? String {

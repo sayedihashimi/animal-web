@@ -56,6 +56,7 @@
 				<string>Danish</string>
 				<string>Spanish</string>
 				<string>Portuguese</string>
+				<string>Chinese (CHS)</string>
 			</array>
 			<key>Values</key>
 			<array>
@@ -64,6 +65,7 @@
 				<string>danish</string>
 				<string>spanish</string>
 				<string>portuguese</string>
+				<string>chinese</string>
 			</array>
 		</dict>
 		<dict>

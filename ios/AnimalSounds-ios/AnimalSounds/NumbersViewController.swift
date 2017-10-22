@@ -13,15 +13,14 @@ import AVFoundation
 class NumbersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
-    let synth = AVSpeechSynthesizer()
     var textItems: [TextItem] = []
-    var voiceName: String = "Samantha"
     var maxNumber = 25
+    let speechHelper = SpeechHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initSettings()
+        // initSettings()
         initItems()
         
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
@@ -40,13 +39,13 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         flowLayout.invalidateLayout()
     }
-    
+    /*
     func initSettings() {
         registerSettingsBundle()
         NotificationCenter.default.addObserver(self, selector: #selector(NumbersViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
         defaultsChanged()
     }
-    
+    */
     func registerSwipeToNavigate() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
@@ -78,7 +77,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     @objc func handleSwipeToSpeak(gestureRecognizer: UISwipeGestureRecognizer) {
         let touchpoint = gestureRecognizer.location(ofTouch: 0, in: collectionView)
         if let item = collectionView.indexPathForItem(at: touchpoint) {
-            sayText(text: textItems[item.row].speakText)
+            speechHelper.speakText(textItems[item.row].speakText)
         }
     }
     @objc func handleSwipeToNavigate(gestureRecognizer: UISwipeGestureRecognizer) {
@@ -101,20 +100,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
             textItems.append(TextItem(displayText: "\(cletter.uppercased()) \(cletter)", speakText: cletter))
         }
     }
-    
-    func registerSettingsBundle() {
-        let appDefaults = [String:AnyObject]()
-        UserDefaults.standard.register(defaults: appDefaults)
-    }
-    
-    @objc func defaultsChanged() {
-        if let voiceSettingValue =  UserDefaults.standard.string(forKey: SettingsBundleHelper.SettingsBundleKeys.Language) {
-            self.voiceName = voiceSettingValue
-        }
-        let maxnumvalue = UserDefaults.standard.integer(forKey: SettingsBundleHelper.SettingsBundleKeys.MaxNumber)
-        self.maxNumber = maxnumvalue
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return textItems.count
     }
@@ -163,84 +149,9 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         print("itemTapped", separator: "", terminator: "")
         
         if let label = tapGestureRecognizer.view as! UILabel! {
-            sayText(text: textItems[label.tag].speakText)
+            speechHelper.speakText(textItems[label.tag].speakText)
         }
     }
-    
-    fileprivate func sayText(text: String){
-        let myUtterance = AVSpeechUtterance(string: text)
-        if let voice = getVoice(forName: voiceName) {
-           myUtterance.voice = voice
-        }
-        synth.speak(myUtterance)
-    }
-    
-    func getVoice(forName name: String) -> AVSpeechSynthesisVoice? {
-        for voice in AVSpeechSynthesisVoice.speechVoices() {
-            if #available(iOS 9.0, *) {
-                if voice.name == name {
-                    return voice
-                }
-            }
-        }
-        
-        return nil
-    }
-    /*
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        print("scrollViewDidEndDragging ", separator: "", terminator: "")
-        snapToNearestCell(scrollView: collectionView!)
-    }
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        print("scrollViewDidEndDecelerating ", separator: "", terminator: "")
-        snapToNearestCell(scrollView: collectionView!)
-    }
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        print("scrollViewDidEndScrollingAnimation ", separator: "", terminator: "")
-        snapToNearestCell(scrollView: collectionView!)
-    }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrollViewDidScroll ", separator: "", terminator: "")
-        snapToNearestCell(scrollView: collectionView!)
-    }
-    func snapToNearestCell(scrollView: UICollectionView) {
-        print("snapToNearestCell called")
-        //pick first cell to get width
-        let indexPath = IndexPath(item: 0, section: 0)
-        if let cell = collectionView.cellForItem(at: indexPath) as! NumbersItemCollectionViewCell? {
-            let cellWidth = cell.bounds.size.width
-            
-            for i in 0..<collectionView.numberOfItems(inSection: 0) {
-                if scrollView.contentOffset.x <= CGFloat(i) * cellWidth + cellWidth / 2 {
-                    let indexPath = NSIndexPath(item: i, section: 0)
-                    
-                    collectionView.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
-                    break
-                }
-            }
-        }
-    }
-    
-    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        guard let collectionView = collectionView else { return super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity) }
-        
-        var offsetAdjustment = CGFloat.greatestFiniteMagnitude
-        let horizontalOffset = proposedContentOffset.x + collectionView.contentInset.left
-        
-        let targetRect = CGRect(x: proposedContentOffset.x, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height)
-        
-        let layoutAttributesArray = super.layoutAttributesForElements(in: targetRect)
-        
-        layoutAttributesArray?.forEach({ (layoutAttributes) in
-            let itemOffset = layoutAttributes.frame.origin.x
-            if fabsf(Float(itemOffset - horizontalOffset)) < fabsf(Float(offsetAdjustment)) {
-                offsetAdjustment = itemOffset - horizontalOffset
-            }
-        })
-        
-        return CGPoint(x: proposedContentOffset.x + offsetAdjustment, y: proposedContentOffset.y)
-    }
- */
 }
 
 class TextItem {
