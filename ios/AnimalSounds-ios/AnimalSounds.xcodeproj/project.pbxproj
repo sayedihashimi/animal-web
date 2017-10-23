@@ -72,6 +72,8 @@
 		ECD59E7C1F9C4D060066F1DD /* strings.portuguese.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD59E7B1F9C4CFF0066F1DD /* strings.portuguese.json */; };
 		ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECD74E941F9068EB00E012A0 /* Settings.bundle */; };
 		ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */; };
+		ECEBB67B1F9D9BC900CBDD06 /* IndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB67A1F9D9BC900CBDD06 /* IndexController.swift */; };
+		ECEBB67D1F9DA52E00CBDD06 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB67C1F9DA52E00CBDD06 /* AppHelper.swift */; };
 		ECFA4A881F99B48D00165FDC /* chicken.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A871F99B48000165FDC /* chicken.wav */; };
 		ECFA4A891F99B48D00165FDC /* chimp.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A841F99B48000165FDC /* chimp.wav */; };
 		ECFA4A8A1F99B48D00165FDC /* penguin.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A851F99B48000165FDC /* penguin.wav */; };
@@ -147,6 +149,8 @@
 		ECD59E7B1F9C4CFF0066F1DD /* strings.portuguese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.portuguese.json; sourceTree = "<group>"; };
 		ECD74E941F9068EB00E012A0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		ECEBB67A1F9D9BC900CBDD06 /* IndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexController.swift; sourceTree = "<group>"; };
+		ECEBB67C1F9DA52E00CBDD06 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		ECFA4A841F99B48000165FDC /* chimp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chimp.wav; path = media/chimp.wav; sourceTree = SOURCE_ROOT; };
 		ECFA4A851F99B48000165FDC /* penguin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = penguin.wav; path = media/penguin.wav; sourceTree = SOURCE_ROOT; };
 		ECFA4A861F99B48000165FDC /* tiger.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tiger.wav; path = media/tiger.wav; sourceTree = SOURCE_ROOT; };
@@ -262,6 +266,8 @@
 				EC7A21FE1F92E3D70062E04E /* DataItem.swift */,
 				ECA84D341F92EE6000803C67 /* Shape.swift */,
 				EC4C2FCC1F9C4601002EFAFC /* SpeechHelper.swift */,
+				ECEBB67A1F9D9BC900CBDD06 /* IndexController.swift */,
+				ECEBB67C1F9DA52E00CBDD06 /* AppHelper.swift */,
 			);
 			path = AnimalSounds;
 			sourceTree = "<group>";
@@ -402,7 +408,9 @@
 				ECA84D351F92EE6000803C67 /* Shape.swift in Sources */,
 				EC5B778A1F831684003CB235 /* Gallery.swift in Sources */,
 				ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */,
+				ECEBB67D1F9DA52E00CBDD06 /* AppHelper.swift in Sources */,
 				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
+				ECEBB67B1F9D9BC900CBDD06 /* IndexController.swift in Sources */,
 				EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */,
 				EC4C2FCD1F9C4601002EFAFC /* SpeechHelper.swift in Sources */,
 			);

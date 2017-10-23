@@ -61,29 +61,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-L6-OWR">
-                                            <rect key="frame" x="130" y="15" width="114" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-L6-OWR">
+                                            <rect key="frame" x="157" y="15" width="60.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCP-yP-vHc">
-                                            <rect key="frame" x="315" y="10" width="60" height="30"/>
-                                            <state key="normal" title="123/ABC"/>
-                                            <connections>
-                                                <segue destination="ZAB-Z0-SqK" kind="show" id="uHN-3u-P5r"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPz-Yj-KSC">
-                                            <rect key="frame" x="0.0" y="10" width="51" height="30"/>
-                                            <state key="normal" title="Shapes"/>
-                                            <connections>
-                                                <segue destination="uUO-u8-eia" kind="show" id="zmA-Iu-yCA"/>
-                                            </connections>
-                                        </button>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-Ob-nQC">
-                                            <rect key="frame" x="78" y="8" width="121" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-Ob-nQC">
+                                            <rect key="frame" x="10" y="11" width="121" height="29"/>
                                             <segments>
                                                 <segment title="Sounds"/>
                                                 <segment title="Names"/>
@@ -92,14 +77,21 @@
                                                 <action selector="soundNameIndexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cml-ts-URw"/>
                                             </connections>
                                         </segmentedControl>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-XK-YKG">
+                                            <rect key="frame" x="330" y="10" width="35" height="30"/>
+                                            <state key="normal" title="Page"/>
+                                            <connections>
+                                                <segue destination="GWg-zH-byk" kind="presentation" id="57h-a9-56b"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="HCP-yP-vHc" secondAttribute="trailing" id="EwC-Ck-xV0"/>
-                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="ZY3-9m-Qos"/>
-                                        <constraint firstItem="jPz-Yj-KSC" firstAttribute="leading" secondItem="kdm-sy-rB4" secondAttribute="leadingMargin" id="npO-zX-cKh"/>
-                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerX" secondItem="kdm-sy-rB4" secondAttribute="centerX" id="oIy-uf-SLg"/>
-                                        <constraint firstItem="HCP-yP-vHc" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="ob8-81-9Tz"/>
-                                        <constraint firstItem="jPz-Yj-KSC" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="svf-Ff-5dD"/>
+                                        <constraint firstItem="fcP-XK-YKG" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="Jmd-13-b3f"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fcP-XK-YKG" secondAttribute="trailing" constant="10" id="WvH-wr-uUr"/>
+                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerX" secondItem="kdm-sy-rB4" secondAttribute="centerX" id="cB0-DI-YSJ"/>
+                                        <constraint firstItem="iHh-Ob-nQC" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="huL-YL-cWS"/>
+                                        <constraint firstItem="Dqz-L6-OWR" firstAttribute="centerY" secondItem="kdm-sy-rB4" secondAttribute="centerY" id="q1k-v8-nGU"/>
+                                        <constraint firstItem="iHh-Ob-nQC" firstAttribute="leading" secondItem="kdm-sy-rB4" secondAttribute="leadingMargin" constant="10" id="wnq-re-gJK"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="commentLabel" destination="Dqz-L6-OWR" id="OSn-Vc-Xb5"/>
@@ -183,28 +175,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gY-2a-us4">
-                                            <rect key="frame" x="321" y="10" width="54" height="30"/>
-                                            <state key="normal" title="Animals"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLd-EI-mIC">
+                                            <rect key="frame" x="330" y="10" width="35" height="30"/>
+                                            <state key="normal" title="Page"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="C5T-fm-5QI"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jla-hm-04s">
-                                            <rect key="frame" x="0.0" y="10" width="51" height="30"/>
-                                            <state key="normal" title="Shapes"/>
-                                            <connections>
-                                                <segue destination="uUO-u8-eia" kind="show" id="c2D-x4-cGv"/>
+                                                <segue destination="GWg-zH-byk" kind="presentation" id="Z3c-uV-cMe"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="jla-hm-04s" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="1AZ-zb-KUK"/>
-                                        <constraint firstItem="4gY-2a-us4" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="6YO-gM-sHt"/>
-                                        <constraint firstItem="jla-hm-04s" firstAttribute="leading" secondItem="5ko-lj-Fcn" secondAttribute="leading" id="F7a-H4-km3"/>
+                                        <constraint firstItem="wLd-EI-mIC" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="Gnq-vd-fw4"/>
+                                        <constraint firstItem="wLd-EI-mIC" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="Od6-Ye-hIY"/>
                                         <constraint firstItem="jAn-GE-XEW" firstAttribute="centerX" secondItem="5ko-lj-Fcn" secondAttribute="centerX" id="SrC-tU-1yy"/>
                                         <constraint firstItem="jAn-GE-XEW" firstAttribute="centerY" secondItem="5ko-lj-Fcn" secondAttribute="centerY" id="bn9-B1-9yi"/>
-                                        <constraint firstAttribute="trailing" secondItem="4gY-2a-us4" secondAttribute="trailing" id="eOE-c5-vPX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wLd-EI-mIC" secondAttribute="trailing" constant="10" id="zmh-YI-YY3"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="commentLabel" destination="jAn-GE-XEW" id="DYP-qK-DUj"/>
@@ -239,7 +223,7 @@
         <!--Shapes View Controller-->
         <scene sceneID="RAG-mr-62H">
             <objects>
-                <viewController id="uUO-u8-eia" customClass="ShapesViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shapesViewController" id="uUO-u8-eia" customClass="ShapesViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqj-q3-ymO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,27 +271,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX9-pH-gZv">
-                                            <rect key="frame" x="321" y="10" width="54" height="30"/>
-                                            <state key="normal" title="Animals"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYS-il-LeT">
+                                            <rect key="frame" x="330" y="10" width="35" height="30"/>
+                                            <state key="normal" title="Page"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="Tsv-Vh-Nnj"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-Je-zTR">
-                                            <rect key="frame" x="0.0" y="10" width="60" height="30"/>
-                                            <state key="normal" title="123/ABC"/>
-                                            <connections>
-                                                <segue destination="ZAB-Z0-SqK" kind="show" id="IEy-Zs-Xpn"/>
+                                                <segue destination="GWg-zH-byk" kind="presentation" id="Lbi-V8-wkq"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QEG-f2-jOV" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="9Fz-Kc-Qi5"/>
-                                        <constraint firstItem="tX9-pH-gZv" firstAttribute="trailing" secondItem="fnb-WR-fQW" secondAttribute="trailingMargin" id="IOu-Ex-aHA"/>
-                                        <constraint firstItem="8sd-Je-zTR" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="Ntd-Xd-Liq"/>
-                                        <constraint firstItem="8sd-Je-zTR" firstAttribute="leading" secondItem="fnb-WR-fQW" secondAttribute="leading" id="XaS-be-laU"/>
-                                        <constraint firstItem="tX9-pH-gZv" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="kqU-rP-dxU"/>
+                                        <constraint firstItem="cYS-il-LeT" firstAttribute="centerY" secondItem="fnb-WR-fQW" secondAttribute="centerY" id="Umk-ux-vJV"/>
+                                        <constraint firstAttribute="trailing" secondItem="cYS-il-LeT" secondAttribute="trailing" constant="10" id="aRr-9T-gy6"/>
                                         <constraint firstItem="QEG-f2-jOV" firstAttribute="centerX" secondItem="fnb-WR-fQW" secondAttribute="centerX" id="wRC-7P-mKj"/>
                                     </constraints>
                                     <connections>
@@ -337,10 +312,92 @@
             </objects>
             <point key="canvasLocation" x="-71" y="688"/>
         </scene>
+        <!--Index Controller-->
+        <scene sceneID="hcK-1T-iuj">
+            <objects>
+                <tableViewController storyboardIdentifier="indexViewController" id="GWg-zH-byk" customClass="IndexController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cGJ-uz-6QF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Select a page" id="e1w-DR-oMn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gbv-T7-chp">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gbv-T7-chp" id="4tK-fh-14K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-LT-RJb">
+                                                    <rect key="frame" x="157" y="11.5" width="61" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DaS-LT-RJb" firstAttribute="centerX" secondItem="4tK-fh-14K" secondAttribute="centerX" id="3Hm-io-v1w"/>
+                                                <constraint firstItem="DaS-LT-RJb" firstAttribute="centerY" secondItem="4tK-fh-14K" secondAttribute="centerY" id="yuT-OA-wLC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ven-p1-mcl">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ven-p1-mcl" id="P5e-wb-E3V">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers and letters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt7-Q4-Kc6">
+                                                    <rect key="frame" x="109.5" y="11.5" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lt7-Q4-Kc6" firstAttribute="centerX" secondItem="P5e-wb-E3V" secondAttribute="centerX" id="EIf-Pp-RQt"/>
+                                                <constraint firstItem="lt7-Q4-Kc6" firstAttribute="centerY" secondItem="P5e-wb-E3V" secondAttribute="centerY" id="feL-h2-IIS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ze2-Xk-FcX">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ze2-Xk-FcX" id="2Dr-Yr-MZq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shapes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-RD-aha">
+                                                    <rect key="frame" x="159" y="11" width="57" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zen-RD-aha" firstAttribute="centerY" secondItem="2Dr-Yr-MZq" secondAttribute="centerY" id="izb-ej-h2b"/>
+                                                <constraint firstItem="Zen-RD-aha" firstAttribute="centerX" secondItem="2Dr-Yr-MZq" secondAttribute="centerX" id="ny7-zM-VwB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="GWg-zH-byk" id="RA3-0X-ZMW"/>
+                            <outlet property="delegate" destination="GWg-zH-byk" id="MKF-gZ-Jek"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uf-5A-9Sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="797"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zmA-Iu-yCA"/>
-        <segue reference="uHN-3u-P5r"/>
-        <segue reference="Tsv-Vh-Nnj"/>
+        <segue reference="Lbi-V8-wkq"/>
     </inferredMetricsTieBreakers>
 </document>
