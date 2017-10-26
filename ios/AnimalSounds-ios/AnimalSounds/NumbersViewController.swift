@@ -14,18 +14,16 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBOutlet var collectionView: UICollectionView!
     var textItems: [TextItem] = []
-    var maxNumber = 25
     let speechHelper = SpeechHelper()
+    var settingsHelper = SettingsHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // initSettings()
         initItems()
         
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
 
-        //registerSwipeToNavigate()
         registerSwipeToSpeak()
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
@@ -84,14 +82,8 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         self.present(newViewController, animated: true, completion: nil)
     }
     fileprivate func initItems() {
-        for index in 0...self.maxNumber {
+        for index in 0...self.settingsHelper.maxNumber {
             textItems.append(TextItem(displayText: String(index), speakText: String(index)))
-        }
-        
-        let startingValue = Int(("a" as UnicodeScalar).value) // 65
-        for i in 0 ..< 26 {
-            let cletter: String = String(Character(UnicodeScalar(i + startingValue)!))
-            textItems.append(TextItem(displayText: "\(cletter.uppercased()) \(cletter)", speakText: cletter))
         }
     }
 

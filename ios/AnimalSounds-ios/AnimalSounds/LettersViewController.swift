@@ -13,7 +13,7 @@ import AVFoundation
 class LettersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
-    var textItems: [TextItem] = []
+    var letters: [TextItem] = []
     var maxNumber = 25
     let speechHelper = SpeechHelper()
     
@@ -25,7 +25,6 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
         
-        //registerSwipeToNavigate()
         registerSwipeToSpeak()
         collectionView.autoresizesSubviews = true
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
@@ -40,20 +39,6 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
         flowLayout.invalidateLayout()
     }
     
-    func registerSwipeToNavigate() {
-        // swipe gesture
-        let swipeRightRec = UISwipeGestureRecognizer()
-        swipeRightRec.addTarget(self, action: #selector(self.handleSwipeToNavigate))
-        swipeRightRec.direction = .right
-        collectionView.addGestureRecognizer(swipeRightRec)
-        self.view.addGestureRecognizer(swipeRightRec)
-        
-        let swipeLeftRec = UISwipeGestureRecognizer()
-        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipeToNavigate))
-        swipeLeftRec.direction = .left
-        collectionView.addGestureRecognizer(swipeLeftRec)
-        self.view.addGestureRecognizer(swipeLeftRec)
-    }
     func registerSwipeToSpeak() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
@@ -71,32 +56,19 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
     @objc func handleSwipeToSpeak(gestureRecognizer: UISwipeGestureRecognizer) {
         let touchpoint = gestureRecognizer.location(ofTouch: 0, in: collectionView)
         if let item = collectionView.indexPathForItem(at: touchpoint) {
-            speechHelper.speakText(textItems[item.row].speakText)
+            speechHelper.speakText(letters[item.row].speakText)
         }
     }
-    @objc func handleSwipeToNavigate(gestureRecognizer: UISwipeGestureRecognizer) {
-        print("swipped, direction: \(gestureRecognizer.direction)")
-        // let newViewController = NumbersViewController()
-        // self.navigationController?.pushViewController(newViewController, animated: true)
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "animalsViewController") as! ViewController
-        self.present(newViewController, animated: true, completion: nil)
-    }
     fileprivate func initItems() {
-        //for index in 0...self.maxNumber {
-        //    textItems.append(TextItem(displayText: String(index), speakText: String(index)))
-        //}
-        
         let startingValue = Int(("a" as UnicodeScalar).value) // 65
         for i in 0 ..< 26 {
             let cletter: String = String(Character(UnicodeScalar(i + startingValue)!))
-            textItems.append(TextItem(displayText: "\(cletter.uppercased()) \(cletter)", speakText: cletter))
+            letters.append(TextItem(displayText: "\(cletter.uppercased()) \(cletter)", speakText: cletter))
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return textItems.count
+        return letters.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -110,7 +82,7 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LettersItemCollectionViewCell", for: indexPath) as! LettersItemCollectionViewCell
         
-        cell.setText(textItems[indexPath.row].displayText)
+        cell.setText(letters[indexPath.row].displayText)
         
         if let label = cell.letterLabel {
             label.isUserInteractionEnabled = true
@@ -143,7 +115,7 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
         print("itemTapped", separator: "", terminator: "")
         
         if let label = tapGestureRecognizer.view as! UILabel! {
-            speechHelper.speakText(textItems[label.tag].speakText)
+            speechHelper.speakText(letters[label.tag].speakText)
         }
     }
 }

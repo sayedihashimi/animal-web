@@ -14,11 +14,11 @@ class SpeechHelper {
     var language = "English"
     let synth = AVSpeechSynthesizer()
     let translationManager = TranslationManager()
+    let settingsHelper = SettingsHelper()
     
-    init(){
-        registerSettingsBundle()
-        NotificationCenter.default.addObserver(self, selector: #selector(SpeechHelper.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
-        defaultsChanged()
+    init(){        
+        language = settingsHelper.language
+        voiceName = translationManager.getVoiceName(forLanguage: language, "Samantha")
     }
     
     // will get the translation
@@ -49,18 +49,9 @@ class SpeechHelper {
         
         return nil
     }
-    
-    func registerSettingsBundle(){
-        let appDefaults = [String:AnyObject]()
-        UserDefaults.standard.register(defaults: appDefaults)
-    }
-    @objc func defaultsChanged(){
-        if let languageSettingName = UserDefaults.standard.string(forKey: SettingsBundleHelper.SettingsBundleKeys.Language) {
-            language = languageSettingName
-            voiceName = translationManager.getVoiceName(forLanguage: language, "Samantha")
-        }
-    }
 }
+
+
 
 class TranslationManager{
     var translations: [String: Translation] = [String: Translation]()
