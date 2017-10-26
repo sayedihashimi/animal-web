@@ -56,6 +56,7 @@
 		ECA9EE821F942E0A00FAAE6C /* goat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA9EE811F942D8200FAAE6C /* goat.wav */; };
 		ECA9EE881F94326A00FAAE6C /* chipmunk.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA9EE851F94320800FAAE6C /* chipmunk.wav */; };
 		ECA9EE891F94326A00FAAE6C /* giraffe.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECA9EE861F94320800FAAE6C /* giraffe.wav */; };
+		ECAD2F701FA03E9B005E7F27 /* LettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD2F6F1FA03E9B005E7F27 /* LettersViewController.swift */; };
 		ECBAE2481F892CEC00D33CEF /* Bird chirps animals140.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2461F892CC500D33CEF /* Bird chirps animals140.wav */; };
 		ECBAE2491F892CEC00D33CEF /* Cow animals055.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE2471F892CC500D33CEF /* Cow animals055.wav */; };
 		ECBAE24A1F892CEC00D33CEF /* Crow caw animals063.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */; };
@@ -133,6 +134,7 @@
 		ECA9EE811F942D8200FAAE6C /* goat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = goat.wav; path = media/goat.wav; sourceTree = SOURCE_ROOT; };
 		ECA9EE851F94320800FAAE6C /* chipmunk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chipmunk.wav; path = media/chipmunk.wav; sourceTree = SOURCE_ROOT; };
 		ECA9EE861F94320800FAAE6C /* giraffe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = giraffe.wav; path = media/giraffe.wav; sourceTree = SOURCE_ROOT; };
+		ECAD2F6F1FA03E9B005E7F27 /* LettersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersViewController.swift; sourceTree = "<group>"; };
 		ECBAE23D1F892CC400D33CEF /* Horse whinny animals126.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Horse whinny animals126.wav"; sourceTree = "<group>"; };
 		ECBAE23E1F892CC400D33CEF /* Crow caw animals063.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Crow caw animals063.wav"; sourceTree = "<group>"; };
 		ECBAE23F1F892CC400D33CEF /* owl animals074.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "owl animals074.wav"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				EC5B77891F831684003CB235 /* Gallery.swift */,
 				EC072B0C1F832BEB00CDF5F0 /* items.plist */,
 				EC072B0E1F834FF200CDF5F0 /* animals.json */,
+				ECAD2F6F1FA03E9B005E7F27 /* LettersViewController.swift */,
 				EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */,
 				EC249E921F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift */,
 				ECD74E941F9068EB00E012A0 /* Settings.bundle */,
@@ -410,6 +413,7 @@
 				ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */,
 				ECEBB67D1F9DA52E00CBDD06 /* AppHelper.swift in Sources */,
 				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
+				ECAD2F701FA03E9B005E7F27 /* LettersViewController.swift in Sources */,
 				ECEBB67B1F9D9BC900CBDD06 /* IndexController.swift in Sources */,
 				EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */,
 				EC4C2FCD1F9C4601002EFAFC /* SpeechHelper.swift in Sources */,

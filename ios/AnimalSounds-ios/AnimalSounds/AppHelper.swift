@@ -12,11 +12,13 @@ class AppHelper{
     enum Page{
         case Animals
         case Numbers
+        case Letters
         case Shapes
     }
     struct PageId{
         static let Animals = "animalsViewController"
         static let Numbers = "numbersViewController"
         static let Shapes = "shapesViewController"
+        static let Letters = "lettersViewController"
     }
 }

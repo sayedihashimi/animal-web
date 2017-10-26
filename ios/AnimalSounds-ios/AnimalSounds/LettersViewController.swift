@@ -1,8 +1,8 @@
 //
-//  NumbersViewController.swift
+//  LettersViewController.swift
 //  AnimalSounds
 //
-//  Created by Sayed Hashimi on 10/8/17.
+//  Created by Sayed Hashimi on 10/24/17.
 //  Copyright © 2017 Sayed Ibrahim Hashimi. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVFoundation
 
-class NumbersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class LettersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
     var textItems: [TextItem] = []
@@ -24,7 +24,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         initItems()
         
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
-
+        
         //registerSwipeToNavigate()
         registerSwipeToSpeak()
         collectionView.autoresizesSubviews = true
@@ -39,7 +39,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         flowLayout.invalidateLayout()
     }
-
+    
     func registerSwipeToNavigate() {
         // swipe gesture
         let swipeRightRec = UISwipeGestureRecognizer()
@@ -84,9 +84,9 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         self.present(newViewController, animated: true, completion: nil)
     }
     fileprivate func initItems() {
-        for index in 0...self.maxNumber {
-            textItems.append(TextItem(displayText: String(index), speakText: String(index)))
-        }
+        //for index in 0...self.maxNumber {
+        //    textItems.append(TextItem(displayText: String(index), speakText: String(index)))
+        //}
         
         let startingValue = Int(("a" as UnicodeScalar).value) // 65
         for i in 0 ..< 26 {
@@ -94,11 +94,11 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
             textItems.append(TextItem(displayText: "\(cletter.uppercased()) \(cletter)", speakText: cletter))
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return textItems.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -108,11 +108,11 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NumbersItemCollectionViewCell", for: indexPath) as! NumbersItemCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LettersItemCollectionViewCell", for: indexPath) as! LettersItemCollectionViewCell
         
         cell.setText(textItems[indexPath.row].displayText)
         
-        if let label = cell.numberLabel {
+        if let label = cell.letterLabel {
             label.isUserInteractionEnabled = true
             label.tag = indexPath.row
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(itemTapped(tapGestureRecognizer:)))
@@ -127,9 +127,9 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "NumbersItemCommentView", for: indexPath) as! NumbersItemCommentView
+        let commentView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "LettersItemCommentView", for: indexPath) as! LettersItemCommentView
         
-        commentView.setLabel(text: "Numbers")
+        commentView.setLabel(text: "Letters")
         
         return commentView
     }
@@ -148,17 +148,8 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 }
 
-class TextItem {
-    let displayText: String
-    let speakText: String
-    
-    init(displayText: String, speakText: String) {
-        self.displayText = displayText
-        self.speakText = speakText
-    }
-}
 
-class NumbersItemCommentView : UICollectionReusableView {
+class LettersItemCommentView : UICollectionReusableView {
     @IBOutlet var commentLabel: UILabel!
     
     func setLabel(text: String){
@@ -166,14 +157,14 @@ class NumbersItemCommentView : UICollectionReusableView {
     }
 }
 
-class NumbersItemCollectionViewCell : UICollectionViewCell {
-    @IBOutlet var numberLabel: UILabel!
+class LettersItemCollectionViewCell : UICollectionViewCell {
+    @IBOutlet var letterLabel: UILabel!
     
     func setText(_ text:String){
-        numberLabel.text = text
+        letterLabel.text = text
     }
     func getText() -> String? {
-        return numberLabel.text
+        return letterLabel.text
     }
     
 }

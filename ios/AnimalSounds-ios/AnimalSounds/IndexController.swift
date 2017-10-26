@@ -25,6 +25,8 @@ class IndexController : UITableViewController{
         case 1:
             pageToNavigateTo = .Numbers
         case 2:
+            pageToNavigateTo = .Letters
+        case 3:
             pageToNavigateTo = .Shapes
         default:
             pageToNavigateTo = .Animals
@@ -41,6 +43,8 @@ class IndexController : UITableViewController{
             nextViewName = AppHelper.PageId.Animals
         case .Numbers:
             nextViewName = AppHelper.PageId.Numbers
+        case .Letters:
+            nextViewName = AppHelper.PageId.Letters
         case .Shapes:
             nextViewName = AppHelper.PageId.Shapes
         default:
