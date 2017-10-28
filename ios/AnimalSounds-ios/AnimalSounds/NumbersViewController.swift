@@ -74,8 +74,6 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     @objc func handleSwipeToNavigate(gestureRecognizer: UISwipeGestureRecognizer) {
         print("swipped, direction: \(gestureRecognizer.direction)")
-        // let newViewController = NumbersViewController()
-        // self.navigationController?.pushViewController(newViewController, animated: true)
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "animalsViewController") as! ViewController
