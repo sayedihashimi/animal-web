@@ -13,10 +13,16 @@ import AVFoundation
 
 
 class BaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     // things that must be overridden by subclass
-    @IBOutlet var collectionView: UICollectionView!
-    let cellReuseId = "cell-id-here"
-    let headerReuseId = "header-id-here"
+    // @IBOutlet var collectionView: UICollectionView!
+
+    func getCollectionView() -> UICollectionView {
+        fatalError(#function + "Must be overridden");
+    }
+    
+    var cellReuseId = "cell-reuse-id"
+    var headerReuseId = "header-reuse-id"
     
     func initItems() {
         fatalError(#function + "Must be overridden");
@@ -47,16 +53,16 @@ class BaseViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         initItems()
         
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        getCollectionView().decelerationRate = UIScrollViewDecelerationRateFast
         
         registerSwipe()
-        collectionView.autoresizesSubviews = true
-        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        collectionView.reloadData()
+        getCollectionView().autoresizesSubviews = true
+        getCollectionView().contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        getCollectionView().reloadData()
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+        guard let flowLayout = getCollectionView().collectionViewLayout as? UICollectionViewFlowLayout else {
             return
         }
         
@@ -68,13 +74,13 @@ class BaseViewController: UIViewController, UICollectionViewDataSource, UICollec
         let swipeRightRec = UISwipeGestureRecognizer()
         swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
         swipeRightRec.direction = .right
-        collectionView.addGestureRecognizer(swipeRightRec)
+        getCollectionView().addGestureRecognizer(swipeRightRec)
         self.view.addGestureRecognizer(swipeRightRec)
         
         let swipeLeftRec = UISwipeGestureRecognizer()
         swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
         swipeLeftRec.direction = .left
-        collectionView.addGestureRecognizer(swipeLeftRec)
+        getCollectionView().addGestureRecognizer(swipeLeftRec)
         self.view.addGestureRecognizer(swipeLeftRec)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -106,63 +112,71 @@ class BaseViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 }
 
-class LettersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class LettersViewController: BaseViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     var letters: [TextItem] = []
     var maxNumber = 25
-    let speechHelper = SpeechHelper()
+    //let speechHelper = SpeechHelper()
     
-    let minimumLineSpacingForSectionAt = CGFloat(0)
-    let minimumInteritemSpacingForSectionAt = CGFloat(0)
-    
-    let cellReuseId = "LettersItemCollectionViewCell"
-    let headerReuseId = "LettersItemCommentView"
+    //let minimumLineSpacingForSectionAt = CGFloat(0)
+    //let minimumInteritemSpacingForSectionAt = CGFloat(0)
     
     override func viewDidLoad() {
+        super.cellReuseId = "LettersItemCollectionViewCell"
+        super.headerReuseId = "LettersItemCommentView"
         super.viewDidLoad()
         
-        initItems()
-        
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
-        
-        registerSwipeToSpeak()
-        collectionView.autoresizesSubviews = true
-        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        collectionView.reloadData()
-    }
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }
-        
-        flowLayout.invalidateLayout()
     }
     
-    func registerSwipeToSpeak() {
-        // swipe gesture
-        let swipeRightRec = UISwipeGestureRecognizer()
-        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
-        swipeRightRec.direction = .right
-        collectionView.addGestureRecognizer(swipeRightRec)
-        self.view.addGestureRecognizer(swipeRightRec)
-        
-        let swipeLeftRec = UISwipeGestureRecognizer()
-        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
-        swipeLeftRec.direction = .left
-        collectionView.addGestureRecognizer(swipeLeftRec)
-        self.view.addGestureRecognizer(swipeLeftRec)
+    override func getCollectionView() -> UICollectionView {
+        return collectionView
     }
     
-    @objc func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        initItems()
+//
+//        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+//
+//        registerSwipeToSpeak()
+//        collectionView.autoresizesSubviews = true
+//        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+//        collectionView.reloadData()
+//    }
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+//            return
+//        }
+//
+//        flowLayout.invalidateLayout()
+//    }
+    
+//    func registerSwipeToSpeak() {
+//        // swipe gesture
+//        let swipeRightRec = UISwipeGestureRecognizer()
+//        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
+//        swipeRightRec.direction = .right
+//        collectionView.addGestureRecognizer(swipeRightRec)
+//        self.view.addGestureRecognizer(swipeRightRec)
+//
+//        let swipeLeftRec = UISwipeGestureRecognizer()
+//        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
+//        swipeLeftRec.direction = .left
+//        collectionView.addGestureRecognizer(swipeLeftRec)
+//        self.view.addGestureRecognizer(swipeLeftRec)
+//    }
+    
+    @objc override func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
         let touchpoint = gestureRecognizer.location(ofTouch: 0, in: collectionView)
         if let item = collectionView.indexPathForItem(at: touchpoint) {
             speechHelper.speakText(letters[item.row].speakText)
         }
     }
     
-    func initItems() {
+    override func initItems() {
         let startingValue = Int(("a" as UnicodeScalar).value) // 65
         for i in 0 ..< 26 {
             let cletter: String = String(Character(UnicodeScalar(i + startingValue)!))
@@ -170,11 +184,11 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
     
-    func getItems() -> [AnyObject]{
+    override func getItems() -> [AnyObject]{
         return letters
     }
     
-    func initCell(_ cell: UICollectionViewCell, _ colletionView: UICollectionView, cellForItemAt indexPath: IndexPath){
+    override func initCell(_ cell: UICollectionViewCell, _ colletionView: UICollectionView, cellForItemAt indexPath: IndexPath){
         let thecell = cell as! LettersItemCollectionViewCell
         
         thecell.setText(letters[indexPath.row].displayText)
@@ -190,7 +204,7 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
             }
         }
     }
-    func initHeader(_ header: UICollectionReusableView, _ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath){
+    override func initHeader(_ header: UICollectionReusableView, _ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath){
         
         let theheader = header as! LettersItemCommentView
         theheader.setLabel(text: "Letters")
@@ -198,35 +212,35 @@ class LettersViewController: UIViewController, UICollectionViewDataSource, UICol
 
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return getItems().count
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return minimumLineSpacingForSectionAt
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return minimumInteritemSpacingForSectionAt
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return self.view.frame.size
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
-        initCell(cell, collectionView, cellForItemAt: indexPath)
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseId, for: indexPath)
-        
-        initHeader(header, collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
-        
-        return header
-    }
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return getItems().count
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return minimumLineSpacingForSectionAt
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return minimumInteritemSpacingForSectionAt
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return self.view.frame.size
+//    }
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
+//        initCell(cell, collectionView, cellForItemAt: indexPath)
+//
+//        return cell
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseId, for: indexPath)
+//
+//        initHeader(header, collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
+//
+//        return header
+//    }
 
-    @objc func itemTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    @objc override func itemTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         if let label = tapGestureRecognizer.view as! UILabel! {
             speechHelper.speakText(letters[label.tag].speakText)
