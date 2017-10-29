@@ -9,6 +9,9 @@
 import UIKit
 import AVFoundation
 
+struct VoiceNames {
+    static let EnglishVoiceName = "Samantha"
+}
 class SpeechHelper {
     var voiceName = "Samantha"
     var language = "English"
@@ -18,7 +21,7 @@ class SpeechHelper {
     
     init(){        
         language = settingsHelper.language
-        voiceName = translationManager.getVoiceName(forLanguage: language, "Samantha")
+        voiceName = translationManager.getVoiceName(forLanguage: language, VoiceNames.EnglishVoiceName)
     }
     
     // will get the translation
@@ -27,12 +30,24 @@ class SpeechHelper {
     }
     
     func speakText(_ text: String){
+        speakText(text, voiceName)
+//        let speakText = getTextToSpeak(text, language, voiceName)
+//
+//        let myUtterance = AVSpeechUtterance(string: speakText)
+//
+//        if let voice = getVoice(forName: voiceName) {
+//            myUtterance.voice = voice
+//        }
+//        synth.speak(myUtterance)
+    }
+    
+    func speakText(_ text: String, _ voiceNameToUse: String){
         
-        let speakText = getTextToSpeak(text, language, voiceName)
+        let speakText = getTextToSpeak(text, language, voiceNameToUse)
         
         let myUtterance = AVSpeechUtterance(string: speakText)
         
-        if let voice = getVoice(forName: voiceName) {
+        if let voice = getVoice(forName: voiceNameToUse) {
             myUtterance.voice = voice
         }
         synth.speak(myUtterance)

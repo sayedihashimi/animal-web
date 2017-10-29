@@ -14,11 +14,13 @@ class AppHelper{
         case Numbers
         case Letters
         case Shapes
+        case Dinosaurs
     }
     struct PageId{
         static let Animals = "animalsViewController"
         static let Numbers = "numbersViewController"
         static let Shapes = "shapesViewController"
         static let Letters = "lettersViewController"
+        static let Dinosaurs = "dinoViewController"
     }
 }

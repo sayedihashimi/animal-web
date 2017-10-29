@@ -181,10 +181,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    enum AnimalAction {
-        case PlaySound
-        case SayName
-    }
+
     
     var audioPlayer: AVAudioPlayer?
     func playSound(name: String) {
@@ -235,7 +232,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
 }
-
+enum AnimalAction {
+    case PlaySound
+    case SayName
+}
 
 
 

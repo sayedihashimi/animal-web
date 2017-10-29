@@ -13,7 +13,7 @@ import AVFoundation
 
 
 class BaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+    var audioPlayer: AVAudioPlayer?
     // things that must be overridden by subclass
     // @IBOutlet var collectionView: UICollectionView!
 
@@ -110,18 +110,25 @@ class BaseViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return header
     }
+    
+    func playSound(name: String) {
+        
+        let soundName = URL(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "wav")!)
+        
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setActive(true)
+        
+        try! audioPlayer = AVAudioPlayer(contentsOf: soundName)
+        audioPlayer!.prepareToPlay()
+        audioPlayer!.play()
+    }
 }
 
 class LettersViewController: BaseViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     var letters: [TextItem] = []
-    var maxNumber = 25
-    //let speechHelper = SpeechHelper()
-    
-    //let minimumLineSpacingForSectionAt = CGFloat(0)
-    //let minimumInteritemSpacingForSectionAt = CGFloat(0)
-    
+
     override func viewDidLoad() {
         super.cellReuseId = "LettersItemCollectionViewCell"
         super.headerReuseId = "LettersItemCommentView"
@@ -132,42 +139,6 @@ class LettersViewController: BaseViewController {
     override func getCollectionView() -> UICollectionView {
         return collectionView
     }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        initItems()
-//
-//        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
-//
-//        registerSwipeToSpeak()
-//        collectionView.autoresizesSubviews = true
-//        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-//        collectionView.reloadData()
-//    }
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-//            return
-//        }
-//
-//        flowLayout.invalidateLayout()
-//    }
-    
-//    func registerSwipeToSpeak() {
-//        // swipe gesture
-//        let swipeRightRec = UISwipeGestureRecognizer()
-//        swipeRightRec.addTarget(self, action: #selector(self.handleSwipe))
-//        swipeRightRec.direction = .right
-//        collectionView.addGestureRecognizer(swipeRightRec)
-//        self.view.addGestureRecognizer(swipeRightRec)
-//
-//        let swipeLeftRec = UISwipeGestureRecognizer()
-//        swipeLeftRec.addTarget(self, action: #selector(self.handleSwipe))
-//        swipeLeftRec.direction = .left
-//        collectionView.addGestureRecognizer(swipeLeftRec)
-//        self.view.addGestureRecognizer(swipeLeftRec)
-//    }
     
     @objc override func handleSwipe(gestureRecognizer: UISwipeGestureRecognizer) {
         let touchpoint = gestureRecognizer.location(ofTouch: 0, in: collectionView)
@@ -209,36 +180,6 @@ class LettersViewController: BaseViewController {
         let theheader = header as! LettersItemCommentView
         theheader.setLabel(text: "Letters")
     }
-
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return getItems().count
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return minimumLineSpacingForSectionAt
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return minimumInteritemSpacingForSectionAt
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return self.view.frame.size
-//    }
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
-//        initCell(cell, collectionView, cellForItemAt: indexPath)
-//
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseId, for: indexPath)
-//
-//        initHeader(header, collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
-//
-//        return header
-//    }
 
     @objc override func itemTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {

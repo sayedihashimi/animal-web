@@ -1,0 +1,44 @@
+ [
+  {
+  "id": "allosaurus",
+  "name": "allosaurus",
+  "image": "allosaurus",
+  "audio": "allosaurus"
+  },
+  {
+  "id": "brachiosaurus",
+  "name": "brachiosaurus",
+  "image": "brachiosaurus",
+  "audio": "brachiosaurus"
+  },
+  {
+  "id": "brontosaurus",
+  "name": "brontosaurus",
+  "image": "brontosaurus",
+  "audio": "brontosaurus"
+  },
+  {
+  "id": "megalosaurus",
+  "name": "megalosaurus",
+  "image": "megalosaurus",
+  "audio": "megalosaurus"
+  },
+  {
+  "id": "triceratops",
+  "name": "triceratops",
+  "image": "triceratops",
+  "audio": "triceratops"
+  },
+  {
+  "id": "tyrannosaurus",
+  "name": "tyrannosaurus",
+  "image": "tyrannosaurus",
+  "audio": "tyrannosaurus"
+  },
+  {
+  "id": "velociraptor",
+  "name": "velociraptor",
+  "image": "velociraptor",
+  "audio": "velociraptor"
+  }
+]

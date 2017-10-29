@@ -1,0 +1,12 @@
+$elementsStr = @'
+  "id": "{0}",
+  "name": "{0}",
+  "image": "{0}",
+  "audio": "{0}"
+}},
+
+'@
+
+str='[';Get-ChildItem .\ *.wav|Select-Object -ExpandProperty basename|%{
+    $str += $elementStr -f $_
+  };$str = $str.Trim().TrimEnd(',') + "`r`n]";$str|clip;'json is on clipboard'
