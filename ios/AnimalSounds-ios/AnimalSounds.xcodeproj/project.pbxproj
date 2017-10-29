@@ -49,6 +49,11 @@
 		EC5B77821F831517003CB235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5B77801F831517003CB235 /* LaunchScreen.storyboard */; };
 		EC5B778A1F831684003CB235 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77891F831684003CB235 /* Gallery.swift */; };
 		EC709C141F9C51510044F611 /* strings.chinese.json in Resources */ = {isa = PBXBuildFile; fileRef = EC709C131F9C50EC0044F611 /* strings.chinese.json */; };
+		EC71AC4F1FA5912000D8C2B6 /* microraptor.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC71AC4A1FA5912000D8C2B6 /* microraptor.wav */; };
+		EC71AC501FA5912000D8C2B6 /* pachycephalosaurus.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC71AC4B1FA5912000D8C2B6 /* pachycephalosaurus.wav */; };
+		EC71AC511FA5912000D8C2B6 /* dilophosaurus.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC71AC4C1FA5912000D8C2B6 /* dilophosaurus.wav */; };
+		EC71AC521FA5912000D8C2B6 /* stegosaurus.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC71AC4D1FA5912000D8C2B6 /* stegosaurus.wav */; };
+		EC71AC531FA5912000D8C2B6 /* torosaurus.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC71AC4E1FA5912000D8C2B6 /* torosaurus.wav */; };
 		EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */; };
 		EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */ = {isa = PBXBuildFile; fileRef = EC7A21FC1F92E3A50062E04E /* shapes.json */; };
 		EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A21FE1F92E3D70062E04E /* DataItem.swift */; };
@@ -137,6 +142,11 @@
 		EC5B77831F831517003CB235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5B77891F831684003CB235 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		EC709C131F9C50EC0044F611 /* strings.chinese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.chinese.json; sourceTree = "<group>"; };
+		EC71AC4A1FA5912000D8C2B6 /* microraptor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = microraptor.wav; path = media/microraptor.wav; sourceTree = SOURCE_ROOT; };
+		EC71AC4B1FA5912000D8C2B6 /* pachycephalosaurus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pachycephalosaurus.wav; path = media/pachycephalosaurus.wav; sourceTree = SOURCE_ROOT; };
+		EC71AC4C1FA5912000D8C2B6 /* dilophosaurus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = dilophosaurus.wav; path = media/dilophosaurus.wav; sourceTree = SOURCE_ROOT; };
+		EC71AC4D1FA5912000D8C2B6 /* stegosaurus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = stegosaurus.wav; path = media/stegosaurus.wav; sourceTree = SOURCE_ROOT; };
+		EC71AC4E1FA5912000D8C2B6 /* torosaurus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = torosaurus.wav; path = media/torosaurus.wav; sourceTree = SOURCE_ROOT; };
 		EC7A21FA1F92E1DE0062E04E /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
 		EC7A21FC1F92E3A50062E04E /* shapes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shapes.json; sourceTree = "<group>"; };
 		EC7A21FE1F92E3D70062E04E /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
@@ -193,6 +203,11 @@
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				EC71AC4C1FA5912000D8C2B6 /* dilophosaurus.wav */,
+				EC71AC4A1FA5912000D8C2B6 /* microraptor.wav */,
+				EC71AC4B1FA5912000D8C2B6 /* pachycephalosaurus.wav */,
+				EC71AC4D1FA5912000D8C2B6 /* stegosaurus.wav */,
+				EC71AC4E1FA5912000D8C2B6 /* torosaurus.wav */,
 				EC0BE6D11FA57E6A00D99044 /* allosaurus.wav */,
 				EC0BE6CE1FA57E6900D99044 /* brachiosaurus.wav */,
 				EC0BE6CF1FA57E6A00D99044 /* brontosaurus.wav */,
@@ -386,6 +401,7 @@
 				EC876F061F96DAFD0062F967 /* squirrel.wav in Resources */,
 				ECA9EE881F94326A00FAAE6C /* chipmunk.wav in Resources */,
 				ECA9EE891F94326A00FAAE6C /* giraffe.wav in Resources */,
+				EC71AC4F1FA5912000D8C2B6 /* microraptor.wav in Resources */,
 				ECA9EE821F942E0A00FAAE6C /* goat.wav in Resources */,
 				EC7A21FD1F92E3AC0062E04E /* shapes.json in Resources */,
 				EC9639DE1F92654900B6204D /* brown-bear.wav in Resources */,
@@ -396,18 +412,22 @@
 				ECA382C71F8F1AE000212BBA /* whale.wav in Resources */,
 				ECA382C91F8F1AE000212BBA /* zebra.wav in Resources */,
 				EC2A3A351F898AA700BF7922 /* alpaca.wav in Resources */,
+				EC71AC521FA5912000D8C2B6 /* stegosaurus.wav in Resources */,
 				ECBAE2481F892CEC00D33CEF /* Bird chirps animals140.wav in Resources */,
 				ECBAE2491F892CEC00D33CEF /* Cow animals055.wav in Resources */,
 				ECBAE24A1F892CEC00D33CEF /* Crow caw animals063.wav in Resources */,
 				ECBAE24B1F892CEC00D33CEF /* Dog animals080.wav in Resources */,
 				ECBAE24C1F892CEC00D33CEF /* Geese (Canadian)-flockanimals003.wav in Resources */,
+				EC71AC511FA5912000D8C2B6 /* dilophosaurus.wav in Resources */,
 				ECBAE24D1F892CEC00D33CEF /* Horse whinny animals126.wav in Resources */,
+				EC71AC531FA5912000D8C2B6 /* torosaurus.wav in Resources */,
 				EC0BE6D21FA57E6A00D99044 /* megalosaurus.wav in Resources */,
 				ECBAE24E1F892CEC00D33CEF /* owl animals074.wav in Resources */,
 				ECBAE24F1F892CEC00D33CEF /* Pig squeal animals024.wav in Resources */,
 				ECBAE2501F892CEC00D33CEF /* porcupine.wav in Resources */,
 				ECBAE2511F892CEC00D33CEF /* Rattlesnake  animals077.wav in Resources */,
 				ECBAE2521F892CEC00D33CEF /* Rooster animals070.wav in Resources */,
+				EC71AC501FA5912000D8C2B6 /* pachycephalosaurus.wav in Resources */,
 				EC0BE6D51FA57E6A00D99044 /* brachiosaurus.wav in Resources */,
 				EC2AB2C81F8893A400CDBC41 /* Bee buzzing animals131.wav in Resources */,
 				EC2AB2C91F8893A400CDBC41 /* Capuchin monkey animals075.wav in Resources */,

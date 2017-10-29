@@ -40,5 +40,35 @@
   "name": "velociraptor",
   "image": "velociraptor",
   "audio": "velociraptor"
+  },
+  {
+  "id": "dilophosaurus",
+  "name": "dilophosaurus",
+  "image": "dilophosaurus",
+  "audio": "dilophosaurus"
+  },
+  {
+  "id": "microraptor",
+  "name": "microraptor",
+  "image": "microraptor",
+  "audio": "microraptor"
+  },
+  {
+  "id": "pachycephalosaurus",
+  "name": "pachycephalosaurus",
+  "image": "pachycephalosaurus",
+  "audio": "pachycephalosaurus"
+  },
+  {
+  "id": "stegosaurus",
+  "name": "stegosaurus",
+  "image": "stegosaurus",
+  "audio": "stegosaurus"
+  },
+  {
+  "id": "torosaurus",
+  "name": "torosaurus",
+  "image": "torosaurus",
+  "audio": "torosaurus"
   }
 ]
