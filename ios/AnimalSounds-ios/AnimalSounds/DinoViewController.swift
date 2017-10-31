@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVFoundation
 
-class DinoViewController: BaseViewController {
+class DinoViewController: BaseCollectionViewController {
     @IBOutlet var collectionView: UICollectionView!
     var dataItems: [DinoItem] = []
     var action: AnimalAction = .PlaySound

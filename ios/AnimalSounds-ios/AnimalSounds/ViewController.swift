@@ -75,7 +75,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 1
     }
     
-    fileprivate func initAnimals() {
+    func initAnimals() {
+        animalItems = Animal.readFromJsonResource(name: "animals")
+        /*
+        if let path = Bundle.main.path(forResource: "animals", ofType: "json") {
+            animalItems = Animal.readFromJsonFile(path: path)
+        }
+         */
+        /*
         do{
             if let path = Bundle.main.path(forResource: "animals", ofType: "json"){
                 let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
@@ -105,6 +112,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } catch {
             print(error)
         }
+ */
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

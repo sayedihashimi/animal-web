@@ -30,6 +30,8 @@ class IndexController : UITableViewController{
             pageToNavigateTo = .Shapes
         case 4:
             pageToNavigateTo = .Dinosaurs
+        case 5:
+            pageToNavigateTo = .AnimalQuiz
         default:
             pageToNavigateTo = .Animals
         }
@@ -51,6 +53,8 @@ class IndexController : UITableViewController{
             nextViewName = AppHelper.PageId.Shapes
         case .Dinosaurs:
             nextViewName = AppHelper.PageId.Dinosaurs
+        case .AnimalQuiz:
+            nextViewName = AppHelper.PageId.AnimalQuiz
         default:
             nextViewName = AppHelper.PageId.Animals
         }

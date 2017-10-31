@@ -65,6 +65,53 @@ class Animal {
         self.imageFull = imageFull
         self.audio = audio
     }
+    
+    static func readFromJsonResource(name: String) -> [Animal]{
+        var result: [Animal] = []
+        if let path = Bundle.main.path(forResource: name, ofType: "json") {
+            result = Animal.readFromJsonFile(path: path)
+        }
+        return result
+    }
+    
+    static func readFromJsonFile(path: String) -> [Animal] {
+        var result: [Animal] = []
+        
+        do {
+            let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
+            if(jsonData.count > 0){
+                
+                if let jsonResult = try JSONSerialization.jsonObject(with: jsonData) as? [NSDictionary] {
+                    for json in jsonResult {
+                        
+                        let newanimal = Animal(name: json.value(forKey: "Name") as! String, imageFull: json.value(forKey: "ImageFull") as! String, image: json.value(forKey: "Image") as! String, audio: json.value(forKey: "Audio") as! String)
+                        result.append(newanimal)
+                    }
+                }
+                else {
+                    print("still empty")
+                }
+                
+                if let jsonResult: [Animal] = try JSONSerialization.jsonObject(with: jsonData) as? [Animal] {
+                    for (_,animal) in jsonResult.enumerated() {
+                        result.append(animal)
+                    }
+                } else {
+                    print("empty")
+                }
+                
+            }
+        } catch {
+            print(error)
+        }
+        
+        
+        
+        return result
+    }
+    
+    
+    
 }
 
 

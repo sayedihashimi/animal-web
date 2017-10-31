@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,11 +21,11 @@
             <objects>
                 <viewController storyboardIdentifier="dinoViewController" id="blJ-aI-8G0" customClass="DinoViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jaf-LP-grp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bmY-cg-TdG">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R8O-vp-feQ">
                                     <size key="itemSize" width="300" height="300"/>
@@ -35,14 +35,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DinoCollectionViewCell" id="UoN-Ae-UFD" customClass="DinoCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="50" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ohi-II-GHZ">
-                                                    <rect key="frame" x="16" y="20" width="268" height="280"/>
+                                                    <rect key="frame" x="16" y="0.0" width="268" height="300"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -58,24 +58,24 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DinoHeaderView" id="vUu-l6-h3c" customClass="DinoHeaderView" customModule="AnimalSounds" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinosaurs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onc-GA-qr7">
-                                            <rect key="frame" x="149" y="15" width="77" height="21"/>
+                                            <rect key="frame" x="295" y="15" width="77" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5S-rr-VZq">
-                                            <rect key="frame" x="324" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="612" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="ekO-6K-Pc1"/>
                                             </connections>
                                         </button>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-wr-T9c">
-                                            <rect key="frame" x="16" y="11" width="121" height="29"/>
+                                            <rect key="frame" x="20" y="11" width="121" height="29"/>
                                             <segments>
                                                 <segment title="Sounds"/>
                                                 <segment title="Names"/>
@@ -121,16 +121,100 @@
             </objects>
             <point key="canvasLocation" x="-742" y="-51"/>
         </scene>
+        <!--Animal Quiz View Controller-->
+        <scene sceneID="Yah-Tc-6mW">
+            <objects>
+                <viewController storyboardIdentifier="animalQuizViewController" id="8Fs-bh-ETD" customClass="AnimalQuizViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dl-YA-9um">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10006-an-elephant-in-the-wild-pv" translatesAutoresizingMaskIntoConstraints="NO" id="7o9-mB-lKX">
+                                <rect key="frame" x="20" y="-154.5" width="182.5" height="683"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17859-leopard-pv" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-Ke-v8b">
+                                <rect key="frame" x="242.5" y="-154.5" width="182" height="683"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="459292254_7fdf520442_b" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-Bw-YjY">
+                                <rect key="frame" x="464.5" y="-154.5" width="182.5" height="683"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff4-Um-i2a">
+                                <rect key="frame" x="622" y="25" width="35" height="30"/>
+                                <state key="normal" title="Page"/>
+                                <connections>
+                                    <segue destination="GWg-zH-byk" kind="presentation" id="Q6Z-U4-eR6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-cB-Hae">
+                                <rect key="frame" x="602" y="295" width="50" height="50"/>
+                                <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="handlNextButtonTap:" destination="8Fs-bh-ETD" eventType="touchUpInside" id="PNr-Se-0qX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfr-q8-1Dk">
+                                <rect key="frame" x="10" y="282" width="50" height="50"/>
+                                <state key="normal" image="replay"/>
+                                <connections>
+                                    <action selector="handleReplayTap:" destination="8Fs-bh-ETD" eventType="touchUpInside" id="dTg-3r-M01"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-qy-FHd">
+                                <rect key="frame" x="10" y="26" width="107" height="29"/>
+                                <segments>
+                                    <segment title="Sound"/>
+                                    <segment title="Name"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ibB-Bw-YjY" firstAttribute="width" secondItem="7o9-mB-lKX" secondAttribute="width" id="0pe-YJ-iKb"/>
+                            <constraint firstItem="xaq-Ke-v8b" firstAttribute="width" secondItem="7o9-mB-lKX" secondAttribute="width" id="4Bv-in-ein"/>
+                            <constraint firstItem="xaq-Ke-v8b" firstAttribute="centerX" secondItem="1dl-YA-9um" secondAttribute="centerX" id="5cB-28-noK"/>
+                            <constraint firstItem="ibB-Bw-YjY" firstAttribute="height" secondItem="7o9-mB-lKX" secondAttribute="height" id="7V4-KS-fy3"/>
+                            <constraint firstItem="7o9-mB-lKX" firstAttribute="leading" secondItem="VKa-Hj-Nih" secondAttribute="leading" constant="20" id="AxE-n0-ROQ"/>
+                            <constraint firstItem="xaq-Ke-v8b" firstAttribute="leading" secondItem="7o9-mB-lKX" secondAttribute="trailing" constant="40" id="CkM-oK-xSa"/>
+                            <constraint firstItem="ibB-Bw-YjY" firstAttribute="leading" secondItem="xaq-Ke-v8b" secondAttribute="trailing" constant="40" id="Gg5-ev-qEb"/>
+                            <constraint firstItem="7o9-mB-lKX" firstAttribute="centerY" secondItem="1dl-YA-9um" secondAttribute="centerY" id="Iwe-Gh-3UT"/>
+                            <constraint firstItem="VKa-Hj-Nih" firstAttribute="trailing" secondItem="h8f-cB-Hae" secondAttribute="trailing" constant="10" id="Nko-5U-gZW"/>
+                            <constraint firstItem="ibB-Bw-YjY" firstAttribute="trailing" secondItem="VKa-Hj-Nih" secondAttribute="trailing" constant="-20" id="OEg-HM-eWJ"/>
+                            <constraint firstItem="ibB-Bw-YjY" firstAttribute="leading" secondItem="xaq-Ke-v8b" secondAttribute="trailing" constant="40" id="XT3-YU-oRi"/>
+                            <constraint firstItem="zXL-qy-FHd" firstAttribute="leading" secondItem="VKa-Hj-Nih" secondAttribute="leading" constant="10" id="Yw4-JP-Uom"/>
+                            <constraint firstItem="xaq-Ke-v8b" firstAttribute="height" secondItem="7o9-mB-lKX" secondAttribute="height" id="cOA-zD-bOd"/>
+                            <constraint firstItem="VKa-Hj-Nih" firstAttribute="trailing" secondItem="ff4-Um-i2a" secondAttribute="trailing" constant="10" id="hxf-P4-jY1"/>
+                            <constraint firstItem="ff4-Um-i2a" firstAttribute="top" secondItem="VKa-Hj-Nih" secondAttribute="top" constant="25" id="iMF-Ks-Xvx"/>
+                            <constraint firstItem="VKa-Hj-Nih" firstAttribute="bottom" secondItem="h8f-cB-Hae" secondAttribute="bottom" constant="25" id="jEE-Xf-QTk"/>
+                            <constraint firstItem="xaq-Ke-v8b" firstAttribute="centerY" secondItem="1dl-YA-9um" secondAttribute="centerY" id="kIs-DF-jdY"/>
+                            <constraint firstItem="ibB-Bw-YjY" firstAttribute="centerY" secondItem="1dl-YA-9um" secondAttribute="centerY" id="onA-oT-jWr"/>
+                            <constraint firstItem="VKa-Hj-Nih" firstAttribute="bottom" secondItem="Tfr-q8-1Dk" secondAttribute="bottom" constant="25" id="pKu-dU-8eZ"/>
+                            <constraint firstItem="xaq-Ke-v8b" firstAttribute="leading" secondItem="7o9-mB-lKX" secondAttribute="trailing" constant="40" id="po3-xG-bBR"/>
+                            <constraint firstItem="Tfr-q8-1Dk" firstAttribute="leading" secondItem="VKa-Hj-Nih" secondAttribute="leading" constant="10" id="t0s-LH-FW7"/>
+                            <constraint firstItem="ff4-Um-i2a" firstAttribute="centerY" secondItem="zXL-qy-FHd" secondAttribute="centerY" id="yC7-9A-Jll"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VKa-Hj-Nih"/>
+                    </view>
+                    <connections>
+                        <outlet property="image1" destination="7o9-mB-lKX" id="W8N-PM-MOO"/>
+                        <outlet property="image2" destination="xaq-Ke-v8b" id="w8a-AQ-hFB"/>
+                        <outlet property="image3" destination="ibB-Bw-YjY" id="9bZ-bb-pyh"/>
+                        <outlet property="soundOrNameSegment" destination="zXL-qy-FHd" id="oBS-2X-wCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wa-DF-gmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.610194902548727" y="-717.60000000000002"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="animalsViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-Q1-cfx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hpV-nV-Lw7">
                                     <size key="itemSize" width="375" height="300"/>
@@ -140,7 +224,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryItemCollectionViewCell" id="vwP-GN-xBN" customClass="GalleryItemCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="300"/>
+                                        <rect key="frame" x="146" y="50" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -163,17 +247,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="GalleryItemCommentView" id="kdm-sy-rB4" customClass="GalleryItemCommentView" customModule="AnimalSounds" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-L6-OWR">
-                                            <rect key="frame" x="157" y="15" width="60.5" height="21"/>
+                                            <rect key="frame" x="303.5" y="15" width="60.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-Ob-nQC">
-                                            <rect key="frame" x="16" y="11" width="121" height="29"/>
+                                            <rect key="frame" x="20" y="11" width="121" height="29"/>
                                             <segments>
                                                 <segment title="Sounds"/>
                                                 <segment title="Names"/>
@@ -183,7 +267,7 @@
                                             </connections>
                                         </segmentedControl>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-XK-YKG">
-                                            <rect key="frame" x="314" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="602" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="57h-a9-56b"/>
@@ -231,11 +315,11 @@
             <objects>
                 <viewController storyboardIdentifier="numbersViewController" id="ZAB-Z0-SqK" customClass="NumbersViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRN-aU-Reb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVT-88-SK0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kom-B3-wH8">
                                     <size key="itemSize" width="300" height="300"/>
@@ -245,7 +329,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NumbersItemCollectionViewCell" id="jiO-XF-zgZ" customClass="NumbersItemCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="50" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -271,17 +355,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="NumbersItemCommentView" id="5ko-lj-Fcn" customClass="NumbersItemCommentView" customModule="AnimalSounds" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAn-GE-XEW">
-                                            <rect key="frame" x="152.5" y="15" width="70" height="21"/>
+                                            <rect key="frame" x="298.5" y="15" width="70" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLd-EI-mIC">
-                                            <rect key="frame" x="314" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="602" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="Z3c-uV-cMe"/>
@@ -329,11 +413,11 @@
             <objects>
                 <viewController storyboardIdentifier="lettersViewController" id="IQb-At-65h" customClass="LettersViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tH3-ew-iHa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uUz-BC-F9j">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4nS-oy-Qdx">
                                     <size key="itemSize" width="375" height="400"/>
@@ -343,7 +427,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LettersItemCollectionViewCell" id="7QL-28-jv3" customClass="LettersItemCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="400"/>
+                                        <rect key="frame" x="146" y="50" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
@@ -369,17 +453,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LettersItemCommentView" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LettersItemCommentView" id="dpX-v0-6YQ" customClass="LettersItemCommentView" customModule="AnimalSounds" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0c-mg-eWB">
-                                            <rect key="frame" x="160.5" y="15" width="54" height="21"/>
+                                            <rect key="frame" x="306.5" y="15" width="54" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybl-9Q-ZPg">
-                                            <rect key="frame" x="324" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="612" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="1Xn-a3-kwF"/>
@@ -424,11 +508,11 @@
             <objects>
                 <viewController storyboardIdentifier="shapesViewController" id="uUO-u8-eia" customClass="ShapesViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqj-q3-ymO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yKN-KB-jbf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MrG-2m-MJg">
                                     <size key="itemSize" width="375" height="300"/>
@@ -438,7 +522,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShapesCollectionViewCell" id="ghD-8R-Zv5" customClass="ShapesCollectionViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="300"/>
+                                        <rect key="frame" x="146" y="50" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -461,17 +545,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ShapesCommentViewCell" id="fnb-WR-fQW" customClass="ShapesCommentViewCell" customModule="AnimalSounds" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shapes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEG-f2-jOV">
-                                            <rect key="frame" x="159" y="15" width="57" height="21"/>
+                                            <rect key="frame" x="305" y="15" width="57" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYS-il-LeT">
-                                            <rect key="frame" x="330" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="622" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="Lbi-V8-wkq"/>
@@ -516,21 +600,21 @@
             <objects>
                 <tableViewController storyboardIdentifier="indexViewController" id="GWg-zH-byk" customClass="IndexController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cGJ-uz-6QF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle="Select a page" id="e1w-DR-oMn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gbv-T7-chp">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="667" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gbv-T7-chp" id="4tK-fh-14K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-LT-RJb">
-                                                    <rect key="frame" x="157" y="11.5" width="61" height="21"/>
+                                                    <rect key="frame" x="303" y="11.5" width="61" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -543,14 +627,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ven-p1-mcl">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="667" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ven-p1-mcl" id="P5e-wb-E3V">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt7-Q4-Kc6">
-                                                    <rect key="frame" x="152.5" y="11.5" width="70" height="21"/>
+                                                    <rect key="frame" x="298.5" y="11.5" width="70" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -563,14 +647,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ze2-Xk-FcX">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="667" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ze2-Xk-FcX" id="2Dr-Yr-MZq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-RD-aha">
-                                                    <rect key="frame" x="160.5" y="11" width="54" height="21"/>
+                                                    <rect key="frame" x="306.5" y="11" width="54" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -583,14 +667,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6MT-lk-ArV">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="160" width="667" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6MT-lk-ArV" id="4fB-fw-3Mf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shapes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMN-1a-eNm">
-                                                    <rect key="frame" x="159" y="11" width="57" height="21"/>
+                                                    <rect key="frame" x="305" y="11" width="57" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -603,14 +687,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8l1-yV-JKY">
-                                        <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="204" width="667" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8l1-yV-JKY" id="9vu-2j-ekS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinosaurs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-pU-HVa">
-                                                    <rect key="frame" x="149" y="11" width="77" height="21"/>
+                                                    <rect key="frame" x="295" y="11" width="77" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -619,6 +703,26 @@
                                             <constraints>
                                                 <constraint firstItem="qbD-pU-HVa" firstAttribute="centerY" secondItem="9vu-2j-ekS" secondAttribute="centerY" id="Srg-ag-50J"/>
                                                 <constraint firstItem="qbD-pU-HVa" firstAttribute="centerX" secondItem="9vu-2j-ekS" secondAttribute="centerX" id="wrI-ej-gRK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UBZ-Ja-mnE">
+                                        <rect key="frame" x="0.0" y="248" width="667" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UBZ-Ja-mnE" id="5g9-z5-mlj">
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL5-kO-ei4">
+                                                    <rect key="frame" x="288" y="11" width="91" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XL5-kO-ei4" firstAttribute="centerY" secondItem="5g9-z5-mlj" secondAttribute="centerY" id="T7z-mr-1Xd"/>
+                                                <constraint firstItem="XL5-kO-ei4" firstAttribute="centerX" secondItem="5g9-z5-mlj" secondAttribute="centerX" id="WYY-mK-qsn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -636,7 +740,14 @@
             <point key="canvasLocation" x="1044" y="796.55172413793105"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="10006-an-elephant-in-the-wild-pv" width="958" height="595"/>
+        <image name="17859-leopard-pv" width="958" height="639"/>
+        <image name="459292254_7fdf520442_b" width="1024" height="683"/>
+        <image name="next" width="55" height="55"/>
+        <image name="replay" width="55" height="68"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ekO-6K-Pc1"/>
+        <segue reference="Q6Z-U4-eR6"/>
     </inferredMetricsTieBreakers>
 </document>
