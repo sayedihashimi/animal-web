@@ -36,6 +36,9 @@ class AnimalQuizViewController : BaseUIViewController {
     @IBOutlet var image2: UIImageView!
     @IBOutlet var image3: UIImageView!
     @IBOutlet var soundOrNameSegment: UISegmentedControl!
+    @IBOutlet var successLabel1: UILabel!
+    @IBOutlet var successLabel2: UILabel!
+    @IBOutlet var successLabel3: UILabel!
     
     var animalItems: [Animal] = []
     var randomIndex: [Int] = []
@@ -54,10 +57,17 @@ class AnimalQuizViewController : BaseUIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateVisibilityOfSuccessUi(true)
         
         initItems()
         initGestures()
         updateViewWithNewAnimals()
+    }
+    
+    func updateVisibilityOfSuccessUi(_ isHidden:Bool){
+        successLabel1.isHidden = isHidden
+        successLabel2.isHidden = isHidden
+        successLabel3.isHidden = isHidden
     }
     
     func initItems(){
@@ -87,6 +97,10 @@ class AnimalQuizViewController : BaseUIViewController {
             // playSound(name: animalItems[tappedImage.tag].audio)
             // playAnimal(animalItems[tappedImage.tag])
             if(tappedImage.tag == selectedIndex) {
+                image1.isUserInteractionEnabled = false
+                image2.isUserInteractionEnabled = false
+                image3.isUserInteractionEnabled = false
+                updateVisibilityOfSuccessUi(false)
                 playSound(name: "applause3")
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
                     self.updateViewWithNewAnimals()
@@ -96,6 +110,7 @@ class AnimalQuizViewController : BaseUIViewController {
     }
     
     func updateViewWithNewAnimals(){
+        updateVisibilityOfSuccessUi(true)
         // get three random animals and add to UI
         let animalsToDisplay:[Animal] = RandomHelper.getRandomElement(animalItems, 3)
         //var selectedIndex:Int = RandomHelper.getRandomElement(Array(0...2), 1)[0]
@@ -105,6 +120,10 @@ class AnimalQuizViewController : BaseUIViewController {
         image3.image = UIImage(named: animalsToDisplay[2].imageFull)
         
         let imageArray: [UIImageView] = [image1, image2, image3]
+        
+        for img in imageArray {
+            img.isUserInteractionEnabled = true
+        }
         
         // update displayed animals and the selected one
         displayedAnimals = animalsToDisplay
