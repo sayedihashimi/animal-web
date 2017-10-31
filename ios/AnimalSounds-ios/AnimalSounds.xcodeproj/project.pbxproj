@@ -88,6 +88,7 @@
 		ECD59E7C1F9C4D060066F1DD /* strings.portuguese.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD59E7B1F9C4CFF0066F1DD /* strings.portuguese.json */; };
 		ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECD74E941F9068EB00E012A0 /* Settings.bundle */; };
 		ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */; };
+		ECDFA1391FA82DE300FFC293 /* applause3.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECDFA1381FA82DE300FFC293 /* applause3.wav */; };
 		ECEBB67B1F9D9BC900CBDD06 /* IndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB67A1F9D9BC900CBDD06 /* IndexController.swift */; };
 		ECEBB67D1F9DA52E00CBDD06 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB67C1F9DA52E00CBDD06 /* AppHelper.swift */; };
 		ECFA4A881F99B48D00165FDC /* chicken.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFA4A871F99B48000165FDC /* chicken.wav */; };
@@ -184,6 +185,7 @@
 		ECD59E7B1F9C4CFF0066F1DD /* strings.portuguese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.portuguese.json; sourceTree = "<group>"; };
 		ECD74E941F9068EB00E012A0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ECD74E961F906E7500E012A0 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		ECDFA1381FA82DE300FFC293 /* applause3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = applause3.wav; path = media/applause3.wav; sourceTree = SOURCE_ROOT; };
 		ECEBB67A1F9D9BC900CBDD06 /* IndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexController.swift; sourceTree = "<group>"; };
 		ECEBB67C1F9DA52E00CBDD06 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		ECFA4A841F99B48000165FDC /* chimp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chimp.wav; path = media/chimp.wav; sourceTree = SOURCE_ROOT; };
@@ -209,6 +211,7 @@
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				ECDFA1381FA82DE300FFC293 /* applause3.wav */,
 				EC71AC4C1FA5912000D8C2B6 /* dilophosaurus.wav */,
 				EC71AC4A1FA5912000D8C2B6 /* microraptor.wav */,
 				EC71AC4B1FA5912000D8C2B6 /* pachycephalosaurus.wav */,
@@ -460,6 +463,7 @@
 				EC0BE6D41FA57E6A00D99044 /* triceratops.wav in Resources */,
 				EC5B77821F831517003CB235 /* LaunchScreen.storyboard in Resources */,
 				EC5B777F1F831517003CB235 /* Assets.xcassets in Resources */,
+				ECDFA1391FA82DE300FFC293 /* applause3.wav in Resources */,
 				EC5B777D1F831517003CB235 /* Main.storyboard in Resources */,
 				EC072B0D1F832BEB00CDF5F0 /* items.plist in Resources */,
 			);

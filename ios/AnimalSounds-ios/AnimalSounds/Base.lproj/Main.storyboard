@@ -129,13 +129,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10006-an-elephant-in-the-wild-pv" translatesAutoresizingMaskIntoConstraints="NO" id="7o9-mB-lKX">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10006-an-elephant-in-the-wild-pv" translatesAutoresizingMaskIntoConstraints="NO" id="7o9-mB-lKX">
                                 <rect key="frame" x="20" y="-154.5" width="182.5" height="683"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17859-leopard-pv" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-Ke-v8b">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17859-leopard-pv" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-Ke-v8b">
                                 <rect key="frame" x="242.5" y="-154.5" width="182" height="683"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="459292254_7fdf520442_b" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-Bw-YjY">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="459292254_7fdf520442_b" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-Bw-YjY">
                                 <rect key="frame" x="464.5" y="-154.5" width="182.5" height="683"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff4-Um-i2a">

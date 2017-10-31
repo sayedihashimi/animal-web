@@ -77,42 +77,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func initAnimals() {
         animalItems = Animal.readFromJsonResource(name: "animals")
-        /*
-        if let path = Bundle.main.path(forResource: "animals", ofType: "json") {
-            animalItems = Animal.readFromJsonFile(path: path)
-        }
-         */
-        /*
-        do{
-            if let path = Bundle.main.path(forResource: "animals", ofType: "json"){
-                let jsonData = try NSData(contentsOfFile: path, options: .mappedIfSafe) as Data
-                if(jsonData.count > 0){
-                    
-                    if let jsonResult = try JSONSerialization.jsonObject(with: jsonData) as? [NSDictionary] {
-                        for json in jsonResult {
-                            
-                            let newanimal = Animal(name: json.value(forKey: "Name") as! String, imageFull: json.value(forKey: "ImageFull") as! String, image: json.value(forKey: "Image") as! String, audio: json.value(forKey: "Audio") as! String)
-                            animalItems.append(newanimal)
-                        }
-                    }
-                    else {
-                        print("still empty")
-                    }
-                    
-                    if let jsonResult: [Animal] = try JSONSerialization.jsonObject(with: jsonData) as? [Animal] {
-                        for (_,animal) in jsonResult.enumerated() {
-                            animalItems.append(animal)
-                        }
-                    } else {
-                        print("empty")
-                    }
-                    
-                }
-            }
-        } catch {
-            print(error)
-        }
- */
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -206,7 +170,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let devSize = self.view.frame.size
+        let deviceSize = self.view.frame.size
         let numColumns = 1
         
         let imgname = animalItems[indexPath.row].imageFull
@@ -228,8 +192,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         
-        let imgHeight = (devSize.height) / CGFloat(numColumns)
-        let imgWidth = imgHeight * (devSize.width/devSize.height)
+        let imgHeight = (deviceSize.height) / CGFloat(numColumns)
+        let imgWidth = imgHeight * (deviceSize.width/deviceSize.height)
         
         return CGSize(width:imgWidth, height: imgHeight)
     }

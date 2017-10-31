@@ -83,6 +83,36 @@ class DinoViewController: BaseCollectionViewController {
             playSound(name: dino.audio)
         }
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let deviceSize = self.view.frame.size
+        let numColumns = 1
+        
+        let imgname = dataItems[indexPath.row].image
+        
+        // assume landscape
+        
+        if let currentImg = UIImage(named: imgname) {
+            if(Float(currentImg.size.height) > Float(currentImg.size.width)){
+                // set size based on height
+                let imgHeight2 = self.view.frame.size.height
+                let imgWidth2 = imgHeight2 * (currentImg.size.height/currentImg.size.height)
+                return CGSize(width:imgWidth2, height: imgHeight2)
+            } else {
+                // set size based on width
+                let imgWidth3 = self.view.frame.size.width
+                let imgHeight3 = imgWidth3 * (currentImg.size.height/currentImg.size.width)
+                return CGSize(width:imgWidth3, height: imgHeight3)
+            }
+        }
+        
+        
+        let imgHeight = (deviceSize.height) / CGFloat(numColumns)
+        let imgWidth = imgHeight * (deviceSize.width/deviceSize.height)
+        
+        return CGSize(width:imgWidth, height: imgHeight)
+    }
 }
 
 
