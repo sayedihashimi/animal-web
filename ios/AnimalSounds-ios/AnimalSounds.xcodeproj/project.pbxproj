@@ -99,6 +99,10 @@
 		ECFD31AE1FA5254F00C6618C /* dino.json in Resources */ = {isa = PBXBuildFile; fileRef = ECFD31AD1FA5254F00C6618C /* dino.json */; };
 		ECFD31B01FA5284300C6618C /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECFD31AF1FA5284300C6618C /* notes.txt */; };
 		ECFE1B841FAA74BC00040B01 /* wrong-answer.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFE1B831FAA74BB00040B01 /* wrong-answer.wav */; };
+		ECFE1B861FAA790300040B01 /* turkey.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFE1B851FAA790200040B01 /* turkey.wav */; };
+		ECFE1B881FAA7A1400040B01 /* camel.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFE1B871FAA7A1300040B01 /* camel.wav */; };
+		ECFE1B8A1FAA7B5100040B01 /* baboon.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFE1B891FAA7B5000040B01 /* baboon.wav */; };
+		ECFE1B8C1FAA7BC500040B01 /* bat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFE1B8B1FAA7BC400040B01 /* bat.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +201,10 @@
 		ECFD31AD1FA5254F00C6618C /* dino.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dino.json; sourceTree = "<group>"; };
 		ECFD31AF1FA5284300C6618C /* notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 		ECFE1B831FAA74BB00040B01 /* wrong-answer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "wrong-answer.wav"; path = "media/wrong-answer.wav"; sourceTree = SOURCE_ROOT; };
+		ECFE1B851FAA790200040B01 /* turkey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = turkey.wav; path = media/turkey.wav; sourceTree = SOURCE_ROOT; };
+		ECFE1B871FAA7A1300040B01 /* camel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = camel.wav; path = media/camel.wav; sourceTree = SOURCE_ROOT; };
+		ECFE1B891FAA7B5000040B01 /* baboon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = baboon.wav; path = media/baboon.wav; sourceTree = SOURCE_ROOT; };
+		ECFE1B8B1FAA7BC400040B01 /* bat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bat.wav; path = media/bat.wav; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,10 @@
 		EC2AB2B61F888F9000CDBC41 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				ECFE1B8B1FAA7BC400040B01 /* bat.wav */,
+				ECFE1B871FAA7A1300040B01 /* camel.wav */,
+				ECFE1B851FAA790200040B01 /* turkey.wav */,
+				ECFE1B891FAA7B5000040B01 /* baboon.wav */,
 				ECDFA1381FA82DE300FFC293 /* applause3.wav */,
 				ECFE1B831FAA74BB00040B01 /* wrong-answer.wav */,
 				EC71AC4C1FA5912000D8C2B6 /* dilophosaurus.wav */,
@@ -398,9 +410,11 @@
 				EC709C141F9C51510044F611 /* strings.chinese.json in Resources */,
 				EC0BE6D81FA57E6A00D99044 /* allosaurus.wav in Resources */,
 				EC0BE6D71FA57E6A00D99044 /* velociraptor.wav in Resources */,
+				ECFE1B8A1FAA7B5100040B01 /* baboon.wav in Resources */,
 				ECD59E7C1F9C4D060066F1DD /* strings.portuguese.json in Resources */,
 				ECD59E7A1F9C493E0066F1DD /* strings.spanish.json in Resources */,
 				ECD59E781F9C48B50066F1DD /* strings.danish.json in Resources */,
+				ECFE1B861FAA790300040B01 /* turkey.wav in Resources */,
 				ECFA4A881F99B48D00165FDC /* chicken.wav in Resources */,
 				ECFA4A891F99B48D00165FDC /* chimp.wav in Resources */,
 				ECFA4A8A1F99B48D00165FDC /* penguin.wav in Resources */,
@@ -422,6 +436,7 @@
 				EC9639DE1F92654900B6204D /* brown-bear.wav in Resources */,
 				EC225A8A1F91730300AD0393 /* strings.hindi.json in Resources */,
 				ECFD31B01FA5284300C6618C /* notes.txt in Resources */,
+				ECFE1B8C1FAA7BC500040B01 /* bat.wav in Resources */,
 				ECD74E951F9068EB00E012A0 /* Settings.bundle in Resources */,
 				ECA382C51F8F1AE000212BBA /* hippo.wav in Resources */,
 				ECA382C71F8F1AE000212BBA /* whale.wav in Resources */,
@@ -449,6 +464,7 @@
 				EC2AB2C91F8893A400CDBC41 /* Capuchin monkey animals075.wav in Resources */,
 				EC2AB2CA1F8893A400CDBC41 /* Cat meow animals021.wav in Resources */,
 				EC2AB2CB1F8893A400CDBC41 /* Duck-quacking animals038.wav in Resources */,
+				ECFE1B881FAA7A1400040B01 /* camel.wav in Resources */,
 				EC2AB2CC1F8893A400CDBC41 /* Elephant-angry animals035.wav in Resources */,
 				ECFD31AE1FA5254F00C6618C /* dino.json in Resources */,
 				EC2AB2CD1F8893A400CDBC41 /* Gorilla growl animals028.wav in Resources */,
