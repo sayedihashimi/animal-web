@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import AVFoundation
+import AudioToolbox
 
 class BaseUIViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
@@ -39,6 +40,9 @@ class AnimalQuizViewController : BaseUIViewController {
     @IBOutlet var successLabel1: UILabel!
     @IBOutlet var successLabel2: UILabel!
     @IBOutlet var successLabel3: UILabel!
+    @IBOutlet var animalStack: UIStackView!
+    
+    
     
     var animalItems: [Animal] = []
     var randomIndex: [Int] = []
@@ -106,7 +110,15 @@ class AnimalQuizViewController : BaseUIViewController {
                     self.updateViewWithNewAnimals()
                 })
             }
+            else {
+                playWrongAnswer()
+            }
         }
+    }
+    
+    func playWrongAnswer(){
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        playSound(name: "wrong-answer")
     }
     
     func updateViewWithNewAnimals(){
@@ -153,6 +165,16 @@ class AnimalQuizViewController : BaseUIViewController {
             return AnimalAction.SayName
         default:
             return AnimalAction.PlaySound
+        }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        if(size.height > size.width){
+            animalStack.axis = .vertical
+        }
+        else {
+            animalStack.axis = .horizontal
         }
     }
 }

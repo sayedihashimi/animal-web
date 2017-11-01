@@ -23,7 +23,7 @@ class IndexController : UITableViewController{
         case 0:
             pageToNavigateTo = .Animals
         case 1:
-            pageToNavigateTo = .Numbers
+            pageToNavigateTo = .AnimalQuiz
         case 2:
             pageToNavigateTo = .Letters
         case 3:
@@ -31,7 +31,7 @@ class IndexController : UITableViewController{
         case 4:
             pageToNavigateTo = .Dinosaurs
         case 5:
-            pageToNavigateTo = .AnimalQuiz
+            pageToNavigateTo = .Numbers
         default:
             pageToNavigateTo = .Animals
         }

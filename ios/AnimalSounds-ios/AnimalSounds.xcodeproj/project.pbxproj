@@ -98,6 +98,7 @@
 		ECFD31AC1FA4EF5900C6618C /* DinoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD31AB1FA4EF5900C6618C /* DinoViewController.swift */; };
 		ECFD31AE1FA5254F00C6618C /* dino.json in Resources */ = {isa = PBXBuildFile; fileRef = ECFD31AD1FA5254F00C6618C /* dino.json */; };
 		ECFD31B01FA5284300C6618C /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECFD31AF1FA5284300C6618C /* notes.txt */; };
+		ECFE1B841FAA74BC00040B01 /* wrong-answer.wav in Resources */ = {isa = PBXBuildFile; fileRef = ECFE1B831FAA74BB00040B01 /* wrong-answer.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +196,7 @@
 		ECFD31AB1FA4EF5900C6618C /* DinoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoViewController.swift; sourceTree = "<group>"; };
 		ECFD31AD1FA5254F00C6618C /* dino.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dino.json; sourceTree = "<group>"; };
 		ECFD31AF1FA5284300C6618C /* notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
+		ECFE1B831FAA74BB00040B01 /* wrong-answer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "wrong-answer.wav"; path = "media/wrong-answer.wav"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDFA1381FA82DE300FFC293 /* applause3.wav */,
+				ECFE1B831FAA74BB00040B01 /* wrong-answer.wav */,
 				EC71AC4C1FA5912000D8C2B6 /* dilophosaurus.wav */,
 				EC71AC4A1FA5912000D8C2B6 /* microraptor.wav */,
 				EC71AC4B1FA5912000D8C2B6 /* pachycephalosaurus.wav */,
@@ -441,6 +444,7 @@
 				ECBAE2521F892CEC00D33CEF /* Rooster animals070.wav in Resources */,
 				EC71AC501FA5912000D8C2B6 /* pachycephalosaurus.wav in Resources */,
 				EC0BE6D51FA57E6A00D99044 /* brachiosaurus.wav in Resources */,
+				ECFE1B841FAA74BC00040B01 /* wrong-answer.wav in Resources */,
 				EC2AB2C81F8893A400CDBC41 /* Bee buzzing animals131.wav in Resources */,
 				EC2AB2C91F8893A400CDBC41 /* Capuchin monkey animals075.wav in Resources */,
 				EC2AB2CA1F8893A400CDBC41 /* Cat meow animals021.wav in Resources */,
