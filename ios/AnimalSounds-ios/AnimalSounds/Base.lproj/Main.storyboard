@@ -237,6 +237,8 @@
                         <outlet property="image2" destination="xaq-Ke-v8b" id="w8a-AQ-hFB"/>
                         <outlet property="image3" destination="ibB-Bw-YjY" id="9bZ-bb-pyh"/>
                         <outlet property="soundOrNameSegment" destination="zXL-qy-FHd" id="oBS-2X-wCd"/>
+                        <outlet property="stackBottomConstraint" destination="fQW-Xa-mvr" id="iBt-Oy-4nG"/>
+                        <outlet property="stackTopConstraint" destination="hMY-t3-ool" id="zYy-Fm-kM9"/>
                         <outlet property="successLabel1" destination="XRx-cV-Q28" id="zCE-FA-HgR"/>
                         <outlet property="successLabel2" destination="gpe-vC-ZmF" id="C6R-Qf-F4w"/>
                         <outlet property="successLabel3" destination="Z4j-TH-lvV" id="NHA-rs-qwz"/>
@@ -789,6 +791,6 @@
         <image name="replay" width="55" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z3c-uV-cMe"/>
+        <segue reference="Q6Z-U4-eR6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -41,8 +41,8 @@ class AnimalQuizViewController : BaseUIViewController {
     @IBOutlet var successLabel2: UILabel!
     @IBOutlet var successLabel3: UILabel!
     @IBOutlet var animalStack: UIStackView!
-    
-    
+    @IBOutlet var stackBottomConstraint: NSLayoutConstraint!
+    @IBOutlet var stackTopConstraint: NSLayoutConstraint!
     
     var animalItems: [Animal] = []
     var randomIndex: [Int] = []
@@ -50,6 +50,8 @@ class AnimalQuizViewController : BaseUIViewController {
     var displayedAnimals:[Animal]=[]
     var selectedAnimal:Animal? = nil
     var selectedIndex = 0
+    var verticalConstraints:[NSLayoutConstraint] = []
+    var horizontalConstraints:[NSLayoutConstraint] = []
     
     @IBAction func handlNextButtonTap(_ sender: UIButton) {
         updateViewWithNewAnimals()
@@ -66,6 +68,9 @@ class AnimalQuizViewController : BaseUIViewController {
         initItems()
         initGestures()
         updateViewWithNewAnimals()
+        initConstraints()
+        
+        setAxis(self.view.frame.size)
     }
     
     func updateVisibilityOfSuccessUi(_ isHidden:Bool){
@@ -82,7 +87,13 @@ class AnimalQuizViewController : BaseUIViewController {
         }
         randomIndex.shuffle()
     }
-   
+    func initConstraints(){
+        verticalConstraints.append(animalStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 80))
+        verticalConstraints.append(animalStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80))
+        
+        horizontalConstraints.append(stackTopConstraint)
+        horizontalConstraints.append(stackBottomConstraint)
+    }
     func initGestures(){
         image1.tag = 0
         image2.tag = 1
@@ -167,15 +178,36 @@ class AnimalQuizViewController : BaseUIViewController {
             return AnimalAction.PlaySound
         }
     }
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
+    func setAxis(_ size: CGSize){
+        // let size = self.view.frame.size
         
         if(size.height > size.width){
             animalStack.axis = .vertical
+            for vc in verticalConstraints {
+                vc.isActive = true
+            }
+            for hc in horizontalConstraints {
+                hc.isActive = false
+            }
+//            stackBottomConstraint.isActive = false
+//            stackTopConstraint.isActive = false
         }
         else {
             animalStack.axis = .horizontal
+            for vc in verticalConstraints {
+                vc.isActive = false
+            }
+            for hc in horizontalConstraints {
+                hc.isActive = true
+            }
+//            stackBottomConstraint.isActive = true
+//            stackTopConstraint.isActive = true
         }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        setAxis(size)
     }
 }
 
