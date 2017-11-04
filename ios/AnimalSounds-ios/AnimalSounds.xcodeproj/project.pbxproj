@@ -41,6 +41,7 @@
 		EC2AB2D61F8893A400CDBC41 /* Sheep - ewe animals112.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2BB1F888FA800CDBC41 /* Sheep - ewe animals112.wav */; };
 		EC2AB2D81F8893A400CDBC41 /* lion-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2AB2C51F888FAB00CDBC41 /* lion-01.wav */; };
 		EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */; };
+		EC3FDAFE1FAD6DA300700618 /* RandomHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3FDAFD1FAD6DA300700618 /* RandomHelper.swift */; };
 		EC4C2FCD1F9C4601002EFAFC /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C2FCC1F9C4601002EFAFC /* SpeechHelper.swift */; };
 		EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77771F831517003CB235 /* AppDelegate.swift */; };
 		EC5B777A1F831517003CB235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B77791F831517003CB235 /* ViewController.swift */; };
@@ -141,6 +142,7 @@
 		EC2AB2C61F888FAB00CDBC41 /* Leopard growl animals089.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Leopard growl animals089.wav"; sourceTree = "<group>"; };
 		EC2AB2C71F888FAC00CDBC41 /* Cat meow animals021.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cat meow animals021.wav"; sourceTree = "<group>"; };
 		EC2CF4A71F8AE48300DDAF83 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		EC3FDAFD1FAD6DA300700618 /* RandomHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomHelper.swift; sourceTree = "<group>"; };
 		EC4C2FCC1F9C4601002EFAFC /* SpeechHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		EC5B77741F831517003CB235 /* AnimalSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5B77771F831517003CB235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				ECA11EDA1FA673020033C654 /* AnimalQuizViewController.swift */,
 				ECA11EFA1FA6E5820033C654 /* BaseCollectionViewController.swift */,
 				ECA11EFC1FA6ED130033C654 /* IntExtensions.swift */,
+				EC3FDAFD1FAD6DA300700618 /* RandomHelper.swift */,
 			);
 			path = AnimalSounds;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				EC249E931F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift in Sources */,
 				EC5B777A1F831517003CB235 /* ViewController.swift in Sources */,
 				EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */,
+				EC3FDAFE1FAD6DA300700618 /* RandomHelper.swift in Sources */,
 				EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */,
 				ECA11EFD1FA6ED130033C654 /* IntExtensions.swift in Sources */,
 				ECFD31AC1FA4EF5900C6618C /* DinoViewController.swift in Sources */,

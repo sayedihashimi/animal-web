@@ -109,8 +109,6 @@ class AnimalQuizViewController : BaseUIViewController {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         // if the tag == selectedIndex correct one was picked
         if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
-            // playSound(name: animalItems[tappedImage.tag].audio)
-            // playAnimal(animalItems[tappedImage.tag])
             if(tappedImage.tag == selectedIndex) {
                 image1.isUserInteractionEnabled = false
                 image2.isUserInteractionEnabled = false
@@ -189,8 +187,6 @@ class AnimalQuizViewController : BaseUIViewController {
             for hc in horizontalConstraints {
                 hc.isActive = false
             }
-//            stackBottomConstraint.isActive = false
-//            stackTopConstraint.isActive = false
         }
         else {
             animalStack.axis = .horizontal
@@ -200,8 +196,6 @@ class AnimalQuizViewController : BaseUIViewController {
             for hc in horizontalConstraints {
                 hc.isActive = true
             }
-//            stackBottomConstraint.isActive = true
-//            stackTopConstraint.isActive = true
         }
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -210,52 +204,3 @@ class AnimalQuizViewController : BaseUIViewController {
         setAxis(size)
     }
 }
-
-class RandomHelper {
-    static func getRandomNumbersFrom(_ start:Int, _ end:Int, _ numElementsToReturn:Int) -> [Int]{
-        var result:[Int] = []
-        
-        var indexarray:[Int] = []
-        for i in start...end {
-            indexarray.append(i)
-        }
-        
-        indexarray.shuffle()
-        
-        var index = 0
-        while(result.count < numElementsToReturn) {
-            result.append(indexarray[index])
-            index += 1
-        }
-        
-        return result
-    }
-    
-    static func getRandomElement<T>(_ items: [T], _ numItems: Int) -> [T] {
-        let randomIndexes = getRandomNumbersFrom(0, items.count-1, numItems)
-        
-        var result: [T] = []
-        for i in randomIndexes {
-            result.append(items[i])
-        }
-        return result
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
