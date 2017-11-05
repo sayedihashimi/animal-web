@@ -18,6 +18,9 @@ class AnimalVideoViewController: BaseAnimalViewController {
     var timer = Timer()
     var videoState = VideoState.paused
     var skipNextTimer = false
+    var shuffle = VideoShuffleState.disabled
+    var previouslyPlayed:[Int] = []
+    var previouslyPlayedIndex = -1
     
     @IBAction func playPauseClicked(_ sender: Any) {
         switch videoState {
@@ -43,6 +46,17 @@ class AnimalVideoViewController: BaseAnimalViewController {
     @IBAction func replayTapped(_ sender: Any) {
         replayCurrentAnimal()
     }
+    @IBAction func shuffleSegmentChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+            shuffle = .disabled
+        case 1:
+            shuffle = .enabled
+        default:
+            shuffle = .disabled
+        }
+    }
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         replayCurrentAnimal()
     }
@@ -70,16 +84,48 @@ class AnimalVideoViewController: BaseAnimalViewController {
     }
     
     func getNextAnimalIndex()->Int{
-        return (currentAnimalIndex+1)%(animalItems.count)
+        var nextIndex = 0
+
+        if(previouslyPlayedIndex > 0 && previouslyPlayedIndex < previouslyPlayed.count - 1 ){
+            nextIndex = previouslyPlayedIndex
+            previouslyPlayedIndex += 1
+            return nextIndex
+        }
+        
+        switch shuffle {
+        case .disabled:
+            nextIndex = (currentAnimalIndex+1)%(animalItems.count)
+        case .enabled:
+            nextIndex = RandomHelper.getRandomNumbersFrom(0, animalItems.count-1, 1)[0]
+        }
+        
+        previouslyPlayedIndex = -1
+        return nextIndex
     }
     
     func getPreviousAnimalIndex()->Int{
-        if( currentAnimalIndex - 1 < 0 ){
-            return animalItems.count - 1
+        var retvalue = 0
+        
+        if(previouslyPlayed.count <= 0){
+            if( currentAnimalIndex - 1 < 0 ){
+                retvalue = animalItems.count - 1
+            }
+            else {
+                retvalue = currentAnimalIndex - 1
+            }
         }
-        else {
-            return currentAnimalIndex - 1
+        else{
+            if(previouslyPlayedIndex < 0){
+                previouslyPlayedIndex = previouslyPlayed.count - 1
+            }
+            if(previouslyPlayedIndex >= previouslyPlayed.count){
+                previouslyPlayedIndex = previouslyPlayed.count - 1
+            }
+            retvalue = previouslyPlayedIndex
+            previouslyPlayedIndex -= 1
         }
+        
+        return retvalue
     }
     override func viewWillDisappear(_ animated: Bool) {
         audioPlayer?.stop()
@@ -88,12 +134,8 @@ class AnimalVideoViewController: BaseAnimalViewController {
     @objc func loadNextAnimal(){
         if(videoState == .playing && !skipNextTimer) {
             let index = getNextAnimalIndex()
+            previouslyPlayed.append(index)
             loadAndPlayAnimal(animalItems[index], index)
-//            currentAnimalIndex = (currentAnimalIndex+1)%(animalItems.count)
-//
-//            let currentAnimal = animalItems[currentAnimalIndex]
-//            animalImageView.image = UIImage(named: currentAnimal.imageFull)
-//            playAnimal(currentAnimal)
         }
 
         skipNextTimer = false
@@ -115,4 +157,8 @@ class AnimalVideoViewController: BaseAnimalViewController {
 enum VideoState {
     case playing
     case paused
+}
+enum VideoShuffleState{
+    case disabled
+    case enabled
 }

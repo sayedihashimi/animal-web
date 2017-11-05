@@ -298,6 +298,16 @@
                                     <action selector="fastForwardTapped:" destination="ekI-Bl-HLL" eventType="touchUpInside" id="TJM-8h-MPv"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nmq-DH-Fhm">
+                                <rect key="frame" x="435.5" y="331" width="157" height="29"/>
+                                <segments>
+                                    <segment title="Shuffle off"/>
+                                    <segment title="Shuffle on"/>
+                                </segments>
+                                <connections>
+                                    <action selector="shuffleSegmentChanged:" destination="ekI-Bl-HLL" eventType="valueChanged" id="0eW-jh-5GS"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -307,6 +317,7 @@
                             <constraint firstItem="cmD-NU-htH" firstAttribute="leading" secondItem="vSL-8y-iEl" secondAttribute="trailing" constant="10" id="5wZ-rD-aWM"/>
                             <constraint firstItem="8a6-HO-hH5" firstAttribute="bottom" secondItem="cmD-NU-htH" secondAttribute="bottom" constant="2" id="6dd-F3-kEt"/>
                             <constraint firstItem="vSL-8y-iEl" firstAttribute="height" secondItem="UpT-DG-L6F" secondAttribute="height" id="B2R-sU-9gM"/>
+                            <constraint firstItem="nmq-DH-Fhm" firstAttribute="leading" secondItem="NSj-72-DE0" secondAttribute="trailing" constant="10" id="B9z-em-Ws9"/>
                             <constraint firstItem="8a6-HO-hH5" firstAttribute="trailing" secondItem="JQZ-eF-hVh" secondAttribute="trailing" constant="10" id="EaX-tT-axQ"/>
                             <constraint firstItem="8a6-HO-hH5" firstAttribute="bottom" secondItem="2y6-QB-Jta" secondAttribute="bottom" constant="60" id="Izs-Di-PX7"/>
                             <constraint firstItem="NSj-72-DE0" firstAttribute="height" secondItem="cmD-NU-htH" secondAttribute="height" id="P22-vk-5Nq"/>
@@ -315,6 +326,7 @@
                             <constraint firstItem="NSj-72-DE0" firstAttribute="width" secondItem="cmD-NU-htH" secondAttribute="width" id="X5r-Vp-78o"/>
                             <constraint firstItem="2y6-QB-Jta" firstAttribute="trailing" secondItem="8a6-HO-hH5" secondAttribute="trailing" id="aBE-2Y-XEB"/>
                             <constraint firstItem="cmD-NU-htH" firstAttribute="height" secondItem="vSL-8y-iEl" secondAttribute="height" id="cF8-EV-VqO"/>
+                            <constraint firstItem="nmq-DH-Fhm" firstAttribute="centerY" secondItem="cmD-NU-htH" secondAttribute="centerY" id="dMA-yu-zf6"/>
                             <constraint firstItem="NSj-72-DE0" firstAttribute="leading" secondItem="cmD-NU-htH" secondAttribute="trailing" constant="10" id="fJE-qD-bo6"/>
                             <constraint firstItem="cmD-NU-htH" firstAttribute="centerX" secondItem="49c-80-O3z" secondAttribute="centerX" id="sm0-pg-cql"/>
                             <constraint firstItem="cmD-NU-htH" firstAttribute="centerY" secondItem="vSL-8y-iEl" secondAttribute="centerY" id="vzI-0H-3K0"/>
