@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,7 +42,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ohi-II-GHZ">
-                                                    <rect key="frame" x="16" y="0.0" width="268" height="300"/>
+                                                    <rect key="frame" x="8" y="8" width="284" height="284"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -68,14 +68,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5S-rr-VZq">
-                                            <rect key="frame" x="612" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="624" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="ekO-6K-Pc1"/>
                                             </connections>
                                         </button>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-wr-T9c">
-                                            <rect key="frame" x="20" y="11" width="121" height="29"/>
+                                            <rect key="frame" x="8" y="11" width="121" height="29"/>
                                             <segments>
                                                 <segment title="Sounds"/>
                                                 <segment title="Names"/>
@@ -248,6 +248,92 @@
             </objects>
             <point key="canvasLocation" x="-72" y="-1111"/>
         </scene>
+        <!--Animal Video View Controller-->
+        <scene sceneID="x8a-g4-wvz">
+            <objects>
+                <viewController storyboardIdentifier="animalVideoViewController" id="ekI-Bl-HLL" customClass="AnimalVideoViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49c-80-O3z">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10006-an-elephant-in-the-wild-pv" translatesAutoresizingMaskIntoConstraints="NO" id="2y6-QB-Jta">
+                                <rect key="frame" x="0.0" y="50" width="667" height="265"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-eF-hVh">
+                                <rect key="frame" x="622" y="10" width="35" height="30"/>
+                                <state key="normal" title="Page"/>
+                                <connections>
+                                    <segue destination="GWg-zH-byk" kind="presentation" id="1H1-6a-bdl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmD-NU-htH">
+                                <rect key="frame" x="305.5" y="318" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2Zx-RV-hZM"/>
+                                    <constraint firstAttribute="width" constant="55" id="SxY-BA-h27"/>
+                                </constraints>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="playPauseClicked:" destination="ekI-Bl-HLL" eventType="touchUpInside" id="xhs-xX-xn4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-8y-iEl">
+                                <rect key="frame" x="240.5" y="318" width="55" height="55"/>
+                                <state key="normal" image="replay"/>
+                                <connections>
+                                    <action selector="replayTapped:" destination="ekI-Bl-HLL" eventType="touchUpInside" id="Oca-hF-eaM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpT-DG-L6F">
+                                <rect key="frame" x="175.5" y="317.5" width="55" height="55"/>
+                                <state key="normal" image="rewind"/>
+                                <connections>
+                                    <action selector="rewindTapped:" destination="ekI-Bl-HLL" eventType="touchUpInside" id="wz6-QJ-lOz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSj-72-DE0">
+                                <rect key="frame" x="370.5" y="318" width="55" height="55"/>
+                                <state key="normal" image="fast_forward"/>
+                                <connections>
+                                    <action selector="fastForwardTapped:" destination="ekI-Bl-HLL" eventType="touchUpInside" id="TJM-8h-MPv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8a6-HO-hH5" firstAttribute="trailing" secondItem="2y6-QB-Jta" secondAttribute="trailing" id="2hF-Rb-SZd"/>
+                            <constraint firstItem="cmD-NU-htH" firstAttribute="centerY" secondItem="UpT-DG-L6F" secondAttribute="centerY" id="3zR-do-lFi"/>
+                            <constraint firstItem="vSL-8y-iEl" firstAttribute="width" secondItem="UpT-DG-L6F" secondAttribute="width" id="5kI-kj-DUd"/>
+                            <constraint firstItem="cmD-NU-htH" firstAttribute="leading" secondItem="vSL-8y-iEl" secondAttribute="trailing" constant="10" id="5wZ-rD-aWM"/>
+                            <constraint firstItem="8a6-HO-hH5" firstAttribute="bottom" secondItem="cmD-NU-htH" secondAttribute="bottom" constant="2" id="6dd-F3-kEt"/>
+                            <constraint firstItem="vSL-8y-iEl" firstAttribute="height" secondItem="UpT-DG-L6F" secondAttribute="height" id="B2R-sU-9gM"/>
+                            <constraint firstItem="8a6-HO-hH5" firstAttribute="trailing" secondItem="JQZ-eF-hVh" secondAttribute="trailing" constant="10" id="EaX-tT-axQ"/>
+                            <constraint firstItem="8a6-HO-hH5" firstAttribute="bottom" secondItem="2y6-QB-Jta" secondAttribute="bottom" constant="60" id="Izs-Di-PX7"/>
+                            <constraint firstItem="NSj-72-DE0" firstAttribute="height" secondItem="cmD-NU-htH" secondAttribute="height" id="P22-vk-5Nq"/>
+                            <constraint firstItem="NSj-72-DE0" firstAttribute="centerY" secondItem="cmD-NU-htH" secondAttribute="centerY" id="VGH-LK-3Rd"/>
+                            <constraint firstItem="cmD-NU-htH" firstAttribute="width" secondItem="vSL-8y-iEl" secondAttribute="width" id="Vc7-HJ-NDF"/>
+                            <constraint firstItem="NSj-72-DE0" firstAttribute="width" secondItem="cmD-NU-htH" secondAttribute="width" id="X5r-Vp-78o"/>
+                            <constraint firstItem="2y6-QB-Jta" firstAttribute="trailing" secondItem="8a6-HO-hH5" secondAttribute="trailing" id="aBE-2Y-XEB"/>
+                            <constraint firstItem="cmD-NU-htH" firstAttribute="height" secondItem="vSL-8y-iEl" secondAttribute="height" id="cF8-EV-VqO"/>
+                            <constraint firstItem="NSj-72-DE0" firstAttribute="leading" secondItem="cmD-NU-htH" secondAttribute="trailing" constant="10" id="fJE-qD-bo6"/>
+                            <constraint firstItem="cmD-NU-htH" firstAttribute="centerX" secondItem="49c-80-O3z" secondAttribute="centerX" id="sm0-pg-cql"/>
+                            <constraint firstItem="cmD-NU-htH" firstAttribute="centerY" secondItem="vSL-8y-iEl" secondAttribute="centerY" id="vzI-0H-3K0"/>
+                            <constraint firstItem="vSL-8y-iEl" firstAttribute="leading" secondItem="UpT-DG-L6F" secondAttribute="trailing" constant="10" id="wKX-EE-R5D"/>
+                            <constraint firstItem="JQZ-eF-hVh" firstAttribute="top" secondItem="8a6-HO-hH5" secondAttribute="top" constant="10" id="wnA-WO-dWH"/>
+                            <constraint firstItem="2y6-QB-Jta" firstAttribute="leading" secondItem="8a6-HO-hH5" secondAttribute="leading" id="yhe-34-jPe"/>
+                            <constraint firstItem="2y6-QB-Jta" firstAttribute="top" secondItem="8a6-HO-hH5" secondAttribute="top" constant="50" id="yiJ-Sp-fhj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8a6-HO-hH5"/>
+                    </view>
+                    <connections>
+                        <outlet property="animalImageView" destination="2y6-QB-Jta" id="Ttl-TE-rA8"/>
+                        <outlet property="playPauseButton" destination="cmD-NU-htH" id="Mfv-zw-BKs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEY-6S-QeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="-1111"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -300,7 +386,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-Ob-nQC">
-                                            <rect key="frame" x="20" y="11" width="121" height="29"/>
+                                            <rect key="frame" x="8" y="11" width="121" height="29"/>
                                             <segments>
                                                 <segment title="Sounds"/>
                                                 <segment title="Names"/>
@@ -310,7 +396,7 @@
                                             </connections>
                                         </segmentedControl>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-XK-YKG">
-                                            <rect key="frame" x="602" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="614" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="57h-a9-56b"/>
@@ -408,7 +494,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLd-EI-mIC">
-                                            <rect key="frame" x="602" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="614" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="Z3c-uV-cMe"/>
@@ -506,7 +592,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybl-9Q-ZPg">
-                                            <rect key="frame" x="612" y="10" width="35" height="30"/>
+                                            <rect key="frame" x="624" y="10" width="35" height="30"/>
                                             <state key="normal" title="Page"/>
                                             <connections>
                                                 <segue destination="GWg-zH-byk" kind="presentation" id="1Xn-a3-kwF"/>
@@ -769,6 +855,26 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vaw-Je-63P">
+                                        <rect key="frame" x="0.0" y="292" width="667" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vaw-Je-63P" id="EvH-ob-n48">
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g49-mB-Gvi">
+                                                    <rect key="frame" x="283.5" y="11" width="100" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g49-mB-Gvi" firstAttribute="centerY" secondItem="EvH-ob-n48" secondAttribute="centerY" id="qRz-se-59F"/>
+                                                <constraint firstItem="g49-mB-Gvi" firstAttribute="centerX" secondItem="EvH-ob-n48" secondAttribute="centerX" id="rdz-qD-lSD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -787,10 +893,13 @@
         <image name="10006-an-elephant-in-the-wild-pv" width="958" height="595"/>
         <image name="17859-leopard-pv" width="958" height="639"/>
         <image name="459292254_7fdf520442_b" width="1024" height="683"/>
+        <image name="fast_forward" width="55" height="55"/>
         <image name="next" width="55" height="55"/>
+        <image name="pause" width="55" height="55"/>
         <image name="replay" width="55" height="68"/>
+        <image name="rewind" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q6Z-U4-eR6"/>
+        <segue reference="1H1-6a-bdl"/>
     </inferredMetricsTieBreakers>
 </document>

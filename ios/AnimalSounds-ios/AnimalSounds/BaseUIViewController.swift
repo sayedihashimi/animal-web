@@ -1,0 +1,33 @@
+//
+//  BaseUIViewController.swift
+//  AnimalSounds
+//
+//  Created by Sayed Hashimi on 11/4/17.
+//  Copyright © 2017 Sayed Ibrahim Hashimi. All rights reserved.
+//
+
+import UIKit
+import Foundation
+import AVFoundation
+import AudioToolbox
+
+class BaseUIViewController: UIViewController {
+    var audioPlayer: AVAudioPlayer?
+    let speechHelper = SpeechHelper()
+
+    func playSound(name: String) {
+        
+        let soundName = URL(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "wav")!)
+        
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setActive(true)
+        
+        try! audioPlayer = AVAudioPlayer(contentsOf: soundName)
+        audioPlayer!.prepareToPlay()
+        audioPlayer!.play()
+    }
+    
+    func speakText(text: String) {
+        speechHelper.speakText(text)
+    }
+}

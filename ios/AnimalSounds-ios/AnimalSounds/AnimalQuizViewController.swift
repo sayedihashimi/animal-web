@@ -11,28 +11,7 @@ import Foundation
 import AVFoundation
 import AudioToolbox
 
-class BaseUIViewController: UIViewController {
-    var audioPlayer: AVAudioPlayer?
-    let speechHelper = SpeechHelper()
-    
-    func playSound(name: String) {
-        
-        let soundName = URL(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "wav")!)
-        
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-        try! AVAudioSession.sharedInstance().setActive(true)
-        
-        try! audioPlayer = AVAudioPlayer(contentsOf: soundName)
-        audioPlayer!.prepareToPlay()
-        audioPlayer!.play()
-    }
-    
-    func speakText(text: String) {
-        speechHelper.speakText(text)
-    }
-}
-
-class AnimalQuizViewController : BaseUIViewController {
+class AnimalQuizViewController : BaseAnimalViewController {
     @IBOutlet var image1: UIImageView!
     @IBOutlet var image2: UIImageView!
     @IBOutlet var image3: UIImageView!
@@ -44,7 +23,7 @@ class AnimalQuizViewController : BaseUIViewController {
     @IBOutlet var stackBottomConstraint: NSLayoutConstraint!
     @IBOutlet var stackTopConstraint: NSLayoutConstraint!
     
-    var animalItems: [Animal] = []
+    // var animalItems: [Animal] = []
     var randomIndex: [Int] = []
     var currentIndex = 0
     var displayedAnimals:[Animal]=[]
@@ -80,7 +59,6 @@ class AnimalQuizViewController : BaseUIViewController {
     }
     
     func initItems(){
-        animalItems = Animal.readFromJsonResource(name: "animals")
         randomIndex.removeAll()
         for i in 0..<animalItems.count {
             randomIndex.append(i)

@@ -21,6 +21,9 @@
 		EC0BE6D61FA57E6A00D99044 /* brontosaurus.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0BE6CF1FA57E6A00D99044 /* brontosaurus.wav */; };
 		EC0BE6D71FA57E6A00D99044 /* velociraptor.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0BE6D01FA57E6A00D99044 /* velociraptor.wav */; };
 		EC0BE6D81FA57E6A00D99044 /* allosaurus.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC0BE6D11FA57E6A00D99044 /* allosaurus.wav */; };
+		EC1893E01FAE64BD0025406A /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1893DF1FAE64BD0025406A /* BaseUIViewController.swift */; };
+		EC1893E21FAE64E00025406A /* AnimalVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1893E11FAE64E00025406A /* AnimalVideoViewController.swift */; };
+		EC1893E41FAE9A7E0025406A /* BaseAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1893E31FAE9A7E0025406A /* BaseAnimalViewController.swift */; };
 		EC225A8A1F91730300AD0393 /* strings.hindi.json in Resources */ = {isa = PBXBuildFile; fileRef = EC225A891F9172EB00AD0393 /* strings.hindi.json */; };
 		EC249E931F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC249E921F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift */; };
 		EC2A3A351F898AA700BF7922 /* alpaca.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC2A3A341F898A9700BF7922 /* alpaca.wav */; };
@@ -121,6 +124,9 @@
 		EC0BE6CF1FA57E6A00D99044 /* brontosaurus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = brontosaurus.wav; path = media/brontosaurus.wav; sourceTree = SOURCE_ROOT; };
 		EC0BE6D01FA57E6A00D99044 /* velociraptor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = velociraptor.wav; path = media/velociraptor.wav; sourceTree = SOURCE_ROOT; };
 		EC0BE6D11FA57E6A00D99044 /* allosaurus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = allosaurus.wav; path = media/allosaurus.wav; sourceTree = SOURCE_ROOT; };
+		EC1893DF1FAE64BD0025406A /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		EC1893E11FAE64E00025406A /* AnimalVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVideoViewController.swift; sourceTree = "<group>"; };
+		EC1893E31FAE9A7E0025406A /* BaseAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimalViewController.swift; sourceTree = "<group>"; };
 		EC225A891F9172EB00AD0393 /* strings.hindi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.hindi.json; sourceTree = "<group>"; };
 		EC249E921F8DBE9200FCB306 /* TouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
 		EC2747961F89DC1A004E63A7 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "appicon/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -320,6 +326,8 @@
 				ECD59E7B1F9C4CFF0066F1DD /* strings.portuguese.json */,
 				ECD59E791F9C49350066F1DD /* strings.spanish.json */,
 				EC5B77791F831517003CB235 /* ViewController.swift */,
+				ECA11EDA1FA673020033C654 /* AnimalQuizViewController.swift */,
+				EC1893E11FAE64E00025406A /* AnimalVideoViewController.swift */,
 				EC5B777B1F831517003CB235 /* Main.storyboard */,
 				EC5B777E1F831517003CB235 /* Assets.xcassets */,
 				EC5B77801F831517003CB235 /* LaunchScreen.storyboard */,
@@ -342,8 +350,9 @@
 				ECEBB67C1F9DA52E00CBDD06 /* AppHelper.swift */,
 				ECFD31AB1FA4EF5900C6618C /* DinoViewController.swift */,
 				ECFD31AF1FA5284300C6618C /* notes.txt */,
-				ECA11EDA1FA673020033C654 /* AnimalQuizViewController.swift */,
 				ECA11EFA1FA6E5820033C654 /* BaseCollectionViewController.swift */,
+				EC1893DF1FAE64BD0025406A /* BaseUIViewController.swift */,
+				EC1893E31FAE9A7E0025406A /* BaseAnimalViewController.swift */,
 				ECA11EFC1FA6ED130033C654 /* IntExtensions.swift */,
 				EC3FDAFD1FAD6DA300700618 /* RandomHelper.swift */,
 			);
@@ -504,11 +513,13 @@
 				EC5B777A1F831517003CB235 /* ViewController.swift in Sources */,
 				EC7A21FF1F92E3D70062E04E /* DataItem.swift in Sources */,
 				EC3FDAFE1FAD6DA300700618 /* RandomHelper.swift in Sources */,
+				EC1893E41FAE9A7E0025406A /* BaseAnimalViewController.swift in Sources */,
 				EC2CF4A81F8AE48300DDAF83 /* NumbersViewController.swift in Sources */,
 				ECA11EFD1FA6ED130033C654 /* IntExtensions.swift in Sources */,
 				ECFD31AC1FA4EF5900C6618C /* DinoViewController.swift in Sources */,
 				ECA84D351F92EE6000803C67 /* Shape.swift in Sources */,
 				EC5B778A1F831684003CB235 /* Gallery.swift in Sources */,
+				EC1893E01FAE64BD0025406A /* BaseUIViewController.swift in Sources */,
 				ECD74E971F906E7500E012A0 /* SettingsBundleHelper.swift in Sources */,
 				ECEBB67D1F9DA52E00CBDD06 /* AppHelper.swift in Sources */,
 				EC5B77781F831517003CB235 /* AppDelegate.swift in Sources */,
@@ -516,6 +527,7 @@
 				ECEBB67B1F9D9BC900CBDD06 /* IndexController.swift in Sources */,
 				ECA11EFB1FA6E5820033C654 /* BaseCollectionViewController.swift in Sources */,
 				EC7A21FB1F92E1DE0062E04E /* ShapesViewController.swift in Sources */,
+				EC1893E21FAE64E00025406A /* AnimalVideoViewController.swift in Sources */,
 				EC4C2FCD1F9C4601002EFAFC /* SpeechHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

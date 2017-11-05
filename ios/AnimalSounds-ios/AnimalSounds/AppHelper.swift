@@ -16,6 +16,7 @@ class AppHelper{
         case Shapes
         case Dinosaurs
         case AnimalQuiz
+        case AnimalVideo
     }
     struct PageId{
         static let Animals = "animalsViewController"
@@ -24,5 +25,6 @@ class AppHelper{
         static let Letters = "lettersViewController"
         static let Dinosaurs = "dinoViewController"
         static let AnimalQuiz = "animalQuizViewController"
+        static let AnimalVideo = "animalVideoViewController"
     }
 }
