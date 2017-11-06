@@ -12,6 +12,9 @@ import UIKit
 class AnimalVideoViewController: BaseAnimalViewController {
     @IBOutlet var animalImageView: UIImageView!
     @IBOutlet var playPauseButton: UIButton!
+    @IBOutlet var playSoundSwitch: UISwitch!
+    @IBOutlet var sayNameSwitch: UISwitch!
+    
     
     var currentAnimalIndex = 0
     var currentAnimal:Animal?
@@ -21,13 +24,14 @@ class AnimalVideoViewController: BaseAnimalViewController {
     var shuffle = VideoShuffleState.disabled
     var previouslyPlayed:[Int] = []
     var previouslyPlayedIndex = -1
+    //var action = AnimalAction.PlaySound
     
     @IBAction func playPauseClicked(_ sender: Any) {
         switch videoState {
         case .playing:
             videoState = .paused
             audioPlayer?.stop()
-            //playPauseButton.image = UIImage(named: "paused")
+            UIApplication.shared.isIdleTimerDisabled = false
             playPauseButton.setImage(UIImage(named: "play"), for: .normal)
         case .paused:
             videoState = .playing
@@ -86,11 +90,11 @@ class AnimalVideoViewController: BaseAnimalViewController {
     func getNextAnimalIndex()->Int{
         var nextIndex = 0
 
-        if(previouslyPlayedIndex > 0 && previouslyPlayedIndex < previouslyPlayed.count - 1 ){
-            nextIndex = previouslyPlayedIndex
-            previouslyPlayedIndex += 1
-            return nextIndex
-        }
+//        if(previouslyPlayedIndex > 0 && previouslyPlayedIndex < previouslyPlayed.count - 1 ){
+//            nextIndex = previouslyPlayedIndex
+//            previouslyPlayedIndex += 1
+//            return nextIndex
+//        }
         
         switch shuffle {
         case .disabled:
@@ -130,8 +134,10 @@ class AnimalVideoViewController: BaseAnimalViewController {
     override func viewWillDisappear(_ animated: Bool) {
         audioPlayer?.stop()
         timer.invalidate()
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     @objc func loadNextAnimal(){
+        UIApplication.shared.isIdleTimerDisabled = true
         if(videoState == .playing && !skipNextTimer) {
             let index = getNextAnimalIndex()
             previouslyPlayed.append(index)
@@ -142,15 +148,40 @@ class AnimalVideoViewController: BaseAnimalViewController {
     }
     
     func loadAndPlayAnimal(_ animal:Animal, _ index:Int) {
+        var actualIndex = index
+        if(actualIndex >= animalItems.count || actualIndex < 0){
+            actualIndex = 0
+        }
         currentAnimal = animal
-        currentAnimalIndex = index
+        currentAnimalIndex = actualIndex
         animalImageView.image = UIImage(named: animal.imageFull)
         playAnimal(animal)
     }
     
     func playAnimal(_ animal:Animal){
         super.audioPlayer?.stop()
-        playSound(name: animal.audio)
+        
+        if(sayNameSwitch.isOn){
+            speechHelper.speakText(animal.name)
+            
+            if(playSoundSwitch.isOn){
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self.playSound(name: animal.audio)
+                })
+            }
+        }
+        else if playSoundSwitch.isOn{
+            playSound(name: animal.audio)
+        }
+        
+//        switch action {
+//        case .PlaySound:
+//            playSound(name: animal.audio)
+//        case .SayName:
+//            speechHelper.speakText(animal.name)
+//        default:
+//            playSound(name: animal.audio)
+//        }
     }
 }
 
