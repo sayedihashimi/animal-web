@@ -1,74 +1,74 @@
- [
+[
   {
-  "id": "allosaurus",
-  "name": "allosaurus",
-  "image": "allosaurus",
-  "audio": "allosaurus"
+    "id": "allosaurus",
+    "name": "allosaurus",
+    "image": "allosaurus",
+    "audio": "allosaurus"
   },
   {
-  "id": "brachiosaurus",
-  "name": "brachiosaurus",
-  "image": "brachiosaurus",
-  "audio": "brachiosaurus"
+    "id": "brachiosaurus",
+    "name": "brachiosaurus",
+    "image": "brachiosaurus",
+    "audio": "brachiosaurus"
   },
   {
-  "id": "brontosaurus",
-  "name": "brontosaurus",
-  "image": "brontosaurus",
-  "audio": "brontosaurus"
+    "id": "brontosaurus",
+    "name": "brontosaurus",
+    "image": "brontosaurus",
+    "audio": "brontosaurus"
   },
   {
-  "id": "megalosaurus",
-  "name": "megalosaurus",
-  "image": "megalosaurus",
-  "audio": "megalosaurus"
+    "id": "megalosaurus",
+    "name": "megalosaurus",
+    "image": "megalosaurus",
+    "audio": "megalosaurus"
   },
   {
-  "id": "triceratops",
-  "name": "triceratops",
-  "image": "triceratops",
-  "audio": "triceratops"
+    "id": "triceratops",
+    "name": "triceratops",
+    "image": "triceratops",
+    "audio": "triceratops"
   },
   {
-  "id": "tyrannosaurus",
-  "name": "tyrannosaurus",
-  "image": "tyrannosaurus",
-  "audio": "tyrannosaurus"
+    "id": "tyrannosaurus",
+    "name": "tyrannosaurus",
+    "image": "tyrannosaurus",
+    "audio": "tyrannosaurus"
   },
   {
-  "id": "velociraptor",
-  "name": "velociraptor",
-  "image": "velociraptor",
-  "audio": "velociraptor"
+    "id": "velociraptor",
+    "name": "velociraptor",
+    "image": "velociraptor",
+    "audio": "velociraptor"
   },
   {
-  "id": "dilophosaurus",
-  "name": "dilophosaurus",
-  "image": "dilophosaurus",
-  "audio": "dilophosaurus"
+    "id": "dilophosaurus",
+    "name": "dilophosaurus",
+    "image": "dilophosaurus",
+    "audio": "dilophosaurus"
   },
   {
-  "id": "microraptor",
-  "name": "microraptor",
-  "image": "microraptor",
-  "audio": "microraptor"
+    "id": "microraptor",
+    "name": "microraptor",
+    "image": "microraptor",
+    "audio": "microraptor"
   },
   {
-  "id": "pachycephalosaurus",
-  "name": "pachycephalosaurus",
-  "image": "pachycephalosaurus",
-  "audio": "pachycephalosaurus"
+    "id": "pachycephalosaurus",
+    "name": "pachycephalosaurus",
+    "image": "pachycephalosaurus",
+    "audio": "pachycephalosaurus"
   },
   {
-  "id": "stegosaurus",
-  "name": "stegosaurus",
-  "image": "stegosaurus",
-  "audio": "stegosaurus"
+    "id": "stegosaurus",
+    "name": "stegosaurus",
+    "image": "stegosaurus",
+    "audio": "stegosaurus"
   },
   {
-  "id": "torosaurus",
-  "name": "torosaurus",
-  "image": "torosaurus",
-  "audio": "torosaurus"
+    "id": "torosaurus",
+    "name": "torosaurus",
+    "image": "torosaurus",
+    "audio": "torosaurus"
   }
 ]
