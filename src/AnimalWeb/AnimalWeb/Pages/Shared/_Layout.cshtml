@@ -1,21 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - Animal Web</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Animal Web</title>
 
-        <link rel="stylesheet" href="~/css/site.css" />
-        <environment include="Development">
-            <link rel="stylesheet" href="~/lib/normalize/normalize.css" />
-        </environment>
-        <environment exclude="Development">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
-                  asp-fallback-href="~/lib/normalize/normalize.css"
-                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        </environment>
-        @RenderSection("Head", required: false) 
-    </head>
+    <link rel="manifest" href="~/manifest.json" />
+    <link rel="apple-touch-icon" sizes="128x128" href="~/images/icon-128.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/icon-144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/icon-152.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="~/images/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="384x384" href="~/images/icon-384.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="~/images/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="~/images/icon-96x96.png" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/normalize/normalize.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+              asp-fallback-href="~/lib/normalize/normalize.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    </environment>
+    @RenderSection("Head", required: false)
+</head>
     <body>
         @RenderBody()
         <environment include="Development">
