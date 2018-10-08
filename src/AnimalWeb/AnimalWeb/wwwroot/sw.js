@@ -1,4 +1,7 @@
 ﻿const mainCacheName = 'sonyasapp-01';
+self.addEventListener('install', async event => {
+    event.waitUntil(self.skipWaiting());
+});
 self.addEventListener('activate', function (event) {
     event.waitUntil(self.clients.claim()); // Become available to all pages
 });
@@ -12,6 +15,8 @@ async function handleFetch(event) {
 
     var respondWithCacheFirst = true;
 
+    event.respondWith(cacheFirst(event.request))
+/*
     if(url.pathname.endsWith('.css') || url.pathname.endsWith('.js') || url.pathname === "/"){
         respondWithCacheFirst = false;
     }
@@ -19,7 +24,7 @@ async function handleFetch(event) {
     respondWithCacheFirst ? 
         event.respondWith(cacheFirst(event.request)) : 
         event.respondWith(networkFirst(event.request));
-
+*/
 }
 
 async function cacheFirst(request) {
@@ -54,3 +59,29 @@ async function networkFirst(request) {
     }
 }
 
+self.addEventListener('message', async function (event) {
+    console.log("SW Received Message: " + event.data);
+    UpdateApp();
+});
+
+async function UpdateApp() {
+    const cache = await caches.open(mainCacheName);
+
+    try {
+        caches.delete(mainCacheName);
+/*        staticAssets.forEach(function (asset) {
+            cache.delete(asset, {
+                'ignoreSearch': true,
+                'ignoreMethod': true,
+                'ignoreVary': true
+            });
+        });
+*/
+    }
+    catch (error) {
+        console.log('error: ' + error);
+    }
+    console.log('removed assets');
+
+    // cache.addAll(staticAssets);
+}
