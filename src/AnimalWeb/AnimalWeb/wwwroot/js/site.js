@@ -6,8 +6,11 @@ window.addEventListener('load', async e => {
     console.log('load event');
     if ('serviceWorker' in navigator) {
         try {
-            navigator.serviceWorker.register('sw.js');
-            console.log('SW registered');
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('Service worker registration succeeded:', registration);
+            }, /*catch*/ function(error) {
+                console.log('Service worker registration failed:', error);
+            });
         }
         catch (error) {
             console.log('error');

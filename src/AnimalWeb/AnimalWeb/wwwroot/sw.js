@@ -1,4 +1,5 @@
-﻿const mainCacheName = 'sonyasapp-01';
+﻿console.log('sw.js loaded');
+const mainCacheName = 'sonyasapp-01';
 self.addEventListener('install', async event => {
     event.waitUntil(self.skipWaiting());
 });
