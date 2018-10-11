@@ -2,29 +2,290 @@
   {
     "Id": "lion",
     "Name": "lion",
-    "ImageFull": "African_Lion_3.jpg",
-    "Image": "African_Lion_3-200.jpg",
+    "ImageFull": "lion.jpg",
     "Audio": "lion-01"
   },
   {
     "Id": "chicken",
     "Name": "chicken",
     "ImageFull": "chicken.jpg",
-    "Image": "chicken-200.jpg",
     "Audio": "chicken"
   },
   {
     "Id": "chimp",
     "Name": "chimp",
     "ImageFull": "chimp.jpg",
-    "Image": "chimp-200.jpg",
     "Audio": "chimp"
   },
   {
     "Id": "alpaca",
     "Name": "alpaca",
     "ImageFull": "alpaca.jpg",
-    "Image": "alpaca-200.jpg",
     "Audio": "alpaca"
+  },
+  {
+    "Id": "turkey",
+    "Name": "turkey",
+    "ImageFull": "turkey.jpg",
+    "Audio": "turkey"
+  },
+  {
+    "Id": "camel",
+    "Name": "camel",
+    "ImageFull": "camel.jpg",
+    "Audio": "camel"
+  },
+  {
+    "Id": "bat",
+    "Name": "bat",
+    "ImageFull": "bat.jpg",
+    "Audio": "bat"
+  },
+  {
+    "Id": "baboon",
+    "Name": "baboon",
+    "ImageFull": "baboon.jpg",
+    "Audio": "baboon"
+  },
+  {
+    "Id": "penguin",
+    "Name": "penguin",
+    "ImageFull": "penguin.jpg",
+    "Audio": "penguin"
+  },
+  {
+    "Id": "tiger",
+    "Name": "tiger",
+    "ImageFull": "tiger.jpg",
+    "Audio": "tiger"
+  },
+  {
+    "Id": "frog",
+    "Name": "frog",
+    "ImageFull": "frog.jpg",
+    "Audio": "frog"
+  },
+  {
+    "Id": "rabbit",
+    "Name": "rabbit",
+    "ImageFull": "rabbit.jpg",
+    "Audio": "rabbit"
+  },
+  {
+    "Id": "squirrel",
+    "Name": "squirrel",
+    "ImageFull": "squirrel.jpg",
+    "Audio": "squirrel"
+  },
+  {
+    "Id": "goat",
+    "Name": "goat",
+    "ImageFull": "goat.jpg",
+    "Audio": "goat"
+  },
+  {
+    "Id": "giraffe",
+    "Name": "giraffe",
+    "ImageFull": "giraffe.jpg",
+    "Audio": "giraffe"
+  },
+  {
+    "Id": "chipmunk",
+    "Name": "chipmunk",
+    "ImageFull": "chipmunk.jpg",
+    "Audio": "chipmunk"
+  },
+  {
+    "Id": "mouse",
+    "Name": "mouse",
+    "ImageFull": "mouse.jpg",
+    "Audio": "mouse"
+  },
+  {
+    "Id": "alligator",
+    "Name": "alligator",
+    "ImageFull": "alligator.jpg",
+    "Audio": "alligator"
+  },
+  {
+    "Id": "donkey",
+    "Name": "donkey",
+    "ImageFull": "donkey.jpg",
+    "Audio": "donkey"
+  },
+  {
+    "Id": "hyena",
+    "Name": "hyena",
+    "ImageFull": "hyena.jpg",
+    "Audio": "hyena"
+  },
+  {
+    "Id": "pelican",
+    "Name": "pelican",
+    "ImageFull": "pelican.jpg",
+    "Audio": "pelican"
+  },
+  {
+    "Id": "zebra",
+    "Name": "zebra",
+    "ImageFull": "zebra.jpg",
+    "Audio": "zebra"
+  },
+  {
+    "Id": "whale",
+    "Name": "whale",
+    "ImageFull": "whale.jpg",
+    "Audio": "whale"
+  },
+  {
+    "Id": "hippo",
+    "Name": "hippo",
+    "ImageFull": "hippo.jpg",
+    "Audio": "hippo"
+  },
+  {
+    "Id": "bee",
+    "Name": "bee",
+    "ImageFull": "bee.jpg",
+    "Audio": "Bee buzzing animals131"
+  },
+  {
+    "Id": "bear",
+    "Name": "brown bear",
+    "ImageFull": "brown-bear.png",
+    "Audio": "brown-bear"
+  },
+  {
+    "Id": "elephant",
+    "Name": "elephant",
+    "ImageFull": "elephant.jpg",
+    "Audio": "Elephant-angry animals035"
+  },
+  {
+    "Id": "monkey",
+    "Name": "monkey",
+    "ImageFull": "monkey.jpg",
+    "Audio": "Capuchin monkey animals075"
+  },
+  {
+    "Id": "duck",
+    "Name": "duck",
+    "ImageFull": "duck.jpg",
+    "Audio": "Duck-quacking animals038"
+  },
+  {
+    "Id": "rooster",
+    "Name": "rooster",
+    "ImageFull": "rooster.jpg",
+    "Audio": "Rooster animals070"
+  },
+  {
+    "Id": "dog",
+    "Name": "dog",
+    "ImageFull": "dog.jpg",
+    "Audio": "Dog animals080"
+  },
+  {
+    "Id": "cat",
+    "Name": "cat",
+    "ImageFull": "cat.jpg",
+    "Audio": "Cat meow animals021"
+  },
+  {
+    "Id": "bird",
+    "Name": "bird",
+    "ImageFull": "bird.jpg",
+    "Audio": "Bird chirps animals140"
+  },
+  {
+    "Id": "cow",
+    "Name": "cow",
+    "ImageFull": "cow.jpg",
+    "Audio": "Cow animals055"
+  },
+  {
+    "Id": "horse",
+    "Name": "horse",
+    "ImageFull": "horse.jpg",
+    "Image": "Nokota_Horses_cropped-200.jpg",
+    "Audio": "Horse whinny animals126"
+  },
+  {
+    "Id": "geese",
+    "Name": "geese",
+    "ImageFull": "geese.jpg",
+    "Audio": "Geese (Canadian)-flockanimals003"
+  },
+  {
+    "Id": "pig",
+    "Name": "pig",
+    "ImageFull": "pig.jpg",
+    "Audio": "Pig squeal animals024"
+  },
+  {
+    "Id": "raven",
+    "Name": "raven",
+    "ImageFull": "raven.jpg",
+    "Audio": "Crow caw animals063"
+  },
+  {
+    "Id": "owl",
+    "Name": "owl",
+    "ImageFull": "owl.jpg",
+    "Audio": "owl animals074"
+  },
+  {
+    "Id": "snake",
+    "Name": "snake",
+    "ImageFull": "rattlesnake.jpg",
+    "Audio": "Rattlesnake  animals077"
+  },
+  {
+    "Id": "sheep",
+    "Name": "sheep",
+    "ImageFull": "sheep.jpg",
+    "Audio": "Sheep - ewe animals112"
+  },
+  {
+    "Id": "peacock",
+    "Name": "peacock",
+    "ImageFull": "peacock.jpg",
+    "Audio": "Peacock animals019"
+  },
+  {
+    "Id": "seagull",
+    "Name": "seagull",
+    "ImageFull": "seagull.jpg",
+    "Audio": "Seagulls animals133"
+  },
+  {
+    "Id": "gorilla",
+    "Name": "gorilla",
+    "ImageFull": "gorilla.jpg",
+    "Audio": "Gorilla growl animals028"
+  },
+  {
+    "Id": "hawk",
+    "Name": "hawk",
+    "ImageFull": "hawk.jpg",
+    "Audio": "Hawk animals083"
+  },
+  {
+    "Id": "leopard",
+    "Name": "leopard",
+    "ImageFull": "leopard.jpg",
+    "Audio": "Leopard growl animals089"
+  },
+  {
+    "Id": "rhino",
+    "Name": "rhino",
+    "ImageFull": "rhinoceros.jpg",
+    "Audio": "Rhinoceros animals134"
+  },
+  {
+    "Id": "porcupine",
+    "Name": "porcupine",
+    "ImageFull": "porcupine.jpg",
+    "Audio": "porcupine"
   }
 ]

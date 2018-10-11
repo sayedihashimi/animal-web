@@ -1,19 +1,19 @@
 ﻿@page
 @model IndexModel
+@*<ul class="imageList">
+         <li><img class="animalImage" src="~/media/10006-an-elephant-in-the-wild-pv.jpg" /></li>
+        <li><img class="animalImage" src="~/media/17859-leopard-pv.jpg" /></li>
+             <li><img class="animalImage" src="~/media/African_Lion_3.jpg" /></li>
+             <li><img class="animalImage" src="~/media/alligator.jpg" /></li>
+             <li><img class="animalImage" src="~/media/alpaca.jpg" /></li>
+             <li><img class="animalImage" src="~/media/baboon.jpg" /></li>
+             <li><img class="animalImage" src="~/media/bat.jpg" /></li>
+    </ul>*@
 <ul class="imageList">
-    <li><img class="animalImage" src="~/media/10006-an-elephant-in-the-wild-pv.jpg" /></li>
-    @*<li><img class="animalImage" src="~/media/17859-leopard-pv.jpg" /></li>
-        <li><img class="animalImage" src="~/media/African_Lion_3.jpg" /></li>
-        <li><img class="animalImage" src="~/media/alligator.jpg" /></li>
-        <li><img class="animalImage" src="~/media/alpaca.jpg" /></li>
-        <li><img class="animalImage" src="~/media/baboon.jpg" /></li>
-        <li><img class="animalImage" src="~/media/bat.jpg" /></li>*@
+    @foreach (var animal in Model.Animals)
+    {
+        <li><img class="animalImage" src="~/media/@animal.ImageFull" alt="animal image" /></li>
+    }
 </ul>
-    <ul class="imageList">
-        @foreach (var animal in Model.Animals)
-        {
-            <li><img class="animalImage" src="~/media/@animal.ImageFull" alt="animal image" /></li>
-        }
-    </ul>
 
 <a asp-page="UpdateApp">Update app</a>
