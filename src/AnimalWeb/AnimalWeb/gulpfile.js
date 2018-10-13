@@ -13,11 +13,12 @@ var rename = require("gulp-rename");
 const srcFolder = "./media-src/";
 const destFolder = "./wwwroot/media-test-dist/";
 
-gulp.task("sih:updateimages",["sih:optimizeimages"], () => {
-    // TODO
-});
 
-gulp.task("sih:optimizeimages",()=> {
+const widths = [1920,1600,1366,1024,768,640];
+
+
+
+gulp.task("img:optimize",()=> {
     return gulp.src([destFolder + "*.jpg",destFolder + "*.png"], { nodir: false })
         .pipe(gulpImagemin({
                 progressive: true,
@@ -31,13 +32,15 @@ gulp.task("img:copy", ()=> {
         .pipe(gulp.dest(destFolder));
 });
 
-gulp.task("sih:makethumbnails", () => {
+gulp.task("img:resize", () => {
     const streams=[];
-    streams.push(gulp.src([srcFolder + "*.jpg",srcFolder + "*.png"], {nodir: true})
+
+    widths.map((width) => {
+        streams.push(gulp.src([srcFolder + "*.jpg",srcFolder + "*.png"], {nodir: true})
                 /*.pipe(gulpNewer(destFolder+"thumbs_"+'768px'))*/
                 .pipe(gulpImageresize({
                     imageMagick: true,
-                    width: 768,
+                    width: width,
                     crop: false
                     }))
                 .pipe(gulpImagemin({
@@ -45,10 +48,14 @@ gulp.task("sih:makethumbnails", () => {
                     svgoPlugins:[{removeViewBox: false},{removeUselessStrokeAndFill: false}]
                     }))
             .pipe(rename(function(path){
-                path.basename += "-768px"
+                path.basename += "-"+width+"px"
             }))
-            .pipe(gulp.dest(destFolder)));
-
-
+            .pipe(gulp.dest(destFolder)))
+    });
+    
     return merge2(streams);
 }); 
+
+gulp.task("img:update",["img:resize","img:copy","img:optimize"], () => {
+    // TODO
+});
