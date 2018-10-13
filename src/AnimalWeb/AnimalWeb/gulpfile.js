@@ -26,6 +26,11 @@ gulp.task("sih:optimizeimages",()=> {
         .pipe(gulp.dest(destFolder));
 });
 
+gulp.task("img:copy", ()=> {
+    gulp.src([srcFolder + "*.jpg",srcFolder + "*.png"], {nodir: true})
+        .pipe(gulp.dest(destFolder));
+});
+
 gulp.task("sih:makethumbnails", () => {
     const streams=[];
     streams.push(gulp.src([srcFolder + "*.jpg",srcFolder + "*.png"], {nodir: true})
