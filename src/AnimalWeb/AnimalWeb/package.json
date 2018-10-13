@@ -1,0 +1,29 @@
+{
+  "name": "animalweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayedihashimi/animal-web.git"
+  },
+  "author": "Sayed Ibrahim Hashimi",
+  "license": "Apache v2.0",
+  "bugs": {
+    "url": "https://github.com/sayedihashimi/animal-web/issues"
+  },
+  "homepage": "https://github.com/sayedihashimi/animal-web#readme",
+  "dependencies": {
+    "del": "^3.0.0",
+    "delete-empty": "^2.0.0",
+    "globby": "^8.0.1",
+    "gulp": "^3.9.1",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-newer": "^1.4.0",
+    "merge2": "^1.2.2"
+  }
+}
