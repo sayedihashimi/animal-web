@@ -6,6 +6,7 @@
 package-lock.json
 media-test-dist/
 media-test/
+media-resized/
 
 .DS_Store
 # User-specific files
