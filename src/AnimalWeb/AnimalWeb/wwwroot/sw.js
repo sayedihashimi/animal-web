@@ -13,19 +13,23 @@ self.addEventListener('fetch', async event => {
 
 async function handleFetch(event) {
     const url = new URL(event.request.url);
+    
+    if (event.request.method === 'GET'){
+        var respondWithCacheFirst = true;
 
-    var respondWithCacheFirst = true;
+        // TODO: If the url has a thumbprint do cache first
 
-    event.respondWith(cacheFirst(event.request))
-/*
-    if(url.pathname.endsWith('.css') || url.pathname.endsWith('.js') || url.pathname === "/"){
-        respondWithCacheFirst = false;
+        if(event.request.destination == "image"){
+            event.respondWith(cacheFirst(event.request));
+        }
+        else{
+            event.respondWith(networkFirst(event.request));
+        }
     }
-
-    respondWithCacheFirst ? 
-        event.respondWith(cacheFirst(event.request)) : 
-        event.respondWith(networkFirst(event.request));
-*/
+    else {
+        // let the browser do the default action
+        return;
+    }
 }
 
 async function cacheFirst(request) {
@@ -41,7 +45,10 @@ async function cacheFirst(request) {
 
     var response = await fetch(request);
     const cache = await caches.open(mainCacheName);
-    cache.put(request, response.clone());
+    
+    if(response.status === 200){
+        cache.put(request, response.clone());
+    }
 
     return response;
 }
@@ -52,7 +59,9 @@ async function networkFirst(request) {
 
     try {
         const response = await fetch(request);
-        cache.put(request, response.clone());
+        if(response.status === 200){
+            cache.put(request, response.clone());
+        }
         return response;
     }
     catch (error) {
@@ -70,19 +79,9 @@ async function UpdateApp() {
 
     try {
         caches.delete(mainCacheName);
-/*        staticAssets.forEach(function (asset) {
-            cache.delete(asset, {
-                'ignoreSearch': true,
-                'ignoreMethod': true,
-                'ignoreVary': true
-            });
-        });
-*/
     }
     catch (error) {
         console.log('error: ' + error);
     }
     console.log('removed assets');
-
-    // cache.addAll(staticAssets);
 }
