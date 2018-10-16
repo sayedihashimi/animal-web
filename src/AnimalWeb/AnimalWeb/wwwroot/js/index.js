@@ -4,11 +4,15 @@ window.addEventListener('load', async e => {
     hookupEvents();
 });
 
+var audioTags;
+
 function hookupEvents(){
     var pics = document.getElementsByTagName("PICTURE");
     for(let pic of pics){
         pic.addEventListener("click", handleImageClick);
     }
+
+    audioTags = document.getElementsByTagName("AUDIO");
 }
 
 function handleImageClick(element){
@@ -18,7 +22,14 @@ function handleImageClick(element){
 
     try{
         var audioTagId = element.currentTarget.id.replace("pic-","audio-");
-        document.getElementById(audioTagId).play();
+        var audio = document.getElementById(audioTagId);
+
+        for(let atag of audioTags){
+            atag.pause();
+        }
+
+        audio.currentTime = 0;
+        audio.play();
     }
     catch(error){
 
