@@ -1,5 +1,4 @@
-﻿console.log('sw.js loaded');
-const mainCacheName = 'sonyasapp-01';
+﻿const mainCacheName = 'sonyasapp-01';
 self.addEventListener('install', async event => {
     event.waitUntil(self.skipWaiting());
 });
@@ -19,7 +18,7 @@ async function handleFetch(event) {
 
         // TODO: If the url has a thumbprint do cache first
 
-        if(event.request.destination == "image"){
+        if(event.request.destination == "image" || event.request.destination == "audio"){
             event.respondWith(cacheFirst(event.request));
         }
         else{

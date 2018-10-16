@@ -4,6 +4,10 @@
 // Write your Javascript code.
 window.addEventListener('load', async e => {
     console.log('load event');
+    loadServiceWorker();
+});
+
+async function loadServiceWorker(){
     if ('serviceWorker' in navigator) {
         try {
             navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -13,7 +17,7 @@ window.addEventListener('load', async e => {
             });
         }
         catch (error) {
-            console.log('error');
+            console.log('Service worker registration failed(2):',error);
         }
     }
-});
+}

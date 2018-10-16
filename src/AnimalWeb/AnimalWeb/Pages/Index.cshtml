@@ -1,13 +1,14 @@
 ﻿@page
 @model IndexModel
-
+@{ 
+    var index = 0;
+}
 <ul class="imageList">
-    @foreach (var animal in Model.Animals)
-    {
+    @foreach (var animal in Model.Animals) {
         <li>
             @{var images = Model.GetImagesFor(animal); }
 
-            <picture>
+            <picture id="pic-@index">
                 <source media="(max-width: 640px)" srcset="/media-resized/@images[0]">
                 <source media="(max-width: 768px)" srcset="/media-resized/@images[1]">
                 <source media="(max-width: 1024px)" srcset="/media-resized/@images[2]">
@@ -15,10 +16,16 @@
                 <source media="(max-width: 1600px)" srcset="/media-resized/@images[4]">
                 <img class="animalImage" src="/media-resized/@animal.ImageFull" alt="Image">
             </picture>
+            <audio id="audio-@index" src="/media/@(animal.Audio).mp3">Your browser does not support the <code>audio</code> element.</audio>
         </li>
-    }
+
+        index++;
+                }
 </ul>
 
 
 
 <a asp-page="UpdateApp">Update app</a>
+@section Scripts {
+<script src="~/js/index.js" asp-append-version="true"></script>
+}
