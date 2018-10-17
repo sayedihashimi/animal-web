@@ -99,10 +99,15 @@ async function cacheFirst(request, updateFromNetworkAfter) {
         const cachedResponse = await caches.match(request);
         if (cachedResponse) {
             if(updateFromNetworkAfter){
-                var response = await fetch(request);
-                if(response.status === 200){
-                    const cache = await caches.open(mainCacheName);
-                    cache.put(request, response.clone());
+                try{
+                    var response = await fetch(request);
+                    if(response.status === 200){
+                        const cache = await caches.open(mainCacheName);
+                        cache.put(request, response.clone());
+                    }
+                }
+                catch(error){
+                    console.log('error:'+error);
                 }
             }
             return cachedResponse
