@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using AnimalWeb.Shared;
 using AnimalWeb.Server.Content;
+using ImageResizer.AspNetCore.Helpers;
 
 namespace AnimalWeb.Server
 {
@@ -28,6 +29,7 @@ namespace AnimalWeb.Server
             services.AddRazorPages();
             services.AddScoped<IAnimalJsonReader, AnimalJsonReader>();
             services.AddScoped<IContentHelper, ContentHelper>();
+            services.AddImageResizer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +50,7 @@ namespace AnimalWeb.Server
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
+            app.UseImageResizer();
 
             app.UseRouting();
 
