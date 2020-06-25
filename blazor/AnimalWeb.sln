@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30224.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalWeb.Server", "AnimalWeb\Server\AnimalWeb.Server.csproj", "{0691677B-8AF0-4765-9089-18575F60DCC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalWeb.Server", "AnimalWeb\Server\AnimalWeb.Server.csproj", "{0691677B-8AF0-4765-9089-18575F60DCC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalWeb.Client", "AnimalWeb\Client\AnimalWeb.Client.csproj", "{D44ADCD1-99CE-44C5-9066-CE8056278918}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalWeb.Client", "AnimalWeb\Client\AnimalWeb.Client.csproj", "{D44ADCD1-99CE-44C5-9066-CE8056278918}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalWeb.Shared", "AnimalWeb\Shared\AnimalWeb.Shared.csproj", "{92C8AB77-26F1-41D8-99DC-83624FB5D052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalWeb.Shared", "AnimalWeb\Shared\AnimalWeb.Shared.csproj", "{92C8AB77-26F1-41D8-99DC-83624FB5D052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalWeb.Static", "AnimalWeb.Static\AnimalWeb.Static.csproj", "{2238A6F9-E29D-4AD6-8D20-EB13FA201AF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{92C8AB77-26F1-41D8-99DC-83624FB5D052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92C8AB77-26F1-41D8-99DC-83624FB5D052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92C8AB77-26F1-41D8-99DC-83624FB5D052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2238A6F9-E29D-4AD6-8D20-EB13FA201AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2238A6F9-E29D-4AD6-8D20-EB13FA201AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2238A6F9-E29D-4AD6-8D20-EB13FA201AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2238A6F9-E29D-4AD6-8D20-EB13FA201AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
