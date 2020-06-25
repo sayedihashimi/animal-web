@@ -7,6 +7,7 @@ using AnimalWeb.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AnimalWeb.Shared.Extensions;
+using System.Reflection.Metadata.Ecma335;
 
 namespace AnimalWeb.Server.Controllers
 {
@@ -23,9 +24,17 @@ namespace AnimalWeb.Server.Controllers
         private IAnimalJsonReader _animalJsonReader;
         private IContentHelper _contentHelper;
         private readonly List<Animal> _animals;
+
+        [Route("")]
         public List<Animal> Get()
         {
             return _animals.Clone();
+        }
+
+        [Route("{id?}")]
+        public Animal Get(string id)
+        {
+            return _animals.SingleOrDefault<Animal>((a) => string.Equals(id, a.Id));
         }
     }
 }
