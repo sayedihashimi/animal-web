@@ -86,7 +86,7 @@ class AnimalQuizViewController : BaseAnimalViewController {
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         // if the tag == selectedIndex correct one was picked
-        if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
+        if let tappedImage = tapGestureRecognizer.view as! UIImageView? {
             if(tappedImage.tag == selectedIndex) {
                 image1.isUserInteractionEnabled = false
                 image2.isUserInteractionEnabled = false
@@ -140,8 +140,8 @@ class AnimalQuizViewController : BaseAnimalViewController {
             playSound(name: selectedAnimal!.audio)
         case .SayName:
             speakText(text: selectedAnimal!.name)
-        default:
-            playSound(name: selectedAnimal!.audio)
+//        default:
+//            playSound(name: selectedAnimal!.audio)
         }
     }
     func getSelectedAnimalAction() -> AnimalAction {

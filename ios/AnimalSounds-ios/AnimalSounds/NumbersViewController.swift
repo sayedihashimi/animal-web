@@ -22,11 +22,11 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
         
         initItems()
         
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
 
         registerSwipeToSpeak()
         collectionView.autoresizesSubviews = true
-        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.reloadData()
     }
     override func viewWillLayoutSubviews() {
@@ -132,7 +132,7 @@ class NumbersViewController: UIViewController, UICollectionViewDataSource, UICol
     {
         print("itemTapped", separator: "", terminator: "")
         
-        if let label = tapGestureRecognizer.view as! UILabel! {
+        if let label = tapGestureRecognizer.view as! UILabel? {
             speechHelper.speakText(textItems[label.tag].speakText)
         }
     }

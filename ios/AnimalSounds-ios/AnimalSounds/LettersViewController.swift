@@ -68,7 +68,7 @@ class LettersViewController: BaseCollectionViewController {
 
     @objc override func itemTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        if let label = tapGestureRecognizer.view as! UILabel! {
+        if let label = tapGestureRecognizer.view as! UILabel? {
             speechHelper.speakText(letters[label.tag].speakText)
         }
     }

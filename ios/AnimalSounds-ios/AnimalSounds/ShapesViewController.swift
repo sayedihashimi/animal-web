@@ -19,8 +19,8 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.autoresizesSubviews = true
-        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         initDataItems()
     }
     override func viewWillLayoutSubviews() {
@@ -63,7 +63,7 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
+        if let tappedImage = tapGestureRecognizer.view as! UIImageView? {
             speechHelper.speakText(shapeItems[tappedImage.tag].name)
         }
     }
@@ -79,10 +79,10 @@ class ShapesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        var sizeValues = [self.view.frame.size.height,self.view.frame.size.width]
+        let sizeValues = [self.view.frame.size.height,self.view.frame.size.width]
         
-        var width = sizeValues.max()
-        var height = sizeValues.min()
+        let width = sizeValues.max()
+        let height = sizeValues.min()
         
         return CGSize(width: width!, height: height!)
         /*
