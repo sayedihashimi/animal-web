@@ -19,8 +19,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.autoresizesSubviews = true
-        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         
         initAnimals()
         registerSwipeToPlay()
@@ -114,7 +114,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        if let tappedImage = tapGestureRecognizer.view as! UIImageView! {
+        if let tappedImage = tapGestureRecognizer.view as! UIImageView? {
             // playSound(name: animalItems[tappedImage.tag].audio)
             playAnimal(animalItems[tappedImage.tag])
         }
@@ -148,8 +148,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             playSound(name: animal.audio)
         case .SayName:
             speakHelper.speakText(animal.name)
-        default:
-            playSound(name: animal.audio)
+//        default:
+//            playSound(name: animal.audio)
         }
     }
     
@@ -160,7 +160,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let soundName = URL(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "wav")!)
         
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setCategory(.playback)
         try! AVAudioSession.sharedInstance().setActive(true)
         
         try! audioPlayer = AVAudioPlayer(contentsOf: soundName)
@@ -201,7 +201,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         // let leftRightInset = self.view.frame.size.width / 14.0
         // let leftRightInset: CGFloat = 1.0
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 enum AnimalAction {
@@ -233,3 +233,8 @@ enum AnimalAction {
 
 
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}

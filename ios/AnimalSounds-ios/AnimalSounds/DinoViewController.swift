@@ -58,7 +58,7 @@ class DinoViewController: BaseCollectionViewController {
         
     }
     @objc override func itemTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        if let tappedItem = tapGestureRecognizer.view as! UIImageView! {
+        if let tappedItem = tapGestureRecognizer.view as! UIImageView? {
             playDino(dataItems[tappedItem.tag])
         }
     }
@@ -79,8 +79,8 @@ class DinoViewController: BaseCollectionViewController {
             playSound(name: dino.audio)
         case .SayName:
             super.speechHelper.speakText(dino.name,VoiceNames.EnglishVoiceName)
-        default:
-            playSound(name: dino.audio)
+//        default:
+//            playSound(name: dino.audio)
         }
     }
     

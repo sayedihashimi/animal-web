@@ -19,7 +19,7 @@ class BaseUIViewController: UIViewController {
         
         let soundName = URL(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "wav")!)
         
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setCategory(.playback)
         try! AVAudioSession.sharedInstance().setActive(true)
         
         try! audioPlayer = AVAudioPlayer(contentsOf: soundName)
@@ -30,4 +30,9 @@ class BaseUIViewController: UIViewController {
     func speakText(text: String) {
         speechHelper.speakText(text)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

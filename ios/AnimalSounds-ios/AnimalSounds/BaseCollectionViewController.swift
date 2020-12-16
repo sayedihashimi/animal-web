@@ -53,11 +53,11 @@ class BaseCollectionViewController: UIViewController, UICollectionViewDataSource
         
         initItems()
         
-        getCollectionView().decelerationRate = UIScrollViewDecelerationRateFast
+        getCollectionView().decelerationRate = UIScrollView.DecelerationRate.fast
         
         registerSwipe()
         getCollectionView().autoresizesSubviews = true
-        getCollectionView().contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        getCollectionView().contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         getCollectionView().reloadData()
     }
     override func viewWillLayoutSubviews() {
@@ -115,11 +115,16 @@ class BaseCollectionViewController: UIViewController, UICollectionViewDataSource
         
         let soundName = URL(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "wav")!)
         
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setCategory(.playback)
         try! AVAudioSession.sharedInstance().setActive(true)
         
         try! audioPlayer = AVAudioPlayer(contentsOf: soundName)
         audioPlayer!.prepareToPlay()
         audioPlayer!.play()
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

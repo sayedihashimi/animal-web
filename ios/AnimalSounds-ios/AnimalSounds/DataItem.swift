@@ -27,7 +27,7 @@ class DataItem {
             if(jsonData.count > 0){
                 if let jsonResult = try JSONSerialization.jsonObject(with: jsonData) as? [NSDictionary] {
                     for json in jsonResult {
-                        let newitem = DataItem(id: json.value(forKey: "id") as! String, name: json.value(forKey: "name") as! String, image: json.value(forKey: "image") as! String)
+                        let newitem = DataItem(id: json.value(forKey: "id") as! String, name: json.value(forKey: "name") as! String, image: json.value(forKey: "image") as? String)
                         result.append(newitem)
                     }
                 }
