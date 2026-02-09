@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Letters({ onBack }) {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
